@@ -1,8 +1,0 @@
-
-## Commands to deploy the project in Google App Engine
-
-# <<project id>> = paulo-neves
-
-docker-compose -f .\docker-compose-deploy.yml run --rm gcloud gcloud auth login
-docker-compose -f .\docker-compose-deploy.yml run --rm gcloud gcloud config set project <<project id>>
-docker-compose -f .\docker-compose-deploy.yml run --rm gcloud gcloud app deploy
