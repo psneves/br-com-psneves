@@ -157,7 +157,7 @@ export default function CVPage() {
                 <h3 className="font-semibold text-gray-900">Mentor Interativa</h3>
                 <p className="text-gray-600 text-sm">São José dos Campos-SP, Brazil</p>
               </div>
-              <p className="text-gray-500 text-sm">2011 — 2013</p>
+              <p className="text-gray-500 text-sm">Dec 2011 — Nov 2013</p>
             </div>
 
             <div className="mt-3 pl-4 border-l-2 border-gray-200">
@@ -262,7 +262,6 @@ export default function CVPage() {
                 "API Development",
                 "Agile/Scrum",
                 "JIRA",
-                "Oracle Eloqua",
               ].map((skill) => (
                 <span key={skill} className="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded">
                   {skill}
