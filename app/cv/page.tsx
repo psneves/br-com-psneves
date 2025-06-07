@@ -322,12 +322,23 @@ export default function CVPage() {
           <div className="space-y-4">
             {personalProjects.map((project) => (
               <div key={project.name}>
-                <div className="flex justify-between">
-                  <h3 className="font-medium text-gray-800 print:text-sm">{project.name}</h3>
-                  <a href={`https://${project.url}`} target="_blank" rel="noopener noreferrer">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-medium text-gray-800 print:text-sm">{project.name}</h3>
+                      <span className="hidden print:inline text-gray-500 print:text-xs">• {project.url}</span>
+                      <span
+                        className={`hidden print:inline text-xs px-1 py-0.5 rounded ml-2
+              ${project.status === "LIVE" ? "print:bg-green-100 print:text-green-800" : "print:bg-amber-100 print:text-amber-800"}`}
+                      >
+                        {project.status}
+                      </span>
+                    </div>
+                  </div>
+                  <a href={`https://${project.url}`} target="_blank" rel="noopener noreferrer" className="print:hidden">
                     <span
                       className={`text-xs px-2 py-0.5 rounded
-                                    ${project.status === "LIVE" ? "bg-green-100 text-green-800" : "bg-amber-100 text-amber-800"}`}
+            ${project.status === "LIVE" ? "bg-green-100 text-green-800" : "bg-amber-100 text-amber-800"}`}
                     >
                       {project.status}
                     </span>

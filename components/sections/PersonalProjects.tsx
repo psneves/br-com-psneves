@@ -14,7 +14,7 @@ export default function PersonalProjects() {
           image="/images/projects/meus-desafios.png"
           url="https://meusdesafios.com.br"
           status="LIVE"
-          tags={["Goal Tracking", "Community", "Personal Development", "React Native"]}
+          tags={["Goal Tracking", "Community", "Personal Development"]}
         />
 
         <ProjectCard
