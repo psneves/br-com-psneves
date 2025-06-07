@@ -404,7 +404,6 @@ export default function Home() {
                   "API Development",
                   "Agile/Scrum",
                   "JIRA",
-                  "Oracle Eloqua",
                 ].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
                     {skill}
