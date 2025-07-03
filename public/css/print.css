@@ -38,14 +38,14 @@ a, a:hover, a:visited, a:active {
 	display:block;
 	padding:0;
 	overflow: hidden;
-	padding-bottom:75px;
-	padding-top:7px;
+	padding-bottom:50px; /* Reduced padding */
+	padding-top:5px; /* Reduced padding */
 }
 
 .entry {
 	width:820px;
 	display: block;
-	padding-top:55px;
+	padding-top:30px; /* Reduced padding */
 	clear: both;
 }
 
@@ -60,7 +60,7 @@ h1 span {
 	font-size:21pt;
 	display:block;
 	margin-left:15px;
-	margin-top:20px;
+	margin-top:10px; /* Reduced margin */
 	color:#1b4491;
 }
 
@@ -95,7 +95,6 @@ ul.list li {
 	float:right;
 	padding-top:32px;
 }
-
 
 h3 {
 	width:180px;
@@ -284,4 +283,21 @@ big {
 
 .works {
 	display:none;
+}
+
+/* New styles for print layout */
+.section {
+  page-break-inside: avoid;
+}
+
+.keep-together {
+  page-break-inside: avoid;
+}
+
+.company-block {
+  page-break-inside: avoid;
+}
+
+.role-item {
+  page-break-inside: avoid;
 }
