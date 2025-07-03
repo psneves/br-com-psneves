@@ -149,7 +149,7 @@ export default function CVPage() {
       </div>
 
       <div ref={contentRef} className="print:mx-0 bg-white">
-        <header className="mb-8 border-b pb-6 print:border-gray-300 print:break-inside-avoid print:mb-4 print:pb-3">
+        <header className="mb-6 border-b pb-4 print:border-gray-300 print:break-inside-avoid print:mb-3 print:pb-2">
           <h1 className="text-3xl font-bold text-gray-900 print:text-2xl">Paulo Neves</h1>
           <p className="text-xl text-gray-600 mt-1 print:text-lg">IT Manager at Johnson & Johnson</p>
 
@@ -178,10 +178,10 @@ export default function CVPage() {
           </div>
         </header>
 
-        <section className="mb-8 section print:break-inside-avoid print:mb-4">
-          <h2 className="text-xl font-semibold text-gray-900 mb-3 print:text-lg print:mb-2">Summary</h2>
+        <section className="mb-6 section print:mb-3">
+          <h2 className="text-xl font-semibold text-gray-900 mb-2 print:text-lg print:mb-2">Summary</h2>
           <div className="keep-together">
-            <p className="text-gray-700 mb-3 print:text-sm print:mb-2">
+            <p className="text-gray-700 mb-2 print:text-sm print:mb-2">
               Experienced IT professional with 15+ years in technology leadership, specializing in digital
               transformation, team management, and product development.
             </p>
@@ -192,11 +192,11 @@ export default function CVPage() {
           </div>
         </section>
 
-        <section className="mb-8 section print:mb-4">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4 print:text-lg print:mb-3">Experience</h2>
+        <section className="mb-6 section print:mb-3">
+          <h2 className="text-xl font-semibold text-gray-900 mb-3 print:text-lg print:mb-2">Experience</h2>
 
-          <div className="company-block print:break-inside-avoid">
-            <div className="flex justify-between items-start mb-3">
+          <div className="company-block allow-page-break">
+            <div className="flex justify-between items-start mb-2">
               <div>
                 <h3 className="font-semibold text-gray-900 print:text-base">Johnson & Johnson</h3>
                 <p className="text-gray-600 text-sm print:text-xs">São José dos Campos-SP, Brazil</p>
@@ -204,10 +204,10 @@ export default function CVPage() {
               <p className="text-gray-500 text-sm print:text-xs">2014 — Present</p>
             </div>
 
-            <div className="mt-3 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
-              <div className="role-item print:break-inside-avoid">
+            <div className="mt-2 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">IT Manager - Web and API Development</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Apr 2023 — Present</p>
                   </div>
@@ -222,9 +222,9 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <div className="role-item print:break-inside-avoid">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">IT Lead - Technical Product Owner</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Sep 2020 — Mar 2023</p>
                   </div>
@@ -240,9 +240,9 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <div className="role-item print:break-inside-avoid">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Service Specialist - Digital & RPA</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Feb 2019 — Aug 2020</p>
                   </div>
@@ -255,9 +255,9 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <div className="role-item print:break-inside-avoid">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Sr. Information Security Analyst</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Apr 2018 — Feb 2019</p>
                   </div>
@@ -269,9 +269,9 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <div className="role-item print:break-inside-avoid">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Information Security Analyst</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Jun 2015 — Mar 2018</p>
                   </div>
@@ -285,9 +285,9 @@ export default function CVPage() {
                 </div>
               </div>
 
-              <div className="role-item print:break-inside-avoid">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Information Security Intern</h4>
                     <p className="text-gray-500 text-sm print:text-xs">Jan 2014 — Jun 2015</p>
                   </div>
@@ -302,8 +302,8 @@ export default function CVPage() {
             </div>
           </div>
 
-          <div className="company-block print:break-inside-avoid">
-            <div className="flex justify-between items-start mb-3">
+          <div className="company-block allow-page-break">
+            <div className="flex justify-between items-start mb-2">
               <div>
                 <h3 className="font-semibold text-gray-900 print:text-base">Mentor Interativa</h3>
                 <p className="text-gray-600 text-sm print:text-xs">São José dos Campos-SP, Brazil</p>
@@ -311,10 +311,10 @@ export default function CVPage() {
               <p className="text-gray-500 text-sm print:text-xs">Dec 2011 — Nov 2013</p>
             </div>
 
-            <div className="mt-3 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
-              <div className="role-item print:break-inside-avoid">
+            <div className="mt-2 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Software Developer</h4>
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
@@ -327,8 +327,8 @@ export default function CVPage() {
             </div>
           </div>
 
-          <div className="company-block print:break-inside-avoid">
-            <div className="flex justify-between items-start mb-3">
+          <div className="company-block allow-page-break">
+            <div className="flex justify-between items-start mb-2">
               <div>
                 <h3 className="font-semibold text-gray-900 print:text-base">Stefanini</h3>
                 <p className="text-gray-600 text-sm print:text-xs">Jaguariúna-SP, Brazil</p>
@@ -336,10 +336,10 @@ export default function CVPage() {
               <p className="text-gray-500 text-sm print:text-xs">Jan 2011 — Dec 2011</p>
             </div>
 
-            <div className="mt-3 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
-              <div className="role-item print:break-inside-avoid">
+            <div className="mt-2 pl-4 border-l-2 border-gray-200 print:border-gray-300 print:pl-3">
+              <div className="role-item">
                 <div className="role-header-content">
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">Junior Software Developer</h4>
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
@@ -353,8 +353,8 @@ export default function CVPage() {
           </div>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:gap-4 grid-section print:break-inside-avoid print:mb-4">
-          <section className="education-item print:break-inside-avoid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:gap-4 grid-section print:mb-4">
+          <section className="education-item">
             <h2 className="text-xl font-semibold text-gray-900 mb-3 print:text-lg print:mb-2">Education</h2>
             <div className="keep-together">
               <div className="mb-4 print:mb-3">
