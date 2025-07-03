@@ -14,51 +14,54 @@ export default function CVPage() {
 
     setIsGenerating(true)
     try {
-      const html2canvas = (await import("html2canvas")).default
-      const jsPDF = (await import("jspdf")).default
-
-      // Capture content as high-res canvas
-      const canvas = await html2canvas(contentRef.current, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: "#ffffff",
-      })
-      const imgData = canvas.toDataURL("image/png")
-
-      // Initialize jsPDF
-      const pdf = new jsPDF("p", "mm", "a4")
-      const pageWidth = pdf.internal.pageSize.getWidth()
-      const pageHeight = pdf.internal.pageSize.getHeight()
-      const margin = 10 // mm margin
-      const printableWidth = pageWidth - margin * 2
-      const printableHeight = pageHeight - margin * 2
-
-      // Calculate dimensions of the image in PDF units
-      const imgProps = pdf.getImageProperties(imgData)
-      const imgWidth = printableWidth
-      const imgHeight = (imgProps.height * imgWidth) / imgProps.width
-
-      let heightLeft = imgHeight
-      let y = margin
-
-      // Add first page
-      pdf.addImage(imgData, "PNG", margin, y, imgWidth, imgHeight)
-      heightLeft -= printableHeight
-
-      // Add additional pages as needed
-      while (heightLeft > 0) {
-        pdf.addPage()
-        y = margin - heightLeft
-        pdf.addImage(imgData, "PNG", margin, y, imgWidth, imgHeight)
-        heightLeft -= printableHeight
-      }
-
-      pdf.save("Paulo_Neves_CV.pdf")
+      // Try using print media query approach first (cleaner result)
+      const originalDisplay = contentRef.current.style.display
+      contentRef.current.style.display = 'block'
+      
+      // Apply print styles
+      const style = document.createElement('style')
+      style.textContent = `
+        @page { size: A4; margin: 10mm; }
+        @media print { body { -webkit-print-color-adjust: exact; } }
+      `
+      document.head.appendChild(style)
+      
+      window.print()
+      
+      // If print dialog is canceled, fall back to PDF generation
+      setTimeout(async () => {
+        // Reset the display style
+        if (contentRef.current) {
+            contentRef.current.style.display = originalDisplay;
+        }
+        document.head.removeChild(style)
+        
+        // If still generating, use jsPDF as fallback
+        if (isGenerating) {
+          const jsPDF = (await import("jspdf")).default
+          const html2pdf = (await import("html2pdf.js")).default
+          
+          const options = {
+            margin: 10,
+            filename: "Paulo_Neves_CV.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { 
+              scale: 2, 
+              useCORS: true,
+              letterRendering: true
+            },
+            jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+          }
+          
+          await html2pdf().set(options).from(contentRef.current).save()
+        }
+        
+        setIsGenerating(false)
+      }, 1000)
     } catch (error) {
       console.error("Error generating PDF:", error)
       window.print()
-    } finally {
       setIsGenerating(false)
     }
   }
@@ -450,7 +453,7 @@ export default function CVPage() {
         </section>
 
         <footer className="mt-8 pt-4 border-t text-center text-gray-500 text-xs print:text-xxs print:mb-4 print:pt-3 print:break-inside-avoid">
-          Last updated: June 2025 • Contact: paulo@psneves.com.br
+          Last updated: July 2025 • Contact: paulo@psneves.com.br
         </footer>
       </div>
     </div>
