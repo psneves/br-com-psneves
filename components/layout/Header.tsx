@@ -14,7 +14,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
           <div className="relative w-24 h-24 rounded-full overflow-hidden border border-gray-200 shadow-md">
-            <Image src="/images/perfil-quadrada.jpg" alt="Paulo Neves" fill className="object-cover" />
+            <Image src="/images/perfil-quadrada.webp" alt="Paulo Neves" fill className="object-cover" />
           </div>
 
           <div className="flex-1">
