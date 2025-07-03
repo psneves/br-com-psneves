@@ -103,7 +103,7 @@ export default function Experiences() {
       <div className="space-y-8">
         <ExperienceItem
           company="Johnson & Johnson"
-          logo="/images/logos/jj-logo.png"
+          logo="/images/logos/jj-logo.webp"
           location="São José dos Campos-SP, Brazil"
           period="2014 — Present"
           roles={johnsonAndJohnsonRoles}
@@ -112,7 +112,7 @@ export default function Experiences() {
 
         <ExperienceItem
           company="Mentor Interativa"
-          logo="/images/logos/mentor-logo.png"
+          logo="/images/logos/mentor-logo.webp"
           location="São José dos Campos-SP, Brazil"
           period="Dec 2011 — Nov 2013"
           roles={mentorInterativaRoles}
@@ -120,7 +120,7 @@ export default function Experiences() {
 
         <ExperienceItem
           company="Stefanini"
-          logo="/images/logos/stefanini-logo.png"
+          logo="/images/logos/stefanini-logo.webp"
           location="Jaguariúna-SP, Brazil"
           period="Jan 2011 — Dec 2011"
           roles={stefaniniRoles}
