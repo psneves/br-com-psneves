@@ -146,15 +146,26 @@
     @apply text-muted-foreground;
   }
 
-  /* Enhanced Cards */
+  /* Enhanced Cards with Glassmorphism */
   .enhanced-card {
-    @apply relative overflow-hidden bg-card text-card-foreground shadow-sm border border-border rounded-xl;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply relative overflow-hidden bg-card/80 backdrop-blur-xl text-card-foreground shadow-lg border border-border/50 rounded-2xl;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(145deg, 
+      hsl(var(--card) / 0.8), 
+      hsl(var(--card) / 0.6)
+    );
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   }
 
   .enhanced-card:hover {
-    @apply shadow-lg border-primary/20;
-    transform: translateY(-2px);
+    @apply shadow-2xl border-primary/30;
+    transform: translateY(-4px) scale(1.02);
+    background: linear-gradient(145deg, 
+      hsl(var(--card) / 0.9), 
+      hsl(var(--card) / 0.7)
+    );
   }
 
   .enhanced-card::before {
@@ -164,12 +175,36 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary)) 50%, transparent 50%);
+    background: linear-gradient(90deg, 
+      hsl(var(--primary)), 
+      hsl(var(--primary) / 0.8), 
+      transparent 80%
+    );
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
   }
 
   .enhanced-card:hover::before {
+    opacity: 1;
+  }
+
+  .enhanced-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, 
+      hsl(var(--primary) / 0.03) 0%, 
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .enhanced-card:hover::after {
     opacity: 1;
   }
 
@@ -230,7 +265,12 @@
 
   /* Enhanced skill badges */
   .skill-badge {
-    @apply inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-all duration-200 hover:border-primary/40 hover:bg-primary/20;
+    @apply inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-all duration-300 hover:border-primary/40 hover:bg-primary/20 hover:shadow-lg hover:shadow-primary/20;
+    transform: translateY(0);
+  }
+
+  .skill-badge:hover {
+    transform: translateY(-2px) scale(1.05);
   }
 
   /* Section headers with gradient */
@@ -302,10 +342,51 @@
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
   50% {
-    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.9) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }
 
@@ -329,6 +410,18 @@
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s linear;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Staggered animation delays */
