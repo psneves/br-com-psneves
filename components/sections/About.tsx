@@ -44,15 +44,19 @@ export default function About(): JSX.Element {
           {highlights.map((highlight, index) => (
             <div 
               key={index}
-              className="group p-4 rounded-lg border border-border/50 bg-muted/30 hover:bg-muted/50 transition-all duration-200 hover:shadow-md"
+              className="group p-5 rounded-xl border border-border/50 bg-gradient-to-br from-muted/20 to-muted/10 hover:from-muted/30 hover:to-muted/20 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <highlight.icon className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/20 transition-all duration-300 group-hover:scale-110">
+                    <highlight.icon className="w-6 h-6 text-primary group-hover:text-primary transition-colors" />
+                  </div>
+                  <div className="absolute inset-0 rounded-xl bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
                 </div>
-                <div>
-                  <div className="font-semibold text-foreground text-sm">{highlight.label}</div>
-                  <div className="text-xs text-muted-foreground">{highlight.description}</div>
+                <div className="flex-1">
+                  <div className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">{highlight.label}</div>
+                  <div className="text-xs text-muted-foreground group-hover:text-muted-foreground/80 transition-colors">{highlight.description}</div>
                 </div>
               </div>
             </div>
