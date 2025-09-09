@@ -2,7 +2,7 @@ import { Code } from "lucide-react"
 import SectionHeader from "../ui/SectionHeader"
 import ProjectCard from "../ui/ProjectCard"
 
-export default function PersonalProjects() {
+export default function PersonalProjects(): JSX.Element {
   return (
     <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
       <SectionHeader icon={Code} title="Personal Projects" />
@@ -11,7 +11,7 @@ export default function PersonalProjects() {
         <ProjectCard
           title="Meus Desafios"
           description="A habit-building and goal-tracking platform that encourages users to take on challenges in areas like fitness, productivity, and personal development. Includes ranking, streak tracking, and community interaction features. Features both a web platform and a mobile app built with React Native for on-the-go challenge tracking."
-          image="/images/projects/meus-desafios.webp"
+          image="/images/projects/meus-desafios.png"
           url="https://meusdesafios.com.br"
           status="LIVE"
           tags={["Goal Tracking", "Community", "Personal Development"]}

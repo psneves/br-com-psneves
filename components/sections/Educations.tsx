@@ -1,7 +1,7 @@
 import { GraduationCap } from "lucide-react"
 import EducationItem from "../ui/EducationItem"
 
-export default function Educations() {
+export default function Educations(): JSX.Element {
   return (
     <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
       <div className="flex items-center gap-3 mb-4">
