@@ -1,41 +1,31 @@
-import type React from "react"
-import "./globals.css"
 import { Inter } from "next/font/google"
+import "./globals.css"
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  display: "swap",
+  variable: "--font-inter",
 })
 
 export const metadata = {
-  title: "Paulo Neves - IT Manager",
-  description:
-    "Paulo Neves - IT Manager at Johnson & Johnson with 15+ years of experience in Information Technology, specializing in digital transformation and team leadership.",
-  keywords:
-    "Paulo Neves, IT Manager, Johnson & Johnson, Software Developer, Information Security, Digital Transformation, Team Leadership",
+  title: "Paulo Neves - IT Manager & Digital Transformation Leader",
+  description: "Experienced IT professional with 15+ years in technology leadership, specializing in digital transformation, team management, and product development.",
+  keywords: "IT Manager, Digital Transformation, Product Development, Team Leadership, Software Development",
   authors: [{ name: "Paulo Neves" }],
   creator: "Paulo Neves",
   openGraph: {
-    title: "Paulo Neves - IT Manager",
-    description: "IT Manager at Johnson & Johnson with 15+ years of experience in Information Technology",
+    title: "Paulo Neves - IT Manager & Digital Transformation Leader",
+    description: "Experienced IT professional with 15+ years in technology leadership, specializing in digital transformation, team management, and product development.",
     url: "https://psneves.com.br",
     siteName: "Paulo Neves",
     locale: "en_US",
     type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+  twitter: {
+    card: "summary_large_image",
+    title: "Paulo Neves - IT Manager & Digital Transformation Leader",
+    description: "Experienced IT professional with 15+ years in technology leadership, specializing in digital transformation, team management, and product development.",
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -44,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={inter.variable}>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )

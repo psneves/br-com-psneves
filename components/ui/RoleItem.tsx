@@ -10,7 +10,7 @@ interface RoleItemProps {
   defaultExpanded?: boolean
 }
 
-export default function RoleItem({ title, period, responsibilities, defaultExpanded = false }: RoleItemProps) {
+export default function RoleItem({ title, period, responsibilities, defaultExpanded = false }: RoleItemProps): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
@@ -30,7 +30,7 @@ export default function RoleItem({ title, period, responsibilities, defaultExpan
       <div className={`role-details ${isExpanded ? "block" : "hidden"}`}>
         <ul className="text-gray-600 space-y-2 text-sm leading-relaxed mt-3 animate-fade-in">
           {responsibilities.map((responsibility, index) => (
-            <li key={index}>• {responsibility}</li>
+            <li key={index}>{responsibility}</li>
           ))}
         </ul>
       </div>

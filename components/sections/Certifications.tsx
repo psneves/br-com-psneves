@@ -26,7 +26,7 @@ function CertificationItem({ title, period, url }: CertificationItemProps) {
   )
 }
 
-export default function Certifications() {
+export default function Certifications(): JSX.Element {
   return (
     <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
       <div className="flex items-center gap-3 mb-4">

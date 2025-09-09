@@ -95,10 +95,34 @@ const stefaniniRoles = [
   },
 ]
 
-export default function Experiences() {
+const fajtecRoles = [
+  {
+    title: "Intern",
+    period: "Jan 2010 — Jul 2010",
+    responsibilities: [
+      "Helped students of the course Introduction to Programming in Java to understand the course content",
+      "Created and applied tests for the students",
+      "Assisted in academic support for programming fundamentals and Java development",
+    ],
+  },
+]
+
+const dataComputadoresRoles = [
+  {
+    title: "Instructor",
+    period: "May 2008 — Sep 2009",
+    responsibilities: [
+      "Taught students how to use computer, change Windows basic configurations and operate Microsoft Office applications",
+      "Provided personalized computer training for individuals and small groups",
+      "Developed instructional materials for basic computer literacy programs",
+    ],
+  },
+]
+
+export default function Experiences(): JSX.Element {
   return (
-    <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-      <SectionHeader icon={Briefcase} title="Experience" />
+    <section className="enhanced-card p-8">
+      <SectionHeader icon={Briefcase} title="Experience" subtitle="Professional Journey" />
 
       <div className="space-y-8">
         <ExperienceItem
@@ -124,6 +148,22 @@ export default function Experiences() {
           location="Jaguariúna-SP, Brazil"
           period="Jan 2011 — Dec 2011"
           roles={stefaniniRoles}
+        />
+
+        <ExperienceItem
+          company="FAJTec - Faculdade Jaguariúna"
+          logo="/images/logos/fajtec-logo.png"
+          location="Jaguariúna-SP, Brazil"
+          period="Jan 2010 — Jul 2010"
+          roles={fajtecRoles}
+        />
+
+        <ExperienceItem
+          company="Data Computadores"
+          logo="/images/logos/data-computadores-logo.png"
+          location="Jaguariúna-SP, Brazil"
+          period="May 2008 — Sep 2009"
+          roles={dataComputadoresRoles}
         />
       </div>
     </section>
