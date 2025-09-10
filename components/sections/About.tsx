@@ -26,7 +26,7 @@ export default function About(): JSX.Element {
       <div className="space-y-6">
         <div className="prose prose-gray max-w-none">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Technology leader with <span className="font-semibold text-foreground">15+ years</span>. Engineering delivery at platform scale across enterprise domains at Johnson & Johnson. Blends hands‑on full‑stack engineering with solution architecture, 
+            Technology leader with <span className="font-semibold text-foreground">15+ years</span>. Engineering delivery at platform scale across enterprise domains at Johnson & Johnson. Blends hands-on Full Stack engineering with solution architecture, 
             product/platform strategy, and stakeholder management.
           </p>
           <p className="text-muted-foreground leading-relaxed">
