@@ -4,10 +4,26 @@ import Image from "next/image"
 import Link from "next/link"
 import { Linkedin, Mail, MapPin, Github, FileDown } from "lucide-react"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { usePDFGenerator } from "@/hooks/use-pdf-generator"
+import { transformToPDFData } from "@/utils/pdf-data-transformer"
+import { useState } from "react"
 
 export default function Header() {
-  const handleDownloadPDF = () => {
-    window.open("https://psneves.com.br/cv", "_blank")
+  const { generatePDFFromData, isGenerating, error } = usePDFGenerator()
+  const [showError, setShowError] = useState(false)
+
+  const handleDownloadPDF = async () => {
+    const pdfData = transformToPDFData()
+    const success = await generatePDFFromData(pdfData, {
+      filename: 'Paulo_Neves_CV.pdf',
+      quality: 0.98,
+      scale: 2
+    })
+    
+    if (!success && error) {
+      setShowError(true)
+      setTimeout(() => setShowError(false), 5000)
+    }
   }
 
   return (
@@ -55,13 +71,24 @@ export default function Header() {
             <ThemeToggle />
             
             <div className="flex flex-wrap gap-2 lg:gap-3">
-              <button
-                onClick={handleDownloadPDF}
-                className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3"
-              >
-                <FileDown size={16} />
-                <span className="hidden sm:inline">Save PDF</span>
-              </button>
+              <div className="relative">
+                <button
+                  onClick={handleDownloadPDF}
+                  disabled={isGenerating}
+                  className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <FileDown size={16} className={isGenerating ? "animate-bounce" : ""} />
+                  <span className="hidden sm:inline">
+                    {isGenerating ? "Generating..." : "Save PDF"}
+                  </span>
+                </button>
+                
+                {showError && error && (
+                  <div className="absolute top-full left-0 mt-2 p-2 bg-red-100 text-red-800 text-xs rounded shadow-lg whitespace-nowrap z-50">
+                    Failed to generate PDF. Please try again.
+                  </div>
+                )}
+              </div>
               
               <Link
                 href="https://br.linkedin.com/in/psneves"
