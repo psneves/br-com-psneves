@@ -467,3 +467,157 @@
 .gradient-text {
   @apply bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent;
 }
+
+/* PDF-specific styles for professional layout */
+@media print, .pdf-export {
+  .pdf-document {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background: white !important;
+    margin: 0;
+    padding: 20px;
+    max-width: none;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .pdf-header {
+    page-break-inside: avoid;
+    margin-bottom: 24px;
+  }
+
+  .pdf-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #111827;
+  }
+
+  .pdf-header p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 16px;
+  }
+
+  .pdf-section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .pdf-section h2 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111827;
+    border-bottom: none;
+    margin-bottom: 12px;
+  }
+
+  .company-block {
+    page-break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .role-item {
+    page-break-inside: avoid;
+    margin-bottom: 12px;
+  }
+
+  .role-item h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+  }
+
+  .role-item ul {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .role-item li {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #4B5563;
+    margin-bottom: 2px;
+  }
+
+  /* High-quality rendering for PDF export */
+  .pdf-export {
+    transform: scale(1);
+    transform-origin: top left;
+    width: 794px; /* A4 width in pixels at 96 DPI */
+    min-height: 1123px; /* A4 height in pixels at 96 DPI */
+  }
+
+  /* Remove animations and effects for PDF */
+  .pdf-export * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Professional color scheme for PDF */
+  .pdf-export .enhanced-card {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .pdf-export .bg-primary\/10 {
+    background-color: #f3f4f6 !important;
+  }
+
+  .pdf-export .text-primary {
+    color: #1f2937 !important;
+  }
+
+  /* Gradient preservation for PDF */
+  .pdf-export .bg-gradient-to-r,
+  .pdf-export .bg-gradient-to-br {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Enhanced section spacing for PDF */
+  .pdf-export .pdf-section {
+    margin-bottom: 24px !important;
+    page-break-inside: avoid;
+  }
+
+  /* Better typography for print */
+  .pdf-export h1 {
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+  }
+
+  .pdf-export h2 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .pdf-export h3 {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+  }
+
+  .pdf-export h4 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  .pdf-export p {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 8px !important;
+  }
+}

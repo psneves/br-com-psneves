@@ -9,12 +9,12 @@ interface LanguageItemProps {
 function LanguageItem({ language, level, proficiency }: LanguageItemProps) {
   return (
     <div className="flex justify-between items-center">
-      <span className="text-gray-700">{language}</span>
+      <span className="text-foreground/90">{language}</span>
       <div className="flex items-center">
-        <div className="w-24 h-2 bg-gray-200 rounded-full mr-2">
-          <div className="h-full bg-blue-900 rounded-full" style={{ width: `${proficiency}%` }}></div>
+        <div className="w-24 h-2 bg-muted rounded-full mr-2">
+          <div className="h-full bg-primary rounded-full" style={{ width: `${proficiency}%` }}></div>
         </div>
-        <span className="text-sm text-gray-500">{level}</span>
+        <span className="text-sm text-muted-foreground">{level}</span>
       </div>
     </div>
   )
@@ -22,10 +22,10 @@ function LanguageItem({ language, level, proficiency }: LanguageItemProps) {
 
 export default function Languages(): JSX.Element {
   return (
-    <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <section className="enhanced-card p-6">
       <div className="flex items-center gap-3 mb-4">
-        <LanguagesIcon className="text-blue-900" size={20} />
-        <h3 className="text-lg font-medium text-black">Languages</h3>
+        <LanguagesIcon className="text-primary" size={20} />
+        <h3 className="text-lg font-medium text-foreground">Languages</h3>
       </div>
       <div className="space-y-3">
         <LanguageItem language="Portuguese" level="Native" proficiency={100} />

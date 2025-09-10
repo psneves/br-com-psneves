@@ -1,0 +1,205 @@
+/* PDF-specific styles for professional layout */
+@media print, .pdf-export {
+  .pdf-document {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #1a1a1a;
+    background: white;
+    margin: 0;
+    padding: 20px;
+    max-width: none;
+    box-shadow: none;
+  }
+
+  .pdf-header {
+    page-break-inside: avoid;
+    margin-bottom: 24px;
+  }
+
+  .pdf-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #111827;
+  }
+
+  .pdf-header p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 16px;
+  }
+
+  .pdf-section {
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  .pdf-section h2 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111827;
+    border-bottom: none;
+    margin-bottom: 12px;
+  }
+
+  .company-block {
+    page-break-inside: avoid;
+    margin-bottom: 16px;
+  }
+
+  .role-item {
+    page-break-inside: avoid;
+    margin-bottom: 12px;
+  }
+
+  .role-item h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+  }
+
+  .role-item ul {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .role-item li {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #4B5563;
+    margin-bottom: 2px;
+  }
+
+  /* Improved spacing and typography */
+  .pdf-document p {
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .pdf-document .bg-gray-50 {
+    background-color: #f9fafb !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .pdf-document .bg-gray-100 {
+    background-color: #f3f4f6 !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  .pdf-document .bg-gray-800 {
+    background-color: #1f2937 !important;
+    color: white !important;
+  }
+
+  .pdf-document .border-l-4 {
+    border-left: 4px solid #1f2937 !important;
+  }
+
+  .pdf-document .border-l-2 {
+    border-left: 2px solid #6b7280 !important;
+  }
+
+  /* Skill badges */
+  .pdf-document .skill-badge {
+    font-size: 9px;
+    padding: 4px 8px;
+    background-color: #1f2937 !important;
+    color: white !important;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* Grid adjustments for PDF */
+  .pdf-document .grid-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .pdf-document .grid-cols-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* Footer */
+  .pdf-footer {
+    page-break-inside: avoid;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 9px;
+    color: #6b7280;
+  }
+
+  /* Page break control */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+
+  /* Remove shadows and unnecessary decorations */
+  .pdf-document * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Ensure proper text rendering */
+  .pdf-document {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* High-quality rendering for PDF export */
+.pdf-export {
+  transform: scale(1);
+  transform-origin: top left;
+  width: 794px; /* A4 width in pixels at 96 DPI */
+  min-height: 1123px; /* A4 height in pixels at 96 DPI */
+}
+
+/* Professional color scheme */
+.pdf-document .text-primary {
+  color: #1f2937 !important;
+}
+
+.pdf-document .bg-primary {
+  background-color: #1f2937 !important;
+}
+
+.pdf-document .border-primary {
+  border-color: #1f2937 !important;
+}
+
+/* Typography improvements */
+.pdf-document strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.pdf-document .font-bold {
+  font-weight: 700;
+}
+
+.pdf-document .font-semibold {
+  font-weight: 600;
+}
+
+.pdf-document .font-medium {
+  font-weight: 500;
+}
