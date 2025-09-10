@@ -273,7 +273,7 @@ export default function CV() {
               <Section title="Executive Summary" icon={<Users size={16} />}>
                 <p className="text-gray-700 leading-relaxed text-sm print:text-xs">
                   Technology leader with <strong>15+ years</strong> delivering secure, scalable web/API platforms at enterprise scale. Combines hands-on Full Stack engineering with solution architecture, product strategy, and stakeholder management.
-                  Currently leads engineering chapter and AI initiatives that accelerate SDLC with generative/agentic approaches while coaching senior engineers and raising technical standards across Johnson &amp; Johnson Technology Services.
+                  Currently leads engineering chapter and AI initiatives that accelerate SDLC with generative/agentic approaches while coaching senior engineers and raising technical standards across multiple SQUADs.
                 </p>
               </Section>
 
