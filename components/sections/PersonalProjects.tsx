@@ -4,7 +4,7 @@ import ProjectCard from "../ui/ProjectCard";
 
 export default function PersonalProjects(): JSX.Element {
   return (
-    <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <section className="enhanced-card p-6">
       <SectionHeader icon={Code} title="Personal Projects" />
 
       <div className="grid grid-cols-1 gap-6">

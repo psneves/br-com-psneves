@@ -14,21 +14,21 @@ export default function RoleItem({ title, period, responsibilities, defaultExpan
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="bg-white rounded-lg border border-gray-100 p-4 transition-all duration-200 hover:shadow-md">
+    <div className="bg-card rounded-lg border border-border p-4 transition-all duration-200 hover:shadow-md">
       <div className="flex justify-between items-center cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
-        <h4 className="font-medium text-gray-900">{title}</h4>
-        <button className="text-gray-400 hover:text-blue-900 transition-colors">
+        <h4 className="font-medium text-foreground">{title}</h4>
+        <button className="text-muted-foreground hover:text-primary transition-colors">
           {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
         </button>
       </div>
 
-      <p className="text-sm text-gray-500 mb-3 font-mono flex items-center gap-1">
-        <Calendar size={12} className="text-gray-400" />
+      <p className="text-sm text-muted-foreground mb-3 font-mono flex items-center gap-1">
+        <Calendar size={12} className="text-muted-foreground" />
         {period}
       </p>
 
       <div className={`role-details ${isExpanded ? "block" : "hidden"}`}>
-        <ul className="text-gray-600 space-y-2 text-sm leading-relaxed mt-3 animate-fade-in">
+        <ul className="text-muted-foreground space-y-2 text-sm leading-relaxed mt-3 animate-fade-in">
           {responsibilities.map((responsibility, index) => (
             <li key={index}>{responsibility}</li>
           ))}

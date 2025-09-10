@@ -9,17 +9,17 @@ interface CertificationItemProps {
 
 function CertificationItem({ title, period, url }: CertificationItemProps) {
   return (
-    <div className="border-l-2 border-blue-100 pl-4">
+    <div className="border-l-2 border-primary/20 pl-4">
       <Link
         href={url}
         target="_blank"
-        className="font-medium text-gray-900 hover:text-blue-900 transition-colors inline-flex items-center gap-1"
+        className="font-medium text-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
       >
         {title}
-        <ExternalLink size={14} className="text-gray-400" />
+        <ExternalLink size={14} className="text-muted-foreground" />
       </Link>
-      <p className="text-sm text-gray-500 font-mono flex items-center gap-1 mt-1">
-        <Award size={12} className="text-gray-400" />
+      <p className="text-sm text-muted-foreground font-mono flex items-center gap-1 mt-1">
+        <Award size={12} className="text-muted-foreground" />
         {period}
       </p>
     </div>
@@ -28,10 +28,10 @@ function CertificationItem({ title, period, url }: CertificationItemProps) {
 
 export default function Certifications(): JSX.Element {
   return (
-    <section className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+    <section className="enhanced-card p-6">
       <div className="flex items-center gap-3 mb-4">
-        <Award className="text-blue-900" size={20} />
-        <h3 className="text-lg font-medium text-black">Certifications</h3>
+        <Award className="text-primary" size={20} />
+        <h3 className="text-lg font-medium text-foreground">Certifications</h3>
       </div>
       <div className="space-y-4">
         <CertificationItem
