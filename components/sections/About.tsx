@@ -10,13 +10,13 @@ export default function About(): JSX.Element {
     },
     {
       icon: Users,
-      label: "Team Management",
-      description: "Cross-functional teams"
+      label: "Team Leadership",
+      description: "Senior Engineers & Vendor Management"
     },
     {
       icon: Zap,
-      label: "Digital Transformation",
-      description: "Enterprise solutions"
+      label: "AI Knowledge",
+      description: "Exploration & Upskilling"
     }
   ]
 
@@ -26,16 +26,12 @@ export default function About(): JSX.Element {
       <div className="space-y-6">
         <div className="prose prose-gray max-w-none">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Experienced IT professional with <span className="font-semibold text-foreground">15+ years</span> in technology leadership, 
-            specializing in digital transformation, team management, and product development.
+            Technology leader with <span className="font-semibold text-foreground">15+ years</span>. Engineering delivery at platform scale across enterprise domains at Johnson & Johnson. Blends hands‑on full‑stack engineering with solution architecture, 
+            product/platform strategy, and stakeholder management.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Bachelor of Computer Science from Federal University of São Paulo with background as People Manager, Technical
-            Product Owner, Service Specialist, Information Security Analyst, and Software Developer.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Currently leading web and API development initiatives at <span className="font-semibold text-foreground">Johnson & Johnson</span>, 
-            focusing on strategic technology direction and team development.
+            Currently leading Full Stack engineering chapter in the region, including <span className="font-semibold text-foreground">AI </span> initiatives to accelerate SDLC with 
+            <span className="font-semibold text-foreground"> generative AI</span>, while coaching senior engineers and elevating technical capabilities.
           </p>
         </div>
 
