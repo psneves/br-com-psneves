@@ -14,7 +14,7 @@ interface SectionProps {
 function Section({ title, icon, children, className = "" }: SectionProps) {
   return (
     <section className={`mb-6 print:mb-4 print:break-inside-avoid ${className}`}>
-      <header className="flex items-center gap-2 mb-3 print:mb-2 pb-2">
+      <header className="flex items-center gap-2">
         <span className="text-blue-600" aria-hidden="true">
           {icon}
         </span>
@@ -237,7 +237,7 @@ export default function CV() {
             <div className="text-center border-b-2 border-blue-600 pb-3">
               <h1 className="text-4xl font-bold text-gray-900 -mb-5">Paulo Neves</h1>
               <p className="text-lg print:text-base text-blue-600 font-medium mb-1">Full Stack Engineering Manager | People Leader</p>
-        
+
               {/* Contact Information */}
               <div className="flex flex-wrap justify-center gap-3 text-xs print:text-xs text-gray-600">
                 <span className="flex items-center gap-1">
@@ -284,7 +284,7 @@ export default function CV() {
               <Section title="Professional Experience" icon={<Briefcase size={16} />}>
                 <ExperienceItem
                   title="IT Manager - Full Stack Chapter Lead"
-                  company="Johnson & Johnson Technology Services"
+                  company="Johnson & Johnson - Technology Services"
                   period="Sep 2023 — Present"
                   location="São José dos Campos-SP"
                   current={true}
@@ -298,7 +298,7 @@ export default function CV() {
 
                 <ExperienceItem
                   title="IT Lead - Full Stack Chapter Lead"
-                  company="Johnson & Johnson"
+                  company="Johnson & Johnson - Technology Services"
                   period="Apr 2023 — Oct 2023"
                   location="São José dos Campos-SP"
                   achievements={[
@@ -309,7 +309,7 @@ export default function CV() {
                 />
                 <ExperienceItem
                   title="IT Lead - Technical Product Owner"
-                  company="Johnson & Johnson Innovative Medicine"
+                  company="Johnson & Johnson - Innovative Medicine"
                   period="Sep 2020 — Mar 2023"
                   location="São José dos Campos-SP"
                   achievements={[
@@ -373,19 +373,24 @@ export default function CV() {
       </div>
       <div className="cv-container bg-white print:bg-white p-8 print:p-0">
         <Section title="Professional Experience (cont.)" icon={<Briefcase size={16} />}>
-          <ExperienceItem title="Service Specialist" company="Johnson & Johnson Technology Services" period="Feb 2019 — Aug 2020" achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]} />
+          <ExperienceItem title="Service Specialist" company="Johnson & Johnson - Technology Services" period="Feb 2019 — Aug 2020" achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]} />
           <ExperienceItem
             title="Sr. Information Security Analyst"
-            company="Johnson & Johnson"
+            company="Johnson & Johnson - Technology Services"
             period="Apr 2018 — Feb 2019"
             achievements={["Security liaison for Corporate, Vision Care and LifeScan across LATAM", "Led app-security assessments during M&A due diligence and integrations"]}
           />
 
-          <ExperienceItem title="Information Security Analyst" company="Johnson & Johnson" period="Jun 2015 — Mar 2018" achievements={["Drove enterprise security awareness programs; performed risk and compliance reviews"]} />
+          <ExperienceItem
+            title="Information Security Analyst"
+            company="Johnson & Johnson - Information Security & Risk Management"
+            period="Jun 2015 — Mar 2018"
+            achievements={["Drove enterprise security awareness programs; performed risk and compliance reviews"]}
+          />
 
           <ExperienceItem
             title="Information Security Intern"
-            company="Johnson & Johnson"
+            company="Johnson & Johnson - - Information Security & Risk Management"
             period="2014 — 2015"
             achievements={[
               "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
