@@ -75,18 +75,21 @@ export default function CVPage() {
   }, []);
 
   const skills = [
-    "Team Leadership",
-    "Product Management",
-    "Digital Transformation",
-    "Information Security",
-    "AI/ML Integration",
-    "Web Development",
-    "API Development",
-    "Agile/Scrum",
-    "JIRA",
-    "Technology Strategy",
-    "Vendor Management",
-    "Budgeting & Forecasting",
+    "Cloud (AWS/GCP/Azure)",
+    "Full‑Stack (React/NextJS/NodeJS/Python)",
+    "API Platforms & Microservices",
+    "AI/IA Architecture",
+    "Generative & Agentic AI",
+    "Kubernetes & Docker",
+    "DevSecOps & CI/CD",
+    "Enterprise Architecture & Standards",
+    "Security, Privacy & Compliance",
+    "Audit Readiness (SOX)",
+    "Product & Platform Management",
+    "Roadmapping & OKRs",
+    "Stakeholder Management",
+    "People Leadership & Mentoring",
+    "Vendor & Budget Management",
   ];
 
   const personalProjects = [
@@ -165,7 +168,7 @@ export default function CVPage() {
               PAULO NEVES
             </h1>
             <p className="text-xl text-gray-700 mt-2 font-medium print:text-lg print:font-semibold print:mt-1 print:mb-3">
-              IT Manager • Digital Transformation Leader
+              IT Manager • Full‑Stack AI Engineering & Architecture
             </p>
             <div className="w-16 h-1 bg-gray-800 mx-auto print:mx-0 mt-2 print:mt-1"></div>
           </div>
@@ -199,14 +202,12 @@ export default function CVPage() {
           </div>
           <div className="keep-together bg-gray-50 p-4 rounded-lg print:bg-transparent print:p-0 print:border-l-4 print:border-gray-800 print:pl-4">
             <p className="text-gray-700 mb-3 leading-relaxed print:text-sm print:mb-2 print:leading-relaxed">
-              Experienced IT professional with <strong>15+ years</strong> in technology
-              leadership, specializing in digital transformation, team
-              management, and product development.
+              Technology leader with <strong>15+ years</strong> delivering at platform scale across LATAM in pharmaceutical and enterprise domains at Johnson & Johnson. 
+              Blends hands‑on full‑stack engineering with solution architecture, product/platform strategy, and stakeholder management.
             </p>
             <p className="text-gray-700 leading-relaxed print:text-sm print:leading-relaxed">
-              Bachelor of Computer Science from Federal University of São Paulo
-              with extensive background as People Manager, Technical Product Owner,
-              Service Specialist, Information Security Analyst, and Software Developer.
+              Expertise in <strong>generative & agentic AI</strong>, intelligent automation (IA), reusable reference architectures, microservices and API platforms, 
+              and modern engineering practices (DevSecOps, CI/CD, containerization). Delivers <strong>secure, compliant, and audit‑ready</strong> solutions in complex environments (SOX and privacy).
             </p>
           </div>
         </section>
@@ -242,36 +243,63 @@ export default function CVPage() {
                 <div className="role-header-content">
                   <div className="flex justify-between mb-1">
                     <h4 className="font-medium text-gray-800 print:text-sm">
-                      IT Manager - Web and API Development
+                      IT Manager - Full Stack Chapter Lead
                     </h4>
                     <p className="text-gray-500 text-sm print:text-xs">
-                      Apr 2023 — Present
+                      Sep 2023 — Present
                     </p>
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Lead talent acquisition and onboarding processes for
-                      digital product development teams
+                      Own LATAM strategy and roadmap for AI‑enabled Web/API platforms; align with enterprise architecture and regulatory requirements
                     </li>
                     <li>
-                      Design comprehensive individual development plans and
-                      career progression pathways
+                      Lead design of reusable frameworks, reference architectures and components to accelerate secure, scalable delivery
                     </li>
                     <li>
-                      Define strategic technology direction and establish
-                      professional training frameworks
+                      Elevate engineering practices (DevSecOps, CI/CD, reliability & performance) with audit readiness
                     </li>
                     <li>
-                      Drive organizational capability enhancement through
-                      targeted training events
+                      Partner with regional BT and global architecture to shape demand, prioritize investments and maximize business value
                     </li>
                     <li>
-                      Serve as escalation point for resource allocation and
-                      performance management issues
+                      Build and mentor a high‑performing chapter of principal engineers and SMEs; drive technical coaching and capability building
                     </li>
                     <li>
-                      Spearhead AI Agents initiative to automate software
-                      development processes
+                      Spearhead AI Agents initiative using generative & agentic AI to automate SDLC (dev/test), reducing lead time and improving quality
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="role-item">
+                <div className="role-header-content">
+                  <div className="flex justify-between mb-1">
+                    <h4 className="font-medium text-gray-800 print:text-sm">
+                      IT Lead - Full Stack Chapter Lead
+                    </h4>
+                    <p className="text-gray-500 text-sm print:text-xs">
+                      Apr 2023 — Oct 2023
+                    </p>
+                  </div>
+                  <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
+                    <li>
+                      Interview and onboard talent as required by digital products and Chapter growth
+                    </li>
+                    <li>
+                      Act as point of escalation for talent resource issues and Chapter member performance management
+                    </li>
+                    <li>
+                      Design individual development plans and career progression pathways for Chapter members
+                    </li>
+                    <li>
+                      Set strategic direction of Chapter's associated technologies/skillsets and professional training plans
+                    </li>
+                    <li>
+                      Lead training events and support the development of Chapter members through mentorship programs
+                    </li>
+                    <li>
+                      Propose new and better ways of leveraging technology and capabilities under Chapter purview
                     </li>
                   </ul>
                 </div>
@@ -289,24 +317,19 @@ export default function CVPage() {
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Delivered end-to-end personalization, SSO integrations,
-                      web analytics, and search capabilities
+                      Owned roadmap and delivery for Janssen Pro LATAM: personalization, SSO (OIDC/SAML), analytics and search across multiple markets
                     </li>
                     <li>
-                      Managed product backlog and sprint planning using JIRA,
-                      aligning with OKR-driven objectives
+                      Defined API contracts, integration patterns and non‑functional requirements; improved reliability, performance and observability
                     </li>
                     <li>
-                      Implemented comprehensive CSAT solution measuring customer
-                      satisfaction
+                      Established OKRs/KPIs and stakeholder reporting; led demos and executive readouts to align outcomes with business goals
                     </li>
                     <li>
-                      Served as technical lead for Oracle Eloqua email marketing
-                      platform
+                      Led vendors and internal squads with Agile practices; managed scope, budget and cross‑regional dependencies
                     </li>
                     <li>
-                      Conducted stakeholder reporting through OKR reviews and
-                      product demonstrations
+                      Ensured compliance and audit readiness focused on privacy and data protection
                     </li>
                   </ul>
                 </div>
@@ -324,20 +347,16 @@ export default function CVPage() {
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Architected RPA and digital transformation solutions
-                      ensuring compliance with standards
+                      Architected intelligent automation (RPA) solutions and established platform governance aligned to enterprise standards
                     </li>
                     <li>
-                      Coordinated proof-of-concept initiatives and managed
-                      development capacity
+                      Coordinated PoCs for automation opportunities; quantified ROI and scaled successful patterns across functions
                     </li>
                     <li>
-                      Established quality assurance frameworks and risk
-                      escalation protocols
+                      Established QA frameworks, delivery metrics and risk escalation protocols for automation initiatives
                     </li>
                     <li>
-                      Built strategic partnerships with regional and global IT
-                      stakeholders
+                      Partnered with regional and global IT stakeholders to advance digital transformation
                     </li>
                   </ul>
                 </div>
@@ -355,16 +374,13 @@ export default function CVPage() {
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Served as primary information security liaison across
-                      Latin America
+                      Security liaison for Corporate, Vision Care and LifeScan across LATAM; guided risk posture and remediation
                     </li>
                     <li>
-                      Conducted comprehensive security assessments during M&A
-                      integration
+                      Led application security assessments during M&A due diligence and integration
                     </li>
                     <li>
-                      Evaluated and validated security controls ensuring
-                      compliance
+                      Evaluated and strengthened security controls to meet corporate and regulatory requirements
                     </li>
                   </ul>
                 </div>
@@ -382,18 +398,14 @@ export default function CVPage() {
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Orchestrated enterprise-wide security awareness programs
+                      Drove enterprise security awareness programs across LATAM for business and IT audiences
                     </li>
                     <li>
-                      Performed application risk assessments and compliance
-                      analysis
+                      Performed application risk assessments and compliance reviews; ensured adherence to corporate standards
                     </li>
-                    <li>Led SOX compliance testing for IT operations</li>
-                    <li>Managed security incident response protocols</li>
-                    <li>
-                      Streamlined security training processes, achieving 50%
-                      reduction in completion time
-                    </li>
+                    <li>Led SOX testing for IT operations and partnered with corporate internal audit</li>
+                    <li>Coordinated incident response for device loss/theft and supported physical security assessments</li>
+                    <li>Optimized security training processes (−50% completion time); mentored interns</li>
                   </ul>
                 </div>
               </div>
@@ -409,15 +421,10 @@ export default function CVPage() {
                     </p>
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
-                    <li>
-                      Managed vulnerability assessments and remediation for web
-                      applications
-                    </li>
-                    <li>Delivered security training to 800+ end-users</li>
-                    <li>
-                      Provided SDLC methodology guidance to IT development teams
-                    </li>
-                    <li>Administered JD Edwards change management processes</li>
+                    <li>Supported vulnerability assessment and remediation for LATAM web applications</li>
+                    <li>Delivered security training to 800+ end‑users; established foundational awareness programs</li>
+                    <li>Guided SDLC methodology adoption and secure coding practices for development teams</li>
+                    <li>Administered JD Edwards change management processes with compliant audit trails</li>
                   </ul>
                 </div>
               </div>
