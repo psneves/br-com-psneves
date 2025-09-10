@@ -303,6 +303,18 @@ export default function CV() {
                     "Led training events to strengthen regional engineering capabilities",
                   ]}
                 />
+                <ExperienceItem
+                  title="IT Lead - Technical Product Owner"
+                  company="Johnson & Johnson Innovative Medicine"
+                  period="Sep 2020 — Mar 2023"
+                  location="São José dos Campos-SP"
+                  achievements={[
+                    "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search",
+                    "Defined API contracts and NFRs; improved reliability, performance and observability",
+                    "Established OKRs/KPIs; led demos and executive readouts across markets",
+                    "Drove vendor and internal squads through Agile delivery with audited compliance",
+                  ]}
+                />
               </Section>
               <div className="page-break print:block hidden" />
             </div>
@@ -357,21 +369,7 @@ export default function CV() {
       </div>
       <div className="cv-container bg-white print:bg-white p-8 print:p-0">
         <Section title="Professional Experience (cont.)" icon={<Briefcase size={16} />}>
-          <ExperienceItem
-            title="IT Lead - Technical Product Owner"
-            company="Johnson & Johnson Innovative Medicine"
-            period="Sep 2020 — Mar 2023"
-            location="São José dos Campos-SP"
-            achievements={[
-              "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search",
-              "Defined API contracts and NFRs; improved reliability, performance and observability",
-              "Established OKRs/KPIs; led demos and executive readouts across markets",
-              "Drove vendor and internal squads through Agile delivery with audited compliance",
-            ]}
-          />
-
           <ExperienceItem title="Service Specialist" company="Johnson & Johnson Technology Services" period="Feb 2019 — Aug 2020" achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]} />
-
           <ExperienceItem
             title="Sr. Information Security Analyst"
             company="Johnson & Johnson"
