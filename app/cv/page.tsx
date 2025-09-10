@@ -14,7 +14,7 @@ interface SectionProps {
 function Section({ title, icon, children, className = "" }: SectionProps) {
   return (
     <section className={`mb-6 print:mb-4 print:break-inside-avoid ${className}`}>
-      <header className="flex items-center gap-2 mb-3 print:mb-2  pb-2">
+      <header className="flex items-center gap-2 mb-3 print:mb-2 pb-2">
         <span className="text-blue-600" aria-hidden="true">
           {icon}
         </span>
@@ -205,6 +205,7 @@ export default function CV() {
             font-size: 13px !important;
             margin-bottom: 0.5rem !important;
           }
+
         }
 
         @media screen {
