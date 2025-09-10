@@ -30,9 +30,9 @@ const johnsonAndJohnsonRoles = [
     period: "Sep 2020 — Mar 2023",
     responsibilities: [
       "Owned roadmap and delivery for Janssen Pro LATAM: personalization, SSO (OIDC/SAML), analytics and search across multiple markets",
-      "Defined API contracts, integration patterns and non‑functional requirements; improved system reliability, performance and observability",
+      "Defined API contracts, integration patterns and non-functional requirements; improved system reliability, performance and observability",
       "Established OKRs/KPIs and stakeholder reporting; led demos and executive readouts to align product outcomes with business goals",
-      "Led vendors and internal squads through Agile delivery; managed scope, budget and cross‑regional dependencies",
+      "Led vendors and internal squads through Agile delivery; managed scope, budget and cross-regional dependencies",
       "Ensured compliance and audit readiness focused on privacy and data protection",
     ],
   },
@@ -71,7 +71,7 @@ const johnsonAndJohnsonRoles = [
     period: "Jan 2014 — Jun 2015",
     responsibilities: [
       "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
-      "Delivered security training to 800+ end‑users and established foundational awareness programs",
+      "Delivered security training to 800+ end-users and established foundational awareness programs",
       "Guided SDLC methodology adoption and secure coding practices for development teams",
       "Administered JD Edwards change management processes with compliant audit trails",
       "Maintained IT policies and procedures for LATAM operations",
@@ -98,7 +98,7 @@ const stefaniniRoles = [
     responsibilities: [
       "Led system migration initiatives, successfully translating legacy Delphi applications to modern Java architecture",
       "Engineered payment processing enhancements, implementing support for new credit card types in financial transaction systems",
-      "Utilized enterprise technologies including Java, C#, Struts framework, SQL Server, and MySQL for full-stack development",
+      "Utilized enterprise technologies including Java, C#, Struts framework, SQL Server, and MySQL for Full Stack development",
     ],
   },
 ];
