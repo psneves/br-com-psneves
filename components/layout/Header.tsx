@@ -8,8 +8,8 @@ import { ThemeToggle } from "@/components/ui/theme-toggle"
 export default function Header() {
   const handleDownloadPDF = () => {
     const link = document.createElement("a")
-    link.href = "/PauloNeves.pdf"
-    link.download = "PauloNeves.pdf"
+    link.href = "/Paulo_Neves_CV.pdf"
+    link.download = "Paulo_Neves_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
