@@ -7,8 +7,6 @@ export default function Footer(): JSX.Element {
         <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>Built with</span>
-            <Heart className="w-4 h-4 text-red-500 animate-pulse" fill="currentColor" />
-            <span>using</span>
             <Code2 className="w-4 h-4 text-primary" />
             <span>Next.js, Tailwind CSS & Shadcn/ui</span>
           </div>

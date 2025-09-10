@@ -1,6 +1,6 @@
-import { Code } from "lucide-react"
-import SectionHeader from "../ui/SectionHeader"
-import ProjectCard from "../ui/ProjectCard"
+import { Code } from "lucide-react";
+import SectionHeader from "../ui/SectionHeader";
+import ProjectCard from "../ui/ProjectCard";
 
 export default function PersonalProjects(): JSX.Element {
   return (
@@ -18,24 +18,27 @@ export default function PersonalProjects(): JSX.Element {
         />
 
         <ProjectCard
-          title="Papelando"
-          description="A virtual stationery brand offering customized planners, notebooks, and journals. Focused on combining design and functionality, Papelando helps users stay organized and motivated through personalized print products."
-          image="/images/projects/papelando.webp"
-          url="https://papelando.com.br"
-          status="LIVE"
-          tags={["E-commerce", "Custom Products", "Design"]}
-        />
-
-        <ProjectCard
           title="Marduk Barber"
           description="A premium barbershop website showcasing high-end grooming services, exclusive subscription plans, and a personalized customer experience. Designed to reflect sophistication and style, Marduk Barber connects tradition with modern aesthetics."
           image="/images/projects/marduk-barber.webp"
           url="https://mardukbarber.com.br"
           status="LIVE"
-          tags={["Barbershop", "Premium Services", "Tailored UX", "Modern Design"]}
+          tags={[
+            "Barbershop",
+            "Premium Services",
+            "Tailored UX",
+            "Modern Design",
+          ]}
         />
 
-
+        <ProjectCard
+          title="Papelando"
+          description="A virtual stationery brand offering customized planners, notebooks, and journals. Focused on combining design and functionality, Papelando helps users stay organized and motivated through personalized print products."
+          image="/images/projects/papelando.webp"
+          url="https://papelando.com.br"
+          status="PAUSED"
+          tags={["E-commerce", "Custom Products", "Design"]}
+        />
         <ProjectCard
           title="75 Hard Challenge"
           description="A digital log and motivation tool to track progress on the 75 Hard mental toughness program. Includes daily checklists, habit tracking, and visual streak indicators for enhanced commitment and discipline."
@@ -53,9 +56,7 @@ export default function PersonalProjects(): JSX.Element {
           status="PAUSED"
           tags={["Nutrition", "Macro Tracking", "Flexible Dieting"]}
         />
-
-
       </div>
     </section>
-  )
+  );
 }

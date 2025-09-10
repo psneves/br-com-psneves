@@ -251,22 +251,22 @@ export default function CVPage() {
                   </div>
                   <ul className="text-gray-700 text-sm list-disc pl-5 space-y-1 print:text-xs print:pl-4 print:space-y-0">
                     <li>
-                      Own LATAM strategy and roadmap for AI‑enabled Web/API platforms; align with enterprise architecture and regulatory requirements
+                      Set platform architecture guardrails and reusable patterns to accelerate secure, scalable delivery across squads
                     </li>
                     <li>
-                      Lead design of reusable frameworks, reference architectures and components to accelerate secure, scalable delivery
+                      Elevating technical capabilities— DevSecOps, CI/CD, observability, reliability
                     </li>
                     <li>
-                      Elevate engineering practices (DevSecOps, CI/CD, reliability & performance) with audit readiness
+                      Lead KODA (Key Operations & Development Assistants) AI initiative to reduce software development lead time
                     </li>
                     <li>
-                      Partner with regional BT and global architecture to shape demand, prioritize investments and maximize business value
+                      Orchestrate cross-regional portfolio planning with BT and Global Architecture; sequence demand and funding against OKRs
                     </li>
                     <li>
-                      Build and mentor a high‑performing chapter of principal engineers and SMEs; drive technical coaching and capability building
+                      Govern vendor strategy and capacity at chapter scale; optimize partner tiers, SLAs, and outcomes
                     </li>
                     <li>
-                      Spearhead AI Agents initiative using generative & agentic AI to automate SDLC (dev/test), reducing lead time and improving quality
+                      Oversee environment strategy and operations (dev/QA/prod), security baselines, and cost/usage governance
                     </li>
                   </ul>
                 </div>

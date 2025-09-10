@@ -1,19 +1,17 @@
-import { Briefcase } from "lucide-react"
-import SectionHeader from "../ui/SectionHeader"
-import ExperienceItem from "../ui/ExperienceItem"
+import { Briefcase } from "lucide-react";
+import SectionHeader from "../ui/SectionHeader";
+import ExperienceItem from "../ui/ExperienceItem";
 
-// Define the experience data
 const johnsonAndJohnsonRoles = [
   {
     title: "IT Manager - Full Stack Chapter Lead",
     period: "Sep 2023 — Present",
     responsibilities: [
-      "Own LATAM strategy and roadmap for AI‑enabled Web/API platforms; align with enterprise architecture and regulatory requirements",
-      "Lead design of reusable frameworks, reference architectures and components to accelerate secure, scalable delivery",
-      "Elevate engineering practices (DevSecOps, CI/CD, reliability & performance) with audit readiness",
-      "Partner with regional BT and global architecture to shape demand, prioritize investments, and maximize business value",
-      "Build and mentor a high‑performing chapter of principal engineers and SMEs; drive technical coaching and capability building",
-      "Spearhead AI Agents initiative using generative & agentic AI to automate SDLC (dev/test) and reduce lead time while improving quality",
+      "Elevating technical capabilities— DevSecOps, CI/CD, observability, reliability",
+      "Lead KODA (Key Operations & Development Assistants) AI initiative to reduce software development lead time",
+      "Guide 15 Full Stack initiatives under development across multiple business units",
+      "Coordinate vendor strategy and capacity at chapter scale; optimize partner tiers and outcomes",
+      "Manage chapter budget, resource allocation, and performance metrics to ensure alignment with organizational goals",
     ],
   },
   {
@@ -25,7 +23,6 @@ const johnsonAndJohnsonRoles = [
       "Design individual development plans and career progression pathways for Chapter members",
       "Set strategic direction of Chapter's associated technologies/skillsets and professional training plans",
       "Lead training events and support the development of Chapter members through mentorship programs",
-      "Propose new and better ways of leveraging technology and capabilities under Chapter purview",
     ],
   },
   {
@@ -80,7 +77,7 @@ const johnsonAndJohnsonRoles = [
       "Maintained IT policies and procedures for LATAM operations",
     ],
   },
-]
+];
 
 const mentorInterativaRoles = [
   {
@@ -92,7 +89,7 @@ const mentorInterativaRoles = [
       "Technologies: Java, Google App Engine, SQL Server, PHP, MySQL, PhoneGap",
     ],
   },
-]
+];
 
 const stefaniniRoles = [
   {
@@ -104,7 +101,7 @@ const stefaniniRoles = [
       "Utilized enterprise technologies including Java, C#, Struts framework, SQL Server, and MySQL for full-stack development",
     ],
   },
-]
+];
 
 const fajtecRoles = [
   {
@@ -116,7 +113,7 @@ const fajtecRoles = [
       "Assisted in academic support for programming fundamentals and Java development",
     ],
   },
-]
+];
 
 const dataComputadoresRoles = [
   {
@@ -128,12 +125,16 @@ const dataComputadoresRoles = [
       "Developed instructional materials for basic computer literacy programs",
     ],
   },
-]
+];
 
 export default function Experiences(): JSX.Element {
   return (
     <section className="enhanced-card p-8">
-      <SectionHeader icon={Briefcase} title="Experience" subtitle="Professional Journey" />
+      <SectionHeader
+        icon={Briefcase}
+        title="Experience"
+        subtitle="Professional Journey"
+      />
 
       <div className="space-y-8">
         <ExperienceItem
@@ -178,5 +179,5 @@ export default function Experiences(): JSX.Element {
         />
       </div>
     </section>
-  )
+  );
 }
