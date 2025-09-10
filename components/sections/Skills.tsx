@@ -19,19 +19,18 @@ function SkillBadge({ skill, index }: SkillBadgeProps) {
 export default function Skills(): JSX.Element {
   const skills = [
     "Full‑Stack (React/NextJS/NodeJS/Python)",
-    "API Platforms & Microservices",
+    "API Platforms",
     "Cloud (AWS/GCP/Azure)",
     "AI/IA Architecture",
     "Generative & Agentic AI",
     "Kubernetes & Docker",
     "DevSecOps & CI/CD",
-    "Enterprise Architecture & Standards",
+    "Enterprise Architecture",
     "Security, Privacy & Compliance",
-    "Audit Readiness (SOX)",
     "Product & Platform Management",
     "Roadmapping & OKRs",
     "Stakeholder Management",
-    "People Leadership & Mentoring",
+    "People Leadership",
     "Vendor & Budget Management",
   ];
 

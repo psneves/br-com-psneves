@@ -26,9 +26,10 @@ export const usePDFGenerator = () => {
     setError(null)
 
     try {
-      // Dynamic import for better code splitting
-      const mod: any = await import('html2pdf.js')
+      // Always import the bundled build for stability across environments
+      const mod: any = await import('html2pdf.js/dist/html2pdf.bundle.min.js')
       const html2pdf = mod?.default?.default || mod?.default || mod
+      if (typeof html2pdf !== 'function') throw new Error('html2pdf failed to load')
 
       const defaultOptions = {
         filename: options.filename || 'Paulo_Neves_CV.pdf',
@@ -49,6 +50,9 @@ export const usePDFGenerator = () => {
       element.style.color = 'black'
       element.style.fontSize = '12px'
       element.style.lineHeight = '1.4'
+      // Ensure the element participates in layout
+      element.style.visibility = 'visible'
+      element.style.opacity = '1'
 
       // Configure html2pdf options
       const pdfOptions = {
@@ -67,10 +71,13 @@ export const usePDFGenerator = () => {
           scrollX: 0,
           scrollY: 0,
           dpi: 192,
+          imageTimeout: 0,
+          removeContainer: true,
           onclone: (clonedDoc: Document) => {
             // Apply PDF styles to cloned document
             const style = clonedDoc.createElement('style')
             style.textContent = `
+              html, body { background: #ffffff !important; }
               .pdf-export {
                 font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
                 font-size: 11px !important;
@@ -117,6 +124,8 @@ export const usePDFGenerator = () => {
       }
 
       // Generate PDF
+      // Small delay to ensure layout flush
+      await new Promise((r) => setTimeout(r, 100))
       await html2pdf()
         .set(pdfOptions)
         .from(element)
@@ -144,9 +153,12 @@ export const usePDFGenerator = () => {
     try {
       // Create a temporary DOM element for PDF generation
       const tempDiv = document.createElement('div')
-      tempDiv.style.position = 'absolute'
-      tempDiv.style.left = '-9999px'
-      tempDiv.style.top = '-9999px'
+      tempDiv.style.position = 'fixed'
+      tempDiv.style.left = '0'
+      tempDiv.style.top = '0'
+      tempDiv.style.visibility = 'hidden'
+      tempDiv.style.pointerEvents = 'none'
+      tempDiv.style.zIndex = '9999'
       tempDiv.style.width = '794px'
       tempDiv.style.background = 'white'
       
@@ -162,8 +174,13 @@ export const usePDFGenerator = () => {
       const root = ReactDOM.createRoot(tempDiv)
       root.render(pdfElement)
 
-      // Wait for render
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Wait for render + fonts
+      await new Promise(requestAnimationFrame)
+      await new Promise(requestAnimationFrame)
+      await new Promise((r) => setTimeout(r, 200))
+      if ((document as any).fonts?.ready) {
+        try { await (document as any).fonts.ready } catch {}
+      }
 
       // Generate PDF from the rendered element
       const result = await generatePDF({ current: tempDiv }, options)
