@@ -205,7 +205,6 @@ export default function CV() {
             font-size: 13px !important;
             margin-bottom: 0.5rem !important;
           }
-
         }
 
         @media screen {
@@ -234,32 +233,36 @@ export default function CV() {
       <div className="cv-container bg-white print:bg-white">
         <div className="p-8 print:p-0">
           {/* Header */}
-          <header className="mb-8 print:mb-6 no-break">
-            <div className="text-center border-b-2 border-blue-600 pb-6">
-              <h1 className="text-3xl print:text-2xl font-bold text-gray-900 mb-2">Paulo Neves</h1>
-              <p className="text-xl print:text-lg text-blue-600 font-medium mb-4">Full Stack Engineering Manager | People Leader</p>
-
+          <header className="mb-4 print:mb-3 space-y-0 no-break">
+            <div className="text-center border-b-2 border-blue-600 pb-3">
+              <h1 className="text-4xl font-bold text-gray-900 -mb-5">Paulo Neves</h1>
+              <p className="text-lg print:text-base text-blue-600 font-medium mb-1">Full Stack Engineering Manager | People Leader</p>
+        
               {/* Contact Information */}
-              <div className="flex flex-wrap justify-center gap-4 text-sm print:text-xs text-gray-600">
-                <a href="mailto:paulo@psneves.com.br" className="flex items-center gap-1 hover:text-blue-600">
-                  <Mail size={14} aria-hidden="true" />
-                  paulo@psneves.com.br
-                </a>
+              <div className="flex flex-wrap justify-center gap-3 text-xs print:text-xs text-gray-600">
                 <span className="flex items-center gap-1">
-                  <MapPin size={14} aria-hidden="true" />
+                  <MapPin size={12} aria-hidden="true" />
                   Jacareí-SP, Brazil
                 </span>
                 <a href="https://br.linkedin.com/in/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
-                  <Linkedin size={14} aria-hidden="true" />
-                  LinkedIn
+                  <Linkedin size={12} aria-hidden="true" />
+                  LinkedIn @psneves
                 </a>
                 <a href="https://github.com/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
-                  <Github size={14} aria-hidden="true" />
-                  GitHub
+                  <Github size={12} aria-hidden="true" />
+                  GitHub @psneves
                 </a>
                 <a href="https://psneves.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
-                  <Globe size={14} aria-hidden="true" />
+                  <Globe size={12} aria-hidden="true" />
                   psneves.com.br
+                </a>
+                <a href="mailto:paulo@psneves.com.br" className="flex items-center gap-1 hover:text-blue-600">
+                  <Mail size={12} aria-hidden="true" />
+                  paulo@psneves.com.br
+                </a>
+                <a href="tel:+5512999999999" className="flex items-center gap-1 hover:text-blue-600">
+                  <span className="sr-only">Phone</span>
+                  📞 +55 (12) 99180-1173
                 </a>
               </div>
             </div>
