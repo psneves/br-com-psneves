@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages, Phone } from "lucide-react";
+import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages, Phone, Home, ArrowLeft } from "lucide-react";
 
 // Semantic section components
 interface SectionProps {
@@ -249,7 +249,11 @@ export default function CV() {
       `}</style>
 
       {/* Download Button - Screen Only */}
-      <div className="fixed top-4 right-4 z-10 print-hidden">
+      <div className="fixed top-4 right-4 z-10 print-hidden flex gap-2">
+        <button onClick={() => (window.location.href = "/")} className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="Go to Home">
+          <ArrowLeft size={16} />
+          Return
+        </button>
         <button
           onClick={handleDownloadPDF}
           className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
@@ -309,7 +313,7 @@ export default function CV() {
             <div className="lg:col-span-2 print:col-span-2 space-y-6 print:space-y-4">
               {/* Professional Summary */}
               <Section title="Executive Summary" icon={<Users size={16} />}>
-                <p className="text-gray-700 leading-relaxed text-sm print:text-xs">
+                <p className="text-gray-700 leading-relaxed text-sm print:text-xs print:justify-normal">
                   Technology leader with <strong>15+ years</strong> delivering secure, scalable web/API platforms at enterprise scale. Combines hands-on Full Stack engineering with solution architecture, product strategy, and stakeholder management.
                   Currently leads engineering chapter and AI initiatives that accelerate SDLC with generative/agentic approaches while coaching senior engineers and raising technical standards across multiple SQUADs.
                 </p>
@@ -408,10 +412,17 @@ export default function CV() {
       </div>
       <div className="cv-container bg-white print:bg-white p-8 print:p-0">
         <Section title="Professional Experience (cont.)" icon={<Briefcase size={16} />}>
-          <ExperienceItem title="Service Specialist" company="Johnson & Johnson - Technology Services" period="Feb 2019 — Aug 2020" achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]} />
+          <ExperienceItem
+            title="Service Specialist"
+            company="Johnson & Johnson - Technology Services"
+            location="São José dos Campos-SP"
+            period="Feb 2019 — Aug 2020"
+            achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]}
+          />
           <ExperienceItem
             title="Sr. Information Security Analyst"
             company="Johnson & Johnson - Technology Services"
+            location="São José dos Campos-SP"
             period="Apr 2018 — Feb 2019"
             achievements={["Security liaison for Corporate, Vision Care and LifeScan across LATAM", "Led app-security assessments during M&A due diligence and integrations"]}
           />
@@ -419,6 +430,7 @@ export default function CV() {
           <ExperienceItem
             title="Information Security Analyst"
             company="Johnson & Johnson - Information Security & Risk Management"
+            location="São José dos Campos-SP"
             period="Jun 2015 — Mar 2018"
             achievements={["Drove enterprise security awareness programs; performed risk and compliance reviews"]}
           />
@@ -426,6 +438,7 @@ export default function CV() {
           <ExperienceItem
             title="Information Security Intern"
             company="Johnson & Johnson - Information Security & Risk Management"
+            location="São José dos Campos-SP"
             period="2014 — 2015"
             achievements={[
               "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
@@ -437,6 +450,7 @@ export default function CV() {
           <ExperienceItem
             title="Software Developer"
             company="Mentor Interativa"
+            location="São José dos Campos-SP"
             period="2011 — 2013"
             achievements={["Developed learning management system with social network integration", "Created and launched the company's first mobile application"]}
           />
@@ -444,20 +458,25 @@ export default function CV() {
           <ExperienceItem
             title="Jr. Developer"
             company="Stefanini"
+            location="Jaguariúna-SP"
             period="2010 — 2011"
-            achievements={[
-              "Led system migration initiatives, successfully translating legacy Delphi applications to modern Java architecture",
-              "Engineered payment processing enhancements, implementing support for new credit card types in financial transaction systems",
-            ]}
+            achievements={["Led system migration initiatives, successfully translating legacy Delphi applications to modern Java architecture", "Engineered payment processing enhancements - new credit card types in financial transaction systems"]}
           />
 
-          <ExperienceItem title="Java Intern" company="FAJTec" period="2010 — 2011" achievements={["Helped students of the course Introduction to Programming in Java to understand the course content", "Created and applied tests for the students"]} />
+          <ExperienceItem
+            location="Jaguariúna-SP"
+            title="Instructor - Java Programming"
+            company="FAJTec"
+            period="2010 — 2011"
+            achievements={["Helped students of the course Introduction to Programming in Java to understand the course content", "Created and applied tests for the students"]}
+          />
 
           <ExperienceItem
-            title="Instructor"
+            title="Instructor - Microsoft Office"
             company="Data Computadores"
+            location="Jaguariúna-SP"
             period="2008 — 2009"
-            achievements={["Taught students how to use computer, change Windows basic configurations and operate Microsoft Office applications", "Provided personalized computer training for individuals and small groups"]}
+            achievements={["Taught students on basic computer skills, including Windows configuration and Microsoft Office applications", "Provided personalized computer training for individuals and small groups"]}
           />
         </Section>
       </div>
