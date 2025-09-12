@@ -253,7 +253,7 @@ export default function CV() {
           <header className="mb-4 print:mb-3 space-y-0 no-break">
             <div className="text-center border-b-2 border-blue-600 pb-3">
               <h1 className="text-4xl font-bold text-gray-900 -mb-5">Paulo Neves</h1>
-              <p className="text-lg print:text-base text-blue-600 font-medium mb-1">Full Stack Engineering Manager | People Leader</p>
+                <p className="text-lg print:text-center text-blue-600 font-medium mb-1 text-center">Full Stack Engineering Manager | People Leader</p>
 
               {/* Contact Information */}
               <div className="flex flex-wrap justify-center gap-3 text-xs print:text-xs text-gray-600">
