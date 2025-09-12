@@ -16,7 +16,7 @@ const johnsonAndJohnsonRoles = [
   },
   {
     title: "IT Lead - Full Stack Chapter Lead",
-    period: "Apr 2023 — Oct 2023",
+    period: "Apr 2023 — Aug 2023",
     responsibilities: [
       "Interview and onboard talent as required by digital products and Chapter growth",
       "Act as point of escalation for talent resource issues and Chapter member performance management",
