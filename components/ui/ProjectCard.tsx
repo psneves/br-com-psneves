@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 interface ProjectCardProps {
   title: string
@@ -18,20 +19,32 @@ export default function ProjectCard({ title, description, image, url, status, ta
         <div className="relative w-full md:w-1/3 h-48 md:h-auto bg-muted flex items-center justify-center">
           <Image src={image || "/placeholder.svg"} alt={title} fill className="object-contain p-2" />
           <div className="absolute top-3 right-3 z-10">
-            <span
-              className={`px-2 py-1 ${
-                status === "LIVE"
-                  ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
-                  : "bg-amber-500/15 text-amber-700 dark:text-amber-400 border-amber-500/20"
-              } text-xs font-medium rounded-full border flex items-center gap-1`}
-            >
-              <span
-                className={`w-2 h-2 ${
-                  status === "LIVE" ? "bg-emerald-500" : "bg-amber-500"
-                } rounded-full ${status === "LIVE" ? "animate-pulse" : ""}`}
-              ></span>
-              {status}
-            </span>
+            {(() => {
+              const isLive = status === "LIVE"
+              return (
+                <span
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium shadow-sm ring-1",
+                    isLive
+                      ? "bg-emerald-500/90 ring-emerald-500/50 text-white"
+                      : "bg-amber-500/90 ring-amber-500/50 text-white"
+                  )}
+                >
+                  <span className="relative flex h-2.5 w-2.5">
+                    {isLive && (
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-30" />
+                    )}
+                    <span
+                      className={cn(
+                        "relative inline-flex h-2.5 w-2.5 rounded-full",
+                        isLive ? "bg-emerald-700" : "bg-amber-700"
+                      )}
+                    />
+                  </span>
+                  <span className="tracking-wide">{isLive ? "LIVE" : "PAUSED"}</span>
+                </span>
+              )
+            })()}
           </div>
         </div>
         <div className="p-5 flex-1">
