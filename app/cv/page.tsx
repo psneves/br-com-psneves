@@ -15,10 +15,10 @@ function Section({ title, icon, children, className = "" }: SectionProps) {
   return (
     <section className={`mb-6 print:mb-4 print:break-inside-avoid ${className}`}>
       <header className="flex items-center gap-2">
-        <span className="text-blue-600" aria-hidden="true">
+        <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
           {icon}
         </span>
-        <h2 className="text-lg font-semibold text-gray-900 uppercase tracking-wide print:text-base section-header">{title}</h2>
+        <h2 className="text-lg font-semibold text-gray-900 uppercase tracking-wide leading-none print:text-base section-header">{title}</h2>
       </header>
       <div className={className}>{children}</div>
     </section>
@@ -81,8 +81,8 @@ interface SkillGroupProps {
 function SkillGroup({ title, skills, icon }: SkillGroupProps) {
   return (
     <div className="mb-4 print:mb-3">
-      <h3 className="flex items-center gap-2 font-medium text-gray-900 text-sm mb-2">
-        <span className="text-blue-600" aria-hidden="true">
+      <h3 className="flex items-center gap-2 font-medium text-gray-900 text-sm mb-2 leading-none">
+        <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
           {icon}
         </span>
         {title}
@@ -133,8 +133,8 @@ export default function CV() {
           }
 
           body {
-            font-size: 11px;
-            line-height: 1.3;
+            font-size: 12px;
+            line-height: 1.4;
           }
 
           .cv-container {
@@ -155,13 +155,21 @@ export default function CV() {
             display: none !important;
           }
 
-          /* Ensure colors are preserved */
+          /* Prefer justified alignment for printed text */
+          .cv-container p,
+          .cv-container li span:last-child {
+            text-align: justify !important;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+          }
+
+          /* Ensure colors are preserved (darker blue for print) */
           .text-blue-600 {
-            color: #2563eb !important;
+            color: #1e40af !important; /* tailwind blue-800 */
           }
 
           .border-blue-600 {
-            border-color: #2563eb !important;
+            border-color: #1e40af !important;
           }
 
           .bg-green-100 {
@@ -174,11 +182,11 @@ export default function CV() {
 
           /* Adjust right column sizing for better fit */
           .print\\:text-xs {
-            font-size: 10px !important;
+            font-size: 11px !important;
           }
 
           .print\\:text-sm {
-            font-size: 11px !important;
+            font-size: 12px !important;
           }
 
           .print\\:mb-2 {
@@ -193,19 +201,23 @@ export default function CV() {
             margin-top: 0.75rem !important;
           }
 
-          /* Compact skill tags */
+          /* Compact skill tags (slightly larger for readability) */
           .skill-tag {
-            font-size: 9px !important;
+            font-size: 10px !important;
             padding: 0.125rem 0.375rem !important;
             margin: 0.125rem !important;
           }
 
           /* Reduce section headers */
           .section-header {
-            font-size: 13px !important;
+            font-size: 14px !important;
             margin-bottom: 0.5rem !important;
           }
         }
+
+        /* Align icons vertically with labels */
+        .icon-align { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+        .icon-align svg { display: block; }
 
         @media screen {
           .cv-container {
@@ -215,6 +227,11 @@ export default function CV() {
             max-width: 8.5in;
             min-height: 11in;
           }
+
+          /* Darker blue tone for on-screen CV page elements */
+          .cv-container .text-blue-600 { color: #1e40af; }
+          .cv-container .border-blue-600 { border-color: #1e40af; }
+          .cv-container .hover\\:text-blue-600:hover { color: #1e40af; }
         }
       `}</style>
 
