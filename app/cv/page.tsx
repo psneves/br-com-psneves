@@ -14,7 +14,7 @@ interface SectionProps {
 function Section({ title, icon, children, className = "" }: SectionProps) {
   return (
     <section className={`mb-6 print:mb-4 print:break-inside-avoid ${className}`}>
-      <header className="flex items-center gap-2">
+      <header className="flex items-baseline gap-2">
         <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
           {icon}
         </span>
@@ -239,7 +239,7 @@ export default function CV() {
       <div className="fixed top-4 right-4 z-10 print-hidden">
         <button
           onClick={handleDownloadPDF}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
           aria-label="Download CV as PDF"
         >
           <Download size={16} aria-hidden="true" />
