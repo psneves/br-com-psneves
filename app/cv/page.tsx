@@ -43,7 +43,7 @@ function ExperienceItem({ title, company, period, location, achievements, curren
             <h3 className="font-semibold text-gray-900 text-base print:text-sm">{title}</h3>
             <p className="text-blue-600 font-medium text-sm print:text-xs">{company}</p>
           </div>
-          {current && <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium print:hidden">Current</span>}
+          {current && <span className="bg-green-100 text-green-900 text-xs px-2 py-1 rounded-full font-medium print:hidden">Current</span>}
         </div>
         <div className="flex space-y-0 items-center gap-4 text-xs text-gray-600 mt-1">
           <span className="flex items-center gap-1">
