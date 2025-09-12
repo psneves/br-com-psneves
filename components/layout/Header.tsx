@@ -4,6 +4,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Linkedin, Mail, MapPin, Github, FileDown } from "lucide-react"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default function Header() {
   const handleDownloadPDF = () => {
@@ -26,6 +32,10 @@ export default function Header() {
                 src="/images/perfil-quadrada.webp" 
                 alt="Paulo Neves" 
                 fill 
+                priority
+                sizes="(min-width: 1024px) 96px, 80px"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><rect width='10' height='10' fill='%23e5e7eb'/></svg>"
                 className="object-cover group-hover:scale-105 transition-transform duration-300" 
               />
             </div>
@@ -58,37 +68,56 @@ export default function Header() {
           {/* Actions */}
           <div className="flex items-center gap-2 lg:gap-3">
             <ThemeToggle />
-            <div className="flex flex-wrap gap-2 lg:gap-3">
-              <button
-                onClick={handleDownloadPDF}
-                className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3"
-              >
-                <FileDown size={16} />
-                <span className="hidden sm:inline">Save PDF</span>
-              </button>
+            <TooltipProvider delayDuration={100}>
+              <div className="flex flex-wrap gap-2 lg:gap-3">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      onClick={handleDownloadPDF}
+                      className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3"
+                      aria-label="Save PDF"
+                    >
+                      <FileDown size={16} />
+                      <span className="hidden sm:inline">Save PDF</span>
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">Save PDF</TooltipContent>
+                </Tooltip>
 
-              <Link
-                href="https://br.linkedin.com/in/psneves"
-                target="_blank"
-                className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
-              >
-                <Linkedin size={16} />
-                <span className="hidden sm:inline">LinkedIn</span>
-              </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://br.linkedin.com/in/psneves"
+                      target="_blank"
+                      className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin size={16} />
+                      <span className="hidden sm:inline">LinkedIn</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">LinkedIn</TooltipContent>
+                </Tooltip>
 
-              <Link
-                href="https://github.com/psneves"
-                target="_blank"
-                className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
-              >
-                <Github size={16} />
-                <span className="hidden sm:inline">GitHub</span>
-              </Link>
-            </div>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="https://github.com/psneves"
+                      target="_blank"
+                      className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
+                      aria-label="GitHub"
+                    >
+                      <Github size={16} />
+                      <span className="hidden sm:inline">GitHub</span>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">GitHub</TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
           </div>
         </div>
       </div>
     </header>
   )
 }
-
