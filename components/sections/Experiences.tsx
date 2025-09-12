@@ -40,7 +40,6 @@ const johnsonAndJohnsonRoles = [
     title: "Service Specialist - Digital & RPA",
     period: "Feb 2019 — Aug 2020",
     responsibilities: [
-      "Architected intelligent automation (RPA) solutions and established platform governance aligned to enterprise standards",
       "Coordinated PoCs for automation opportunities; quantified ROI and scaled successful patterns across functions",
       "Established QA frameworks, delivery metrics and risk escalation protocols for automation initiatives",
       "Partnered with regional and global IT stakeholders to advance digital transformation",
