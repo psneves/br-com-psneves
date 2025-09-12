@@ -338,7 +338,7 @@ export default function CV() {
                 <ExperienceItem
                   title="IT Lead - Full Stack Chapter Lead"
                   company="Johnson & Johnson - Technology Services"
-                  period="Apr 2023 — Oct 2023"
+                  period="Apr 2023 — Aug 2023"
                   location="São José dos Campos-SP"
                   achievements={[
                     "Interviewed/onboarded engineers; set strategic direction for chapter technologies and training",
