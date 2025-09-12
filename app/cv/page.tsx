@@ -328,10 +328,10 @@ export default function CV() {
                   location="São José dos Campos-SP"
                   current={true}
                   achievements={[
-                    "Elevate capabilities in DevSecOps, CI/CD, observability and service reliability through chapter programs",
-                    "Lead KODA (Key Operations & Development Assistants) initiative to accelerate SDLC with AI",
                     "Guide 15 Full Stack parallel initiatives; technical reference and/or budget management",
                     "Govern vendor strategy and capacity; optimize partner tiers, SLAs and delivery outcomes",
+                    "Elevate capabilities in DevSecOps, CI/CD, observability and service reliability through chapter programs",
+                    "Lead KODA (Key Operations & Development Assistants) initiative to accelerate SDLC with AI",
                   ]}
                 />
 
@@ -342,7 +342,7 @@ export default function CV() {
                   location="São José dos Campos-SP"
                   achievements={[
                     "Interviewed/onboarded engineers; set strategic direction for chapter technologies and training",
-                    "Created individual development plans and career pathways; mentored senior engineers",
+                    "Created individual development plans and career pathways; mentored senior and junior engineers",
                     "Led training events to strengthen regional engineering capabilities",
                   ]}
                 />
