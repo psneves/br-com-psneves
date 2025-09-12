@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages } from "lucide-react";
+import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages, Phone } from "lucide-react";
 
 // Semantic section components
 interface SectionProps {
@@ -216,8 +216,15 @@ export default function CV() {
         }
 
         /* Align icons vertically with labels */
-        .icon-align { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
-        .icon-align svg { display: block; }
+        .icon-align {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+        }
+        .icon-align svg {
+          display: block;
+        }
 
         @media screen {
           .cv-container {
@@ -229,9 +236,15 @@ export default function CV() {
           }
 
           /* Darker blue tone for on-screen CV page elements */
-          .cv-container .text-blue-600 { color: #1e40af; }
-          .cv-container .border-blue-600 { border-color: #1e40af; }
-          .cv-container .hover\\:text-blue-600:hover { color: #1e40af; }
+          .cv-container .text-blue-600 {
+            color: #1e40af;
+          }
+          .cv-container .border-blue-600 {
+            border-color: #1e40af;
+          }
+          .cv-container .hover\\:text-blue-600:hover {
+            color: #1e40af;
+          }
         }
       `}</style>
 
@@ -250,36 +263,41 @@ export default function CV() {
       <div className="cv-container bg-white print:bg-white">
         <div className="p-8 print:p-0">
           {/* Header */}
-          <header className="mb-4 print:mb-3 space-y-0 no-break">
-            <div className="text-center border-b-2 border-blue-600 pb-3">
-              <h1 className="text-4xl font-bold text-gray-900 -mb-5">Paulo Neves</h1>
-                <p className="text-lg print:text-center text-blue-600 font-medium mb-1 text-center">Full Stack Engineering Manager | People Leader</p>
+          <header className="mb-6 print:mb-4 no-break">
+            <div className="text-center w-full border-b-2 border-blue-600 pb-4">
+              {/* Name and Title */}
+              <div className="mb-4 text-center">
+                <h1 className="text-4xl font-bold text-gray-900 mb-2 print:text-3xl">Paulo Neves</h1>
+                <div className="w-full flex flex-col items-center">
+                  <p className="text-lg text-blue-600 font-medium">Full Stack Engineering Manager | People Leader</p>
+                </div>
+              </div>
 
               {/* Contact Information */}
-              <div className="flex flex-wrap justify-center gap-3 text-xs print:text-xs text-gray-600">
+              <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-1 text-xs print:text-xs text-gray-600 print:gap-x-12">
                 <span className="flex items-center gap-1">
                   <MapPin size={12} aria-hidden="true" />
                   Jacareí-SP, Brazil
                 </span>
-                <a href="https://br.linkedin.com/in/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
+                <a href="https://br.linkedin.com/in/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
                   <Linkedin size={12} aria-hidden="true" />
                   LinkedIn @psneves
                 </a>
-                <a href="https://github.com/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
+                <a href="https://github.com/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
                   <Github size={12} aria-hidden="true" />
                   GitHub @psneves
                 </a>
-                <a href="https://psneves.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600">
+                <a href="https://psneves.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
                   <Globe size={12} aria-hidden="true" />
                   psneves.com.br
                 </a>
-                <a href="mailto:paulo@psneves.com.br" className="flex items-center gap-1 hover:text-blue-600">
+                <a href="mailto:paulo@psneves.com.br" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
                   <Mail size={12} aria-hidden="true" />
                   paulo@psneves.com.br
                 </a>
-                <a href="tel:+5512999999999" className="flex items-center gap-1 hover:text-blue-600">
-                  <span className="sr-only">Phone</span>
-                  📞 +55 (12) 99180-1173
+                <a href="tel:+551299180173" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Phone size={12} aria-hidden="true" />
+                  +55 (12) 99180-1173
                 </a>
               </div>
             </div>
@@ -407,7 +425,7 @@ export default function CV() {
 
           <ExperienceItem
             title="Information Security Intern"
-            company="Johnson & Johnson - - Information Security & Risk Management"
+            company="Johnson & Johnson - Information Security & Risk Management"
             period="2014 — 2015"
             achievements={[
               "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
