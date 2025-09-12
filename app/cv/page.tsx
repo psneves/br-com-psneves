@@ -417,7 +417,7 @@ export default function CV() {
             company="Johnson & Johnson - Technology Services"
             location="São José dos Campos-SP"
             period="Feb 2019 — Aug 2020"
-            achievements={["Architected RPA solutions and platform governance aligned to enterprise standards"]}
+            achievements={["Partnered with regional and global IT stakeholders to advance digital transformation"]}
           />
           <ExperienceItem
             title="Sr. Information Security Analyst"
@@ -439,7 +439,7 @@ export default function CV() {
             title="Information Security Intern"
             company="Johnson & Johnson - Information Security & Risk Management"
             location="São José dos Campos-SP"
-            period="2014 — 2015"
+            period="Jan 2014 — May 2015"
             achievements={[
               "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
               "Delivered security training to 800+ end-users and established foundational awareness programs",
@@ -451,7 +451,7 @@ export default function CV() {
             title="Software Developer"
             company="Mentor Interativa"
             location="São José dos Campos-SP"
-            period="2011 — 2013"
+            period="Dec 2011 — Nov 2013"
             achievements={["Developed learning management system with social network integration", "Created and launched the company's first mobile application"]}
           />
 
@@ -459,7 +459,7 @@ export default function CV() {
             title="Jr. Developer"
             company="Stefanini"
             location="Jaguariúna-SP"
-            period="2010 — 2011"
+            period="Jan 2011 — Dec 2011"
             achievements={["Led system migration initiatives, successfully translating legacy Delphi applications to modern Java architecture", "Engineered payment processing enhancements - new credit card types in financial transaction systems"]}
           />
 
@@ -467,7 +467,7 @@ export default function CV() {
             location="Jaguariúna-SP"
             title="Instructor - Java Programming"
             company="FAJTec"
-            period="2010 — 2011"
+            period="Jan 2010 — Jul 2010"
             achievements={["Helped students of the course Introduction to Programming in Java to understand the course content", "Created and applied tests for the students"]}
           />
 
@@ -475,7 +475,7 @@ export default function CV() {
             title="Instructor - Microsoft Office"
             company="Data Computadores"
             location="Jaguariúna-SP"
-            period="2008 — 2009"
+            period="May 2008 — Sep 2009"
             achievements={["Taught students on basic computer skills, including Windows configuration and Microsoft Office applications", "Provided personalized computer training for individuals and small groups"]}
           />
         </Section>
