@@ -7,41 +7,37 @@ const johnsonAndJohnsonRoles = [
     title: "IT Manager - Full Stack Chapter Lead",
     period: "Sep 2023 — Present",
     responsibilities: [
-      "Elevating technical capabilities— DevSecOps, CI/CD, observability, reliability",
-      "Lead KODA (Key Operations & Development Assistants) AI initiative to reduce software development lead time",
-      "Guide 15 Full Stack initiatives under development across multiple business units",
-      "Coordinate vendor strategy and capacity at chapter scale; optimize partner tiers and outcomes",
-      "Manage chapter budget, resource allocation, and performance metrics to ensure alignment with organizational goals",
+      "Guide 15 Full Stack parallel initiatives; technical reference and/or budget management",
+      "Govern vendor strategy and capacity; optimize partner tiers, SLAs and delivery outcomes",
+      "Elevate capabilities in DevSecOps, CI/CD, observability and service reliability through chapter programs",
+      "Lead KODA (Key Operations & Development Assistants) initiative to accelerate SDLC with AI",
     ],
   },
   {
     title: "IT Lead - Full Stack Chapter Lead",
     period: "Apr 2023 — Aug 2023",
     responsibilities: [
-      "Interview and onboard talent as required by digital products and Chapter growth",
-      "Act as point of escalation for talent resource issues and Chapter member performance management",
-      "Design individual development plans and career progression pathways for Chapter members",
-      "Set strategic direction of Chapter's associated technologies/skillsets and professional training plans",
-      "Lead training events and support the development of Chapter members through mentorship programs",
+      "Interviewed/onboarded engineers; set strategic direction for chapter technologies and training",
+      "Created individual development plans and career pathways; mentored senior and junior engineers",
+      "Led training events to strengthen regional engineering capabilities",
     ],
   },
   {
     title: "IT Lead - Technical Product Owner",
     period: "Sep 2020 — Mar 2023",
     responsibilities: [
-      "Owned roadmap and delivery for Janssen Pro LATAM: personalization, SSO (OIDC/SAML), analytics and search across multiple markets",
-      "Defined API contracts, integration patterns and non-functional requirements; improved system reliability, performance and observability",
-      "Established OKRs/KPIs and stakeholder reporting; led demos and executive readouts to align product outcomes with business goals",
-      "Led vendors and internal squads through Agile delivery; managed scope, budget and cross-regional dependencies",
-      "Ensured compliance and audit readiness focused on privacy and data protection",
+      "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search for JanssenProLATAM.com",
+      "Defined API contracts and NFRs; improved reliability, performance and observability",
+      "Established OKRs/KPIs; led demos and executive readouts across markets",
+      "Drove vendor and internal squads through Agile delivery with audited compliance",
     ],
   },
   {
     title: "Service Specialist - Digital & RPA",
     period: "Feb 2019 — Aug 2020",
     responsibilities: [
-      "Coordinated PoCs for automation opportunities; quantified ROI and scaled successful patterns across functions",
-      "Established QA frameworks, delivery metrics and risk escalation protocols for automation initiatives",
+      "Main technical point of contact and escalation for all digital initiatives, facilitating technical discussions and issue resolution",
+      "Coordinated PoCs for automation opportunities using BluePrism and python scripting",
       "Partnered with regional and global IT stakeholders to advance digital transformation",
     ],
   },
@@ -82,11 +78,7 @@ const mentorInterativaRoles = [
   {
     title: "Software Developer",
     period: "Dec 2011 — Nov 2013",
-    responsibilities: [
-      "Developed learning management system with social network integration",
-      "Created and launched the company's first mobile application",
-      "Technologies: Java, Google App Engine, SQL Server, PHP, MySQL, PhoneGap",
-    ],
+    responsibilities: ["Developed learning management system with social network integration", "Created and launched the company's first mobile application", "Technologies: Java, Google App Engine, SQL Server, PHP, MySQL, PhoneGap"],
   },
 ];
 
@@ -129,53 +121,18 @@ const dataComputadoresRoles = [
 export default function Experiences(): JSX.Element {
   return (
     <section className="enhanced-card p-8">
-      <SectionHeader
-        icon={Briefcase}
-        title="Experience"
-        subtitle="Professional Journey"
-      />
+      <SectionHeader icon={Briefcase} title="Experience" subtitle="Professional Journey" />
 
       <div className="space-y-8">
-        <ExperienceItem
-          company="Johnson & Johnson"
-          logo="/images/logos/jj-logo.webp"
-          location="São José dos Campos-SP, Brazil"
-          period="2014 — Present"
-          roles={johnsonAndJohnsonRoles}
-          defaultExpandedRole="IT Manager - Web and API Development"
-        />
+        <ExperienceItem company="Johnson & Johnson" logo="/images/logos/jj-logo.webp" location="São José dos Campos-SP, Brazil" period="2014 — Present" roles={johnsonAndJohnsonRoles} defaultExpandedRole="IT Manager - Web and API Development" />
 
-        <ExperienceItem
-          company="Mentor Interativa"
-          logo="/images/logos/mentor-logo.webp"
-          location="São José dos Campos-SP, Brazil"
-          period="Dec 2011 — Nov 2013"
-          roles={mentorInterativaRoles}
-        />
+        <ExperienceItem company="Mentor Interativa" logo="/images/logos/mentor-logo.webp" location="São José dos Campos-SP, Brazil" period="Dec 2011 — Nov 2013" roles={mentorInterativaRoles} />
 
-        <ExperienceItem
-          company="Stefanini"
-          logo="/images/logos/stefanini-logo.webp"
-          location="Jaguariúna-SP, Brazil"
-          period="Jan 2011 — Dec 2011"
-          roles={stefaniniRoles}
-        />
+        <ExperienceItem company="Stefanini" logo="/images/logos/stefanini-logo.webp" location="Jaguariúna-SP, Brazil" period="Jan 2011 — Dec 2011" roles={stefaniniRoles} />
 
-        <ExperienceItem
-          company="FAJTec - Faculdade Jaguariúna"
-          logo="/images/logos/fajtec-logo.png"
-          location="Jaguariúna-SP, Brazil"
-          period="Jan 2010 — Jul 2010"
-          roles={fajtecRoles}
-        />
+        <ExperienceItem company="FAJTec - Faculdade Jaguariúna" logo="/images/logos/fajtec-logo.png" location="Jaguariúna-SP, Brazil" period="Jan 2010 — Jul 2010" roles={fajtecRoles} />
 
-        <ExperienceItem
-          company="Data Computadores"
-          logo="/images/logos/data-computadores-logo.png"
-          location="Jaguariúna-SP, Brazil"
-          period="May 2008 — Sep 2009"
-          roles={dataComputadoresRoles}
-        />
+        <ExperienceItem company="Data Computadores" logo="/images/logos/data-computadores-logo.png" location="Jaguariúna-SP, Brazil" period="May 2008 — Sep 2009" roles={dataComputadoresRoles} />
       </div>
     </section>
   );
