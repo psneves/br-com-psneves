@@ -43,37 +43,14 @@ export default function RoleItem({ title, period, responsibilities, defaultExpan
           <div className="pt-3">
             <h5 className="text-xs font-semibold text-foreground/80 uppercase tracking-wide mb-2">Key Responsibilities</h5>
             <ul className="space-y-2">
-              {responsibilities.map((responsibility, index) => {
-                // Categorize responsibilities
-                const isLeadership = /lead|manage|guide|mentor|coordinate|oversee/i.test(responsibility);
-                const isTechnical = /develop|implement|engineer|architect|code|api|system/i.test(responsibility);
-                const isStrategic = /strategy|roadmap|okr|plan|vision|initiative/i.test(responsibility);
-
-                let categoryColor = "bg-muted/60";
-                let categoryLabel = "General";
-
-                if (isLeadership) {
-                  categoryColor = "bg-blue-500/10 border-blue-500/20";
-                  categoryLabel = "Leadership";
-                } else if (isTechnical) {
-                  categoryColor = "bg-green-500/10 border-green-500/20";
-                  categoryLabel = "Technical";
-                } else if (isStrategic) {
-                  categoryColor = "bg-purple-500/10 border-purple-500/20";
-                  categoryLabel = "Strategic";
-                }
-
-                return (
-                  <li key={index} className="flex items-start gap-3 group/item">
-                    <div className={`px-2 py-1 rounded-full text-[10px] font-medium border ${categoryColor} flex-shrink-0 mt-0.5`}>
-                      {categoryLabel.charAt(0)}
-                    </div>
-                    <span className="text-xs text-muted-foreground leading-relaxed group-hover/item:text-foreground transition-colors">
-                      {responsibility}
-                    </span>
-                  </li>
-                );
-              })}
+              {responsibilities.map((responsibility, index) => (
+                <li key={index} className="flex items-start gap-3 group/item">
+                  <span className="w-1.5 h-1.5 bg-primary/60 rounded-full flex-shrink-0 mt-2"></span>
+                  <span className="text-xs text-muted-foreground leading-relaxed group-hover/item:text-foreground transition-colors">
+                    {responsibility}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
