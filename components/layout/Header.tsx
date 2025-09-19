@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-b border-border/40 bg-background">
       <div className="container mx-auto px-6 py-6">
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
           {/* Profile Image */}

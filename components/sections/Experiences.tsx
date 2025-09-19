@@ -120,10 +120,11 @@ const dataComputadoresRoles = [
 
 export default function Experiences(): JSX.Element {
   return (
-    <section className="enhanced-card p-8">
+    <section className="enhanced-card p-4 sm:p-6 lg:p-8">
       <SectionHeader icon={Briefcase} title="Experience" subtitle="Professional Journey" />
 
-      <div className="space-y-8">
+      {/* Responsive layout */}
+      <div className="space-y-6 sm:space-y-8">
         <ExperienceItem company="Johnson & Johnson" logo="/images/logos/jj-logo.webp" location="São José dos Campos-SP, Brazil" period="2014 — Present" roles={johnsonAndJohnsonRoles} defaultExpandedRole="IT Manager - Web and API Development" />
 
         <ExperienceItem company="Mentor Interativa" logo="/images/logos/mentor-logo.webp" location="São José dos Campos-SP, Brazil" period="Dec 2011 — Nov 2013" roles={mentorInterativaRoles} />
