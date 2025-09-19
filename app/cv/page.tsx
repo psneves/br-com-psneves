@@ -40,8 +40,8 @@ function ExperienceItem({ title, company, period, location, achievements, curren
       <header className="mb-2">
         <div className="flex space-y-0 items-start justify-between gap-2">
           <div className="flex-1 space-y-0 ">
-            <h3 className="font-semibold text-gray-900 text-base print:text-sm">{title}</h3>
-            <p className="text-blue-600 font-medium text-sm print:text-xs">{company}</p>
+            <h3 className="font-bold text-gray-900 text-base print:text-sm">{company}</h3>
+            <p className="text-blue-600 font-medium text-sm print:text-xs">{title}</p>
           </div>
           {current && <span className="bg-green-100 text-green-900 text-xs px-2 py-1 rounded-full font-medium print:hidden">Current</span>}
         </div>
@@ -352,7 +352,7 @@ export default function CV() {
                   period="Sep 2020 — Mar 2023"
                   location="São José dos Campos-SP"
                   achievements={[
-                    "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search",
+                    "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search for JanssenProLATAM.com",
                     "Defined API contracts and NFRs; improved reliability, performance and observability",
                     "Established OKRs/KPIs; led demos and executive readouts across markets",
                     "Drove vendor and internal squads through Agile delivery with audited compliance",
@@ -366,26 +366,33 @@ export default function CV() {
             <div className="space-y-6 print:space-y-4">
               {/* Core Skills */}
               <Section title="Skills" icon={<Code size={16} />}>
-                <SkillGroup title="Leadership & AI" icon={<Users size={12} />} skills={["Full Stack Architecture", "Artificial Intelligence", "API Platforms", "Cloud (AWS/GCP/Azure)", "Product Strategy"]} />
-
-                <SkillGroup title="Engineering" icon={<Code size={12} />} skills={["React", "Next.js", "NodeJS", "Python", "Kubernetes", "Docker", "DevSecOps", "CI/CD", "Robot Framework", "Playwright"]} />
-
-                <SkillGroup title="Management" icon={<Briefcase size={12} />} skills={["Chapter Leadership", "Roadmapping", "OKRs", "Vendor Management", "Budget Management", "Stakeholder Management"]} />
+                
+                        <SkillGroup
+                          title="Engineering"
+                          icon={<Code size={12} />}
+                          skills={["React", "Next.js", "NodeJS", "Python", "Docker", "DevSecOps", "CI/CD", "Robot Framework", "Playwright","Full Stack Architecture", "Artificial Intelligence", "API Platforms", "Cloud (AWS/GCP/Azure)", "Product Strategy"]}
+                        />
+                
+                        <SkillGroup
+                          title="Management"
+                          icon={<Briefcase size={12} />}
+                          skills={["Chapter Leadership", "Roadmapping", "OKRs", "Vendor Management", "Budget Management", "Stakeholder Management"]}
+                        />
               </Section>
 
               {/* Languages */}
               <Section title="Languages" icon={<Languages size={16} />} className="no-break">
                 <div className="space-y-2 text-sm print:text-xs">
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Portuguese</span>
+                    <span className="font-bold text-gray-700">Portuguese</span>
                     <span className="font-medium text-blue-600">Native</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">English</span>
+                    <span className="font-bold text-gray-700">English</span>
                     <span className="font-medium text-blue-600">Fluent</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">Spanish</span>
+                    <span className="font-bold text-gray-700">Spanish</span>
                     <span className="font-medium text-blue-600">Fluent</span>
                   </div>
                 </div>
@@ -395,12 +402,12 @@ export default function CV() {
               <Section title="Education" icon={<GraduationCap size={16} />} className="no-break">
                 <div className="space-y-0 print:space-y-0">
                   <div className="space-y-0 mb-6">
-                    <h3 className="font-semibold text-gray-900 text-sm print:text-xs">Federal University of São Paulo</h3>
+                    <h3 className="font-bold text-gray-900 text-sm print:text-xs">Federal University of São Paulo</h3>
                     <p className="text-blue-600 text-sm print:text-xs">Bachelor in Computer Science</p>
                     <p className="text-gray-600 text-xs">2011 — 2015</p>
                   </div>
                   <div className="space-y-0">
-                    <h3 className="font-semibold text-gray-900 text-sm print:text-xs">DeVry – Metrocamp</h3>
+                    <h3 className="font-bold text-gray-900 text-sm print:text-xs">DeVry – Metrocamp</h3>
                     <p className="text-blue-600 text-sm print:text-xs">Post-graduate, Information Security Management</p>
                     <p className="text-gray-600 text-xs">2016 — 2018</p>
                   </div>

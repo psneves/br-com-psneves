@@ -1,25 +1,20 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Linkedin, Mail, MapPin, Github, FileDown } from "lucide-react"
-import { ThemeToggle } from "@/components/ui/theme-toggle"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
+import Image from "next/image";
+import Link from "next/link";
+import { Linkedin, Mail, MapPin, Github, FileDown } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export default function Header() {
   const handleDownloadPDF = () => {
-    const link = document.createElement("a")
-    link.href = "/Paulo_Neves_CV.pdf"
-    link.download = "Paulo_Neves_CV.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+    const link = document.createElement("a");
+    link.href = "/Paulo_Neves_CV.pdf";
+    link.download = "Paulo_Neves_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -28,15 +23,15 @@ export default function Header() {
           {/* Profile Image */}
           <div className="relative group">
             <div className="relative w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Image 
-                src="/images/perfil-quadrada.webp" 
-                alt="Paulo Neves" 
-                fill 
+              <Image
+                src="/images/perfil-quadrada.webp"
+                alt="Paulo Neves"
+                fill
                 priority
                 sizes="(min-width: 1024px) 96px, 80px"
                 placeholder="blur"
                 blurDataURL="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><rect width='10' height='10' fill='%23e5e7eb'/></svg>"
-                className="object-cover group-hover:scale-105 transition-transform duration-300" 
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background animate-pulse"></div>
@@ -44,13 +39,10 @@ export default function Header() {
 
           {/* Content */}
           <div className="flex-1 space-y-3">
-            <div>
-              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent mb-1">
-                Paulo Neves
-              </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground font-medium">
-                IT Manager at Johnson & Johnson
-              </p>
+            <div className="space-y-0">
+              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent leading-tight">Paulo Neves</h1>
+              <p className="text-lg lg:text-xl text-primary font-medium leading-tight -mt-2">Johnson &amp; Johnson</p>
+              <p className="text-base lg:text-lg text-muted-foreground font-medium leading-tight -mt-1">Full Stack Engineering Manager | People Leader</p>
             </div>
 
             <div className="flex flex-wrap gap-4 text-sm">
@@ -72,11 +64,7 @@ export default function Header() {
               <div className="flex flex-wrap gap-2 lg:gap-3">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <button
-                      onClick={handleDownloadPDF}
-                      className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3"
-                      aria-label="Save PDF"
-                    >
+                    <button onClick={handleDownloadPDF} className="button-primary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="Save PDF">
                       <FileDown size={16} />
                       <span className="hidden sm:inline">Save PDF</span>
                     </button>
@@ -86,12 +74,7 @@ export default function Header() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link
-                      href="https://br.linkedin.com/in/psneves"
-                      target="_blank"
-                      className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
-                      aria-label="LinkedIn"
-                    >
+                    <Link href="https://br.linkedin.com/in/psneves" target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="LinkedIn">
                       <Linkedin size={16} />
                       <span className="hidden sm:inline">LinkedIn</span>
                     </Link>
@@ -101,12 +84,7 @@ export default function Header() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link
-                      href="https://github.com/psneves"
-                      target="_blank"
-                      className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3"
-                      aria-label="GitHub"
-                    >
+                    <Link href="https://github.com/psneves" target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="GitHub">
                       <Github size={16} />
                       <span className="hidden sm:inline">GitHub</span>
                     </Link>
@@ -119,5 +97,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

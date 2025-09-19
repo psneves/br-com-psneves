@@ -1,4 +1,4 @@
-import { Code, Sparkles } from "lucide-react";
+import { Code, Sparkles, Briefcase } from "lucide-react";
 
 interface SkillBadgeProps {
   skill: string;
@@ -16,24 +16,30 @@ function SkillBadge({ skill, index }: SkillBadgeProps) {
   );
 }
 
-export default function Skills(): JSX.Element {
-  const skills = [
-    "Full Stack (React/NextJS/NodeJS/Python)",
-    "API Platforms",
-    "Cloud (AWS/GCP/Azure)",
-    "AI/IA Architecture",
-    "Generative & Agentic AI",
-    "Kubernetes & Docker",
-    "DevSecOps & CI/CD",
-    "Enterprise Architecture",
-    "Security, Privacy & Compliance",
-    "Product & Platform Management",
-    "Roadmapping & OKRs",
-    "Stakeholder Management",
-    "People Leadership",
-    "Vendor & Budget Management",
-  ];
+interface SkillGroupProps {
+  title: string;
+  icon: React.ReactNode;
+  skills: string[];
+  startIndex: number;
+}
 
+function SkillGroup({ title, icon, skills, startIndex }: SkillGroupProps) {
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+        {icon}
+        <span>{title}</span>
+      </div>
+      <div className="flex flex-wrap gap-2">
+        {skills.map((skill, index) => (
+          <SkillBadge key={skill} skill={skill} index={startIndex + index} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Skills(): JSX.Element {
   return (
     <section className="enhanced-card p-6">
       <div className="flex items-center gap-3 mb-6">
@@ -51,16 +57,21 @@ export default function Skills(): JSX.Element {
         <Sparkles className="ml-auto text-primary/60 animate-pulse" size={16} />
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <SkillBadge key={skill} skill={skill} index={index} />
-        ))}
-      </div>
+      <div className="space-y-4">
 
-      <div className="mt-4 pt-4 border-t border-border/50">
-        <div className="text-xs text-muted-foreground text-center">
-          {skills.length} core competencies
-        </div>
+        <SkillGroup
+          title="Engineering"
+          icon={<Code size={12} />}
+          skills={["React", "Next.js", "NodeJS", "Python", "Docker", "DevSecOps", "CI/CD", "Robot Framework", "Playwright","Full Stack Architecture", "Artificial Intelligence", "API Platforms", "Cloud (AWS/GCP/Azure)", "Product Strategy"]}
+          startIndex={5}
+        />
+
+        <SkillGroup
+          title="Management"
+          icon={<Briefcase size={12} />}
+          skills={["Chapter Leadership", "Roadmapping", "OKRs", "Vendor Management", "Budget Management", "Stakeholder Management"]}
+          startIndex={15}
+        />
       </div>
     </section>
   );
