@@ -2,6 +2,7 @@
 
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import ChatWidget from "@/components/layout/ChatWidget"
 import About from "@/components/sections/About"
 import Experiences from "@/components/sections/Experiences"
 import PersonalProjects from "@/components/sections/PersonalProjects"
@@ -65,6 +66,9 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      {/* Chat Widget */}
+      <ChatWidget />
     </div>
   )
 }
