@@ -1,0 +1,106 @@
+# Paulo Neves
+Timezone: America/Sao_Paulo | Location: São José dos Campos, SP, Brazil
+
+CONTACT
+- Email: paulo@psneves.com.br
+- LinkedIn: https://www.linkedin.com/in/psneves
+- Website/Portfolio: https://www.psneves.com.br
+- Github: https://github.com/psneves
+
+PROFESSIONAL HEADLINE
+Technology leader with 15+ years. Engineering delivery at platform scale across enterprise domains at Johnson & Johnson. Blends hands-on Full Stack engineering with solution architecture, product/platform strategy, and stakeholder management.
+Currently leading Full Stack engineering chapter in the region, including AI initiatives to accelerate SDLC with generative AI, while coaching senior engineers and elevating technical capabilities.
+
+PROFESSIONAL SNAPSHOT
+- Focus: Full‑stack & AI Engineering - Web and API development, Solution Architecture, DevSecOps/CI/CD, Observability, Intelligent Automation.
+- Known for: turning strategy into reference architectures and “golden paths”, coaching teams and vendors, be audit‑ready delivery (privacy and security).
+- Domains: Healthcare/MedTech and enterprise web & APIs.
+- Leadership: builds capability through chapters, training plans, and vendor governance; sets clear OKRs; security knowledge.
+
+CURRENT ROLE (J&J Technology Services, Vision LATAM)
+- Title: IT Manager — Full Stack Chapter Lead (Sep 2023–Present)
+- Scope: guide ~15 parallel full‑stack initiatives; act as technical reference and budget manager; govern vendor strategy and capacity; uplift DevSecOps, CI/CD, observability, and reliability via chapter programs.
+- AI Initiative: leads KODA (Key Operations & Development Assistants) to accelerate SDLC with agentic/GenAI patterns (e.g., PR pre‑checks, test generation, change summaries) under enterprise guardrails.
+  - Leads the Full‑Stack engineering **chapter** across LATAM, defining standards, golden paths, and enablement for senior engineers and vendors.  
+  - Drives **AI/agentic SDLC acceleration** (e.g., PR pre‑checks, testing assistance, change summaries) under enterprise guardrails (privacy, auditability, observability). 
+
+## PAST EXPERIENCE
+- **IT Lead — Full Stack Chapter Lead, Johnson & Johnson** *(Apr 2023–Aug 2023)*  
+  - Established chapter foundations: **hiring/onboarding**, performance & career paths, and a skills **training roadmap** aligned to delivery outcomes.
+
+- **IT Lead — Technical Product Owner, Janssen LATAM (J&J)** *(Sep 2020–Mar 2023)*  
+  - Owned delivery & operations for **personalization**, **SSO/API integrations**, **web analytics**, and **site search** across Janssen Pro LATAM.  
+  - Managed features/epics and OKRs; enabled partner agencies; owned **Oracle Eloqua** campaigns; implemented **CSAT** for digital channels (Pro portal, F2F/webcalls, events).
+
+- **Service Specialist — Digital & RPA, Johnson & Johnson** *(Feb 2019–Aug 2020)*  
+  - Drove engineering/architecture decisions and standards for Digital & **RPA** initiatives; led PoCs, capacity teams, metrics, and risk management with regional/global stakeholders.
+
+- **Sr. Information Security Analyst, Johnson & Johnson** *(Apr 2018–Feb 2019)*  
+  - Information Security **POC** for Corporate, Vision Care, and LifeScan LATAM; assessed application controls and supported audit/compliance activities.
+
+- **Information Security Analyst, Johnson & Johnson** *(Jun 2015–Mar 2018)*  
+  - Ran **security awareness** programs for LATAM; delivered compliance analysis & risk calculation; managed **internal audits/SOx** and vendor risk; mentored interns.
+
+- **Information Security Intern, Johnson & Johnson** *(Jan 2014–Jun 2015)*  
+  - Managed web vulnerability remediation and large‑scale security trainings; supported SDLC guidance and incident response; handled change approvals and policy maintenance.
+
+- **Software Developer, Mentor Interativa** *(Dec 2011–Nov 2013, São José dos Campos‑SP)*  
+  - Built an LMS with social features and shipped the company’s first **mobile app**; stack: **Java**, Google App Engine, SQL Server, PHP, MySQL, PhoneGap.
+
+- **Junior Software Developer, Stefanini** *(Jan 2011–Dec 2011, Jaguariúna‑SP)*  
+  - Supported a **Delphi → Java** migration and implemented new credit‑card flows; stack: **Java**, **C#**, Struts, SQL Server, MySQL.
+
+- **Intern, FAJTec — Faculdade Jaguariúna** *(Jan 2010–Jul 2010, Jaguariúna‑SP)*  
+  - Teaching assistant for **Intro to Programming in Java**; created and graded assessments.
+
+- **Instructor, Data Computadores** *(May 2008–Sep 2009, Jaguariúna‑SP)*  
+  - Taught **Windows** fundamentals and **Microsoft Office** to entry‑level students.
+
+
+EDUCATION
+- B.Sc. in Computer Science — Universidade Federal de São Paulo (2011–2015)
+- Post‑graduate — Information Security Management — DeVry | Metrocamp (2016–2018)
+
+CERTIFICATIONS & AWARDS
+- Blue Prism Certified Developer
+- “Aluno destaque” (academic recognition)
+
+LANGUAGES
+- Portuguese — Native/Bilingual
+- English — Full Professional
+- Spanish — Full Professional
+
+TOP SKILLS (FROM CV & PRACTICE)
+- Information Security, Application Security Assessments, Risk Management
+- Full‑stack engineering (React/Next.js, Node.js/TypeScript, Python)
+- DevSecOps/CI/CD (Jenkins/GitHub Actions), IaC, containers, microservices
+- Observability (logs, traces, metrics)
+- AI/Agentic patterns (tool‑calling, planning/critique loops), RAG, evaluation harnesses
+- Vendor management, capability building, roadmap/KPI ownership
+
+TECH STACK PREFERENCES
+- Frontend: React, Next.js 14/15, Tailwind, shadcn/ui, Storybook
+- Backend: Node.js/TypeScript, Python; serverless (AWS Lambda), API Gateway, Google Apigee, Mulesoft
+- Data/Ops: PostgreSQL, Docker/Kubernetes (as needed), Sonar, Snyk
+- AI: Langflow, LangGraph; vector stores; prompt/model versioning;
+
+PERSONAL
+- Family: married to Jessica; two children (Stella and Henrique)
+- Pet: dog named Mel
+- Sports: running, cycling, swimming; multiple half‑marathons; completed duathlon standards and triathlon sprints challenges
+- Interests: code, AI, web and digital trends, (e.g., build personal projects like MeusDesafios.com.br to train the skills)
+
+COMMUNICATION STYLE
+- Tone: friendly, concise, professional (prefers structured, visual and brand‑aligned outputs)
+- Prefers English technical content; values diagrams/tables and concrete before/after metrics
+
+FAQ HINTS (FOR THE BOT)
+- What does Paulo do? Full‑stack & AI/agentic engineering leadership with enterprise controls, focused on measurable delivery and quality outcomes.
+- Favorite stack? Next.js + TypeScript + Tailwind; Node/Python backends; AWS Lambda; CI/CD + OPA.
+- View on AI? Use agentic patterns with strict privacy/audit safety gates; evaluation in CI; model/prompt versioning;
+- Values? Reuse (golden paths), compliance‑by‑design, observability, coaching teams, vendor clarity.
+
+GUARDRAILS FOR THE BOT
+- Do not disclose private identifiers (addresses, IDs, financials). Keep family details at first name only.
+- When unsure, answer with high‑level professional context; avoid speculation.
+- Respect privacy and enterprise confidentiality; do not invent metrics or promises.
