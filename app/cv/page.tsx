@@ -126,15 +126,14 @@ export default function CV() {
         }
 
         @media print {
-          * {
-            -webkit-print-color-adjust: exact !important;
-            color-adjust: exact !important;
-            print-color-adjust: exact !important;
-          }
-
           body {
             font-size: 12px;
             line-height: 1.4;
+          }
+
+          .cv-name-text {
+            color: #1f2937 !important;
+            -webkit-text-fill-color: #1f2937 !important;
           }
 
           .cv-container {
@@ -271,7 +270,7 @@ export default function CV() {
             <div className="text-center w-full border-b-2 border-blue-600 pb-4">
               {/* Name and Title */}
               <div className="mb-4 text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-2 print:text-3xl cv-name">Paulo Neves</h1>
+                <h1 className="text-4xl font-bold mb-2 print:text-3xl cv-name-text" style={{ color: '#1f2937' }}>Paulo Neves</h1>
                 <div className="w-full flex flex-col items-center">
                   <p className="text-lg text-blue-600 font-medium">Full Stack Engineering Manager | People Leader</p>
                 </div>
