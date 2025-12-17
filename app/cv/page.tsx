@@ -105,7 +105,7 @@ export default function CV() {
 
   return (
     <>
-      <style jsx global>{`
+      <style>{`
         @page {
           size: A4;
           margin: 0.5in;
@@ -181,23 +181,23 @@ export default function CV() {
           }
 
           /* Adjust right column sizing for better fit */
-          .print\\:text-xs {
+          .print\:text-xs {
             font-size: 11px !important;
           }
 
-          .print\\:text-sm {
+          .print\:text-sm {
             font-size: 12px !important;
           }
 
-          .print\\:mb-2 {
+          .print\:mb-2 {
             margin-bottom: 0.375rem !important;
           }
 
-          .print\\:mb-3 {
+          .print\:mb-3 {
             margin-bottom: 0.5rem !important;
           }
 
-          .print\\:space-y-4 > * + * {
+          .print\:space-y-4 > * + * {
             margin-top: 0.75rem !important;
           }
 
@@ -242,7 +242,7 @@ export default function CV() {
           .cv-container .border-blue-600 {
             border-color: #1e40af;
           }
-          .cv-container .hover\\:text-blue-600:hover {
+          .cv-container .hover\:text-blue-600:hover {
             color: #1e40af;
           }
         }
@@ -271,7 +271,7 @@ export default function CV() {
             <div className="text-center w-full border-b-2 border-blue-600 pb-4">
               {/* Name and Title */}
               <div className="mb-4 text-center">
-                <h1 className="text-4xl font-bold text-gray-900 mb-2 print:text-3xl">Paulo Neves</h1>
+                <h1 className="text-4xl font-bold text-gray-900 mb-2 print:text-3xl cv-name">Paulo Neves</h1>
                 <div className="w-full flex flex-col items-center">
                   <p className="text-lg text-blue-600 font-medium">Full Stack Engineering Manager | People Leader</p>
                 </div>
