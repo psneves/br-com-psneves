@@ -327,10 +327,10 @@ export default function CV() {
                   location="São José dos Campos-SP"
                   current={true}
                   achievements={[
-                    "Guide 15 Full Stack parallel initiatives; technical reference and/or budget management",
-                    "Govern vendor strategy and capacity; optimize partner tiers, SLAs and delivery outcomes",
-                    "Elevate capabilities in DevSecOps, CI/CD, observability and service reliability through chapter programs",
-                    "Lead KODA (Key Operations & Development Assistants) initiative to accelerate SDLC with AI",
+                    "Sponsoring an engineering organization of ~70 professionals across employees and vendors",
+                    "Lead 17 parallel initiatives, aligning technical direction, capacity, budget, and execution to business priorities",
+                    "Govern vendor strategy, partner performance, and capacity to improve quality, scalability, and cost efficiency",
+                    "Strengthen DevSecOps, CI/CD, observability, and AI-driven SDLC acceleration through chapter leadership",
                   ]}
                 />
 
