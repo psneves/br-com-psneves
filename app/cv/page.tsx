@@ -458,7 +458,7 @@ export default function CV() {
             company="Mentor Interativa"
             location="São José dos Campos-SP"
             period="Dec 2011 — Nov 2013"
-            achievements={["Developed learning management system with social network integration", "Created and launched the company's first mobile application"]}
+            achievements={["Developed learning management system with social network integration using Java", "Created and launched the company's first mobile application using PhoneGap"]}
           />
 
           <ExperienceItem

@@ -78,7 +78,7 @@ const mentorInterativaRoles = [
   {
     title: "Software Developer",
     period: "Dec 2011 — Nov 2013",
-    responsibilities: ["Developed learning management system with social network integration", "Created and launched the company's first mobile application", "Technologies: Java, Google App Engine, SQL Server, PHP, MySQL, PhoneGap"],
+    responsibilities: ["Developed learning management system with social network integration using Java", "Created and launched the company's first mobile application using PhoneGap", "Technologies: Java, Google App Engine, SQL Server, PHP, MySQL, PhoneGap"],
   },
 ];
 
