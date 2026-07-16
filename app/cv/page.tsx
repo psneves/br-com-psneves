@@ -427,7 +427,7 @@ export default function CV() {
           />
           <ExperienceItem
             title="Sr. Information Security Analyst"
-            company="Johnson & Johnson - Technology Services"
+            company="Johnson & Johnson - Information Security & Risk Management"
             location="São José dos Campos-SP"
             period="Apr 2018 — Feb 2019"
             achievements={["Security liaison for Corporate, Vision Care and LifeScan across LATAM", "Led app-security assessments during M&A due diligence and integrations"]}
