@@ -4,14 +4,14 @@ Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Full Stack Engineering Manager with 17 years in software and 3 managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. AI across the team's planning, build and release cycle drove US$1.2M in cost avoidance through July 2026. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product, mobile, backend, billing and store releases end to end.
+Full Stack Engineering Manager with 17 years in software, three of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Applying AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.
 
 ## Experience
 
 **Full Stack Engineering Manager — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
 - Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org; accountable for hiring, leveling, career plans and the technical bar.
-- Drove US$1.2M in cost avoidance through July 2026 by applying AI across the team's planning, build, test and release cycle.
+- Drove US$1.2M in cost avoidance in the first seven months of 2026 by applying AI across the team's planning, build, test and release cycle.
 - Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.
 - Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
 - Design and write the production systems the group ships — TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.
@@ -65,7 +65,7 @@ Remote — Brazil · 2026 — Present
 - Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 ## Skills
-**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2, etc.) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
+**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
 
 **Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget Management
 
