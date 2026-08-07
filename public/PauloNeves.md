@@ -10,14 +10,15 @@ Full Stack Engineering Manager with 17 years in software, 3 of them managing eng
 
 **Full Stack Engineering Manager — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
-- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance, engineering standards and technical excellence.
+- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance and technical excellence.
 - Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.
-- Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.
-- Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
-- Design and write the production systems the group ships — TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.
-- Lead CI/CD and infrastructure as code — Terraform provisioning AWS Lambda services behind API Gateway, and EKS for workloads that outgrow serverless.
-- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone.
-- Promoted from chapter lead to manager in Sep 2023.
+- Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.
+- Oversee 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
+- Define technical architecture and engineering standards across the chapter.
+- Remain hands-on by designing architecture and developing production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.
+- Lead CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS.
+- Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.
+- Promoted from Chapter Lead to Engineering Manager in September 2023.
 
 **Technical Product Owner — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
@@ -65,7 +66,7 @@ Remote — Brazil · 2026 — Present
 - Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 ## Skills
-**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
+**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · PostgreSQL · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
 
 **Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget Management
 

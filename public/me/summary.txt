@@ -19,17 +19,17 @@ PROFESSIONAL SNAPSHOT
 - Focus: managing a mixed-seniority engineering team, hands-on architecture, and AI-assisted software development.
 - Known for: being a manager who still designs and writes systems; setting a review and release bar and holding internal and partner squads to the same one; building reusable platform foundations other teams adopt.
 - Domains: healthcare/pharma and enterprise web & APIs; consumer mobile on his own product.
-- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Terraform, AWS (Lambda, API Gateway, EKS, S3, EC2), GCP (BigQuery, App Engine), Microsoft Entra, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
+- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, PostgreSQL, Docker, Terraform, AWS (Lambda, API Gateway, EKS, S3, EC2), GCP (BigQuery, App Engine), Microsoft Entra, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
-Promoted from chapter lead to manager in Sep 2023.
-- Manages 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, leveling, career plans and the technical bar. These 11 are J&J employees.
+Promoted from Chapter Lead to Engineering Manager in September 2023.
+- Manages 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, career development, performance and technical excellence. These 11 are J&J employees.
 - Drove US$1.2M in cost avoidance in the first seven months of 2026 (January through July) by integrating AI across the whole delivery cycle — planning, build, test and release — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
-- Approximately 70 vendor engineers deliver alongside that team. He does NOT line-manage them: he sets their technical direction and owns the vendor relationships and budget. He supports 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
-- Designs and writes the production systems the group ships, on TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.
-- Leads CI/CD and infrastructure as code: Terraform provisioning AWS Lambda services behind API Gateway, and EKS for workloads that outgrow serverless. AWS is the cloud he has real depth in. Do not describe individual internal systems, named or unnamed.
-- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone.
-- Leads the group's agent-assisted development program under enterprise privacy and audit guardrails.
+- Approximately 70 vendor engineers deliver alongside that team. He does NOT line-manage them: he sets their technical direction and owns the vendor relationships and budget. He oversees 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction, and defines the technical architecture and engineering standards the chapter builds against.
+- Remains hands-on: designs architecture and develops production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.
+- Leads CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS. AWS is the cloud he has real depth in. Do not describe individual internal systems, named or unnamed.
+- Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.
+- Introduced AI-native, specification-driven development practices: engineering specifications are version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency. Runs under enterprise privacy and audit guardrails.
 
 CURRENT ROLE — Founder & Sole Engineer, Meus Desafios (2026 – Present)
 Live at https://meusdesafios.com.br, on iOS and Android.
