@@ -59,13 +59,12 @@ function EmployerHeader({ company, context, location, period, url }: { company: 
   );
 }
 
-function RoleBlock({ title, internalTitle, period, bullets }: { title: string; internalTitle?: string; period?: string; bullets: string[] }) {
+function RoleBlock({ title, period, bullets }: { title: string; period?: string; bullets: string[] }) {
   return (
     <article className="mb-3 cv-role">
       <header className="flex items-baseline justify-between gap-3">
         <p className="text-blue-600 font-semibold cv-role-title">
           {title}
-          {internalTitle && <span className="text-gray-500 font-normal"> (internal title: {internalTitle})</span>}
         </p>
         {period && <span className="text-gray-600 cv-meta shrink-0">{period}</span>}
       </header>
@@ -268,10 +267,6 @@ export default function CV() {
               the dedicated section, where there is no page budget. */}
           <Section title="Professional Experience" icon={<Briefcase size={14} />}>
             <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={johnsonAndJohnson.period} />
-            {/* The internal title ("IT Manager — Full Stack Chapter Lead") is
-                shown on the homepage but kept off the print CV: "IT Manager"
-                reads as internal back-office at a product company and undoes
-                the positioning the rest of the page is doing. */}
             {RECENT_JJ_ROLES.map((role) => (
               <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
             ))}

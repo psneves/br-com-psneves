@@ -22,7 +22,7 @@ PROFESSIONAL SNAPSHOT
 - Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Terraform, AWS (Lambda, API Gateway, EKS, S3, EC2), GCP (BigQuery, App Engine), Microsoft Entra, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
-Internal title: IT Manager — Full Stack Chapter Lead. Promoted from chapter lead to manager in Sep 2023.
+Promoted from chapter lead to manager in Sep 2023.
 - Manages 5 direct reports inside an 11-engineer group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, leveling, career plans and the technical bar.
 - Drove US$1.2M in cost avoidance through July 2026 by applying AI across the whole delivery cycle — planning, build, test and release — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
 - Supports ~70 contractors across the delivery org, and 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
@@ -47,7 +47,7 @@ This is his sharpest differentiator. Describe mechanisms, never benefits, and ne
 - Headless runs take the repetitive passes — migrations, codebase sweeps, release checks.
 
 PAST EXPERIENCE
-- Technical Product Owner, Johnson & Johnson (Sep 2020 – Mar 2023). Internal title: IT Lead. Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM. Defined API contracts and non-functional requirements; set OKRs and ran executive readouts across markets.
+- Technical Product Owner, Johnson & Johnson (Sep 2020 – Mar 2023). Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM. Defined API contracts and non-functional requirements; set OKRs and ran executive readouts across markets.
 - Service Specialist — Digital & RPA, Johnson & Johnson (Feb 2019 – Aug 2020). Main technical point of contact and escalation for regional digital initiatives; ran automation proofs of concept with Blue Prism and Python. Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
 - Sr. Information Security Analyst, Johnson & Johnson (Apr 2018 – Feb 2019). Security liaison for Corporate, Vision Care and LifeScan across LATAM; led application-security assessments during M&A due diligence and integration.
 - Information Security Analyst, Johnson & Johnson (Jun 2015 – Mar 2018). Application risk assessments and compliance reviews; SOX testing for IT operations; cut security training completion time in half.

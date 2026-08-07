@@ -14,8 +14,6 @@
 export interface Role {
   /** Market-facing title. */
   title: string;
-  /** Literal internal title, when it differs from the market-facing one. */
-  internalTitle?: string;
   period: string;
   bullets: string[];
   /** Condensed variant for the print/PDF CV. */
@@ -116,7 +114,6 @@ export const experiences: Experience[] = [
     roles: [
       {
         title: "Full Stack Engineering Manager",
-        internalTitle: "IT Manager — Full Stack Chapter Lead",
         period: "Apr 2023 — Present",
         current: true,
         bullets: [
@@ -142,7 +139,6 @@ export const experiences: Experience[] = [
       },
       {
         title: "Technical Product Owner",
-        internalTitle: "IT Lead",
         period: "Sep 2020 — Mar 2023",
         bullets: [
           "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.",

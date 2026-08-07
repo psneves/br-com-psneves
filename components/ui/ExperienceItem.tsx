@@ -69,7 +69,6 @@ export default function ExperienceItem({
           <RoleItem
             key={role.title}
             title={role.title}
-            internalTitle={role.internalTitle}
             period={role.period}
             responsibilities={role.bullets}
             defaultExpanded={role.title === defaultExpandedRole}

@@ -10,7 +10,6 @@ Full Stack Engineering Manager with 17 years in software and 3 managing engineer
 
 **Full Stack Engineering Manager — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
-*(internal title: IT Manager — Full Stack Chapter Lead)*
 - Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org; accountable for hiring, leveling, career plans and the technical bar.
 - Drove US$1.2M in cost avoidance through July 2026 by applying AI across the team's planning, build, test and release cycle.
 - Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.
@@ -22,7 +21,6 @@ São José dos Campos, SP, Brazil · Apr 2023 — Present
 
 **Technical Product Owner — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
-*(internal title: IT Lead)*
 - Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.
 - Defined the API contracts and non-functional requirements, and drove the reliability, performance and observability work behind them.
 - Set OKRs and ran demos and executive readouts across LATAM markets.
