@@ -88,9 +88,8 @@ where it goes: `experiences[0].roles[0]`.
 
 | Item | Why |
 |---|---|
-| **Cloud depth.** The old CV claimed "Cloud (AWS/GCP/Azure)" — all three. It has been removed rather than guessed. Which one do you have real depth in, down to named services? | `skillGroups[0]` |
-| **CI system by name.** "CI/CD" was listed but the actual tool never was. GitHub Actions? Jenkins? Azure DevOps? | `skillGroups[0]` |
-| **Kubernetes.** Present in the old `PauloNeves.md` competencies, absent from every experience bullet. Dropped rather than guessed. | `skillGroups[0]` |
+| **CI system by name — still open.** The CV now names Terraform, AWS Lambda, API Gateway and EKS, but not the CI runner itself. GitHub Actions? Jenkins? Azure DevOps? It is the one unnamed link in an otherwise concrete delivery chain. | `experiences[0].roles[0]` and `skillGroups[0]` |
+| **Kubernetes beyond EKS.** EKS is now named in a bullet and in Skills. If you run Kubernetes outside EKS, that is a separate claim worth making. | `skillGroups[0]` |
 | **This site as a portfolio asset.** It has an OpenAI tool-calling chat endpoint — genuinely good hands-on evidence, currently claimed nowhere. Worth one line, but verify what it actually does first: `CLAUDE.md` claimed zod validation and rate limiting, and `lib/rate-limit.ts` does not exist. | new bullet, `experiences[1]` or a Selected Work block |
 | **English proof.** "Fluent" is a self-assessment. If you work in English daily with global stakeholders, say so concretely. | `languages` |
 

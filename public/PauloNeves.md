@@ -16,7 +16,8 @@ São José dos Campos, SP, Brazil · Apr 2023 — Present
 - Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.
 - Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
 - Design and write the production systems the group ships — TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.
-- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.
+- Lead CI/CD and infrastructure as code — Terraform provisioning AWS Lambda services behind API Gateway, and EKS for workloads that outgrow serverless.
+- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone.
 - Promoted from chapter lead to manager in Sep 2023.
 
 **Technical Product Owner — Johnson & Johnson**
@@ -65,7 +66,7 @@ Remote — Brazil · 2026 — Present
 - Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 ## Skills
-**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Microsoft Entra SSO (OIDC/SAML) · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
+**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS) · Microsoft Entra SSO (OIDC/SAML) · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
 
 **Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget Management
 

@@ -19,15 +19,16 @@ PROFESSIONAL SNAPSHOT
 - Focus: managing a mixed-seniority engineering team, hands-on architecture, and AI-assisted software development.
 - Known for: being a manager who still designs and writes systems; setting a review and release bar and holding internal and partner squads to the same one; building reusable platform foundations other teams adopt.
 - Domains: healthcare/pharma and enterprise web & APIs; consumer mobile on his own product.
-- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Microsoft Entra SSO, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
+- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Terraform, AWS (Lambda, API Gateway, EKS), Microsoft Entra SSO, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
 Internal title: IT Manager — Full Stack Chapter Lead. Promoted from chapter lead to manager in Sep 2023.
 - Manages 5 direct reports inside an 11-engineer group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, leveling, career plans and the technical bar.
 - Drove US$1.2M in cost avoidance through July 2026 by applying AI across the whole delivery cycle — planning, build, test and release — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
 - Supports ~70 contractors across the delivery org, and 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
-- Designs and writes the production systems the group ships, on TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph. Do not describe individual internal systems, named or unnamed.
-- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.
+- Designs and writes the production systems the group ships, on TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.
+- Leads CI/CD and infrastructure as code: Terraform provisioning AWS Lambda services behind API Gateway, and EKS for workloads that outgrow serverless. AWS is the cloud he has real depth in. Do not describe individual internal systems, named or unnamed.
+- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone.
 - Leads the group's agent-assisted development program under enterprise privacy and audit guardrails.
 
 CURRENT ROLE — Founder & Sole Engineer, Meus Desafios (2026 – Present)
