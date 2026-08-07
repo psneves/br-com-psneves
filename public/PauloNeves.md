@@ -67,7 +67,7 @@ Remote — Brazil · 2026 — Present
 - Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 ## Skills
-**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS) · Microsoft Entra SSO (OIDC/SAML) · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
+**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · Vite · PostgreSQL · TypeORM · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2, etc.) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
 
 **Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget Management
 

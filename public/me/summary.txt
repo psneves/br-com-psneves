@@ -19,7 +19,7 @@ PROFESSIONAL SNAPSHOT
 - Focus: managing a mixed-seniority engineering team, hands-on architecture, and AI-assisted software development.
 - Known for: being a manager who still designs and writes systems; setting a review and release bar and holding internal and partner squads to the same one; building reusable platform foundations other teams adopt.
 - Domains: healthcare/pharma and enterprise web & APIs; consumer mobile on his own product.
-- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Terraform, AWS (Lambda, API Gateway, EKS), Microsoft Entra SSO, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
+- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, Vite, PostgreSQL, TypeORM, Docker, Terraform, AWS (Lambda, API Gateway, EKS, S3, EC2), GCP (BigQuery, App Engine), Microsoft Entra, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
 Internal title: IT Manager — Full Stack Chapter Lead. Promoted from chapter lead to manager in Sep 2023.
