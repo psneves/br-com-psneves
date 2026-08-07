@@ -48,7 +48,7 @@ This is his sharpest differentiator. Describe mechanisms, never benefits, and ne
 
 PAST EXPERIENCE
 - Technical Product Owner, Johnson & Johnson (Sep 2020 – Mar 2023). Internal title: IT Lead. Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM. Defined API contracts and non-functional requirements; set OKRs and ran executive readouts across markets.
-- Service Specialist — Digital & RPA, Johnson & Johnson (Feb 2019 – Aug 2020). Main technical point of contact and escalation for regional digital initiatives; ran automation proofs of concept with Blue Prism and Python.
+- Service Specialist — Digital & RPA, Johnson & Johnson (Feb 2019 – Aug 2020). Main technical point of contact and escalation for regional digital initiatives; ran automation proofs of concept with Blue Prism and Python. Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
 - Sr. Information Security Analyst, Johnson & Johnson (Apr 2018 – Feb 2019). Security liaison for Corporate, Vision Care and LifeScan across LATAM; led application-security assessments during M&A due diligence and integration.
 - Information Security Analyst, Johnson & Johnson (Jun 2015 – Mar 2018). Application risk assessments and compliance reviews; SOX testing for IT operations; cut security training completion time in half.
 - Information Security Intern, Johnson & Johnson (Jan 2014 – May 2015). Vulnerability remediation for J&J Medical LATAM web applications; delivered security training to 800+ end users.

@@ -31,6 +31,7 @@ São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
 São José dos Campos, SP, Brazil · Feb 2019 — Aug 2020
 - Main technical point of contact and escalation for regional digital initiatives.
 - Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.
+- Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
 
 **Sr. Information Security Analyst — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2018 — Feb 2019

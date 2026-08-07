@@ -162,10 +162,12 @@ export const experiences: Experience[] = [
         bullets: [
           "Main technical point of contact and escalation for regional digital initiatives.",
           "Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
+          "Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.",
         ],
         cvBullets: [
           "Main technical point of contact and escalation for regional digital initiatives.",
           "Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
+          "Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.",
         ],
       },
       {
