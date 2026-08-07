@@ -107,6 +107,7 @@ where it goes: `experiences[0].roles[0]`.
 | **Auth.js dropped entirely**, including the skills chip (you asked for it off the template bullet; leaving it in Skills alone would have read as inconsistent). Entra SSO is still named. | `skillGroups[0]`, `experiences[0].roles[0]` | Re-add "Auth.js" to the Build with group |
 | **Meus Desafios moved to its own "Independent Product" section**, out of Professional Experience. Named to avoid "project"/"side", which makes a reader relocate the entry mentally to the bottom of the page. It still sits on page 1, directly under the J&J block. | `app/cv/page.tsx` | Move the `<Section>` contents back under Professional Experience |
 | **Internal Next.js template bullet removed** at your instruction — see §5 for what that costs. | `experiences[0].roles[0]` | Re-add the bullet |
+| **Agent-review bullet removed from the CV** ("a reviewer agent audits the writer agent's diff… a person approves every merge"). It was the most manager-credible line in the AI story — the accountability claim rather than the tooling claim. It survives on the homepage `AiPractice` section, so it is gone from the PDF only. | `experiences[0].roles[0]` | Re-add the bullet from `aiPractice.points[2]` and `[3]` |
 | **Pre-2014 roles compressed to one line each**, security years kept with bullets, per your choice. | `earlierExperience` | Move any role back into `experiences` for full bullets |
 
 ## 8. Facts that were contradictory and how they were resolved
