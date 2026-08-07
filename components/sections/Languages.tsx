@@ -1,24 +1,5 @@
 import { LanguagesIcon } from "lucide-react"
-
-interface LanguageItemProps {
-  language: string
-  level: string
-  proficiency: number
-}
-
-function LanguageItem({ language, level, proficiency }: LanguageItemProps) {
-  return (
-    <div className="flex justify-between items-center">
-      <span className="text-foreground/90">{language}</span>
-      <div className="flex items-center">
-        <div className="w-24 h-2 bg-muted rounded-full mr-2">
-          <div className="h-full bg-primary rounded-full" style={{ width: `${proficiency}%` }}></div>
-        </div>
-        <span className="text-sm text-muted-foreground">{level}</span>
-      </div>
-    </div>
-  )
-}
+import { languages } from "@/lib/data/profile"
 
 export default function Languages(): JSX.Element {
   return (
@@ -28,9 +9,12 @@ export default function Languages(): JSX.Element {
         <h3 className="text-lg font-medium text-foreground">Languages</h3>
       </div>
       <div className="space-y-3">
-        <LanguageItem language="Portuguese" level="Native" proficiency={100} />
-        <LanguageItem language="English" level="Fluent" proficiency={90} />
-        <LanguageItem language="Spanish" level="Fluent" proficiency={85} />
+        {languages.map((language) => (
+          <div key={language.name} className="flex justify-between items-center">
+            <span className="text-foreground/90">{language.name}</span>
+            <span className="text-sm font-medium text-primary">{language.level}</span>
+          </div>
+        ))}
       </div>
     </section>
   )

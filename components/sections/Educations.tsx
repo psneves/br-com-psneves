@@ -1,5 +1,6 @@
 import { GraduationCap } from "lucide-react"
 import EducationItem from "../ui/EducationItem"
+import { education } from "@/lib/data/profile"
 
 export default function Educations(): JSX.Element {
   return (
@@ -9,16 +10,14 @@ export default function Educations(): JSX.Element {
         <h3 className="text-lg font-medium text-foreground">Education</h3>
       </div>
       <div className="space-y-6">
-        <EducationItem
-          institution="Federal University of São Paulo"
-          degree="Bachelor of Computer Science"
-          period="2011 — 2015"
-        />
-        <EducationItem
-          institution="DeVry - Metrocamp"
-          degree="Post-graduation, Information Security"
-          period="2016 — 2018"
-        />
+        {education.map((item) => (
+          <EducationItem
+            key={item.institution}
+            institution={item.institution}
+            degree={item.degree}
+            period={item.period}
+          />
+        ))}
       </div>
     </section>
   )

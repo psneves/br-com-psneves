@@ -11,9 +11,9 @@ export default function Footer(): JSX.Element {
             <span>Next.js, Tailwind CSS & Shadcn/ui</span>
           </div>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <span>Last updated September 2025</span>
+            <span>Last updated August 2026</span>
             <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
-            <span>© 2025 Paulo Neves</span>
+            <span>© 2026 Paulo Neves</span>
           </div>
         </div>
       </div>

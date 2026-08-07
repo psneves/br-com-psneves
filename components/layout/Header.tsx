@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Mail, MapPin, Github, FileDown } from "lucide-react";
+import { Linkedin, Mail, MapPin, Github, FileDown, Globe } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { profile } from "@/lib/data/profile";
 
 export default function Header() {
   const handleDownloadPDF = () => {
@@ -40,19 +41,23 @@ export default function Header() {
           {/* Content */}
           <div className="flex-1 space-y-3">
             <div className="space-y-0">
-              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent leading-tight">Paulo Neves</h1>
-              <p className="text-lg lg:text-xl text-primary font-medium leading-tight -mt-2">Johnson &amp; Johnson</p>
-              <p className="text-base lg:text-lg text-muted-foreground font-medium leading-tight -mt-1">Full Stack Engineering Manager | People Leader</p>
+              <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent leading-tight">{profile.name}</h1>
+              <p className="text-lg lg:text-xl text-primary font-medium leading-tight -mt-2">{profile.title}</p>
+              <p className="text-base lg:text-lg text-muted-foreground font-medium leading-tight -mt-1">Johnson &amp; Johnson</p>
             </div>
 
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 <MapPin size={16} className="text-primary" />
-                <span>Jacareí-SP, Brazil</span>
+                <span>{profile.location}</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                <Globe size={16} className="text-primary" />
+                <span>{profile.availability}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 <Mail size={16} className="text-primary" />
-                <span>paulo@psneves.com.br</span>
+                <span>{profile.email}</span>
               </div>
             </div>
           </div>
@@ -74,7 +79,7 @@ export default function Header() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link href="https://br.linkedin.com/in/psneves" target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="LinkedIn">
+                    <Link href={profile.linkedinUrl} target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="LinkedIn">
                       <Linkedin size={16} />
                       <span className="hidden sm:inline">LinkedIn</span>
                     </Link>
@@ -84,7 +89,7 @@ export default function Header() {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <Link href="https://github.com/psneves" target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="GitHub">
+                    <Link href={profile.githubUrl} target="_blank" className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="GitHub">
                       <Github size={16} />
                       <span className="hidden sm:inline">GitHub</span>
                     </Link>

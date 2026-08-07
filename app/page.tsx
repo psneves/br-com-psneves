@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import ChatWidget from "@/components/layout/ChatWidget"
 import About from "@/components/sections/About"
+import AiPractice from "@/components/sections/AiPractice"
 import Experiences from "@/components/sections/Experiences"
 import PersonalProjects from "@/components/sections/PersonalProjects"
 import Languages from "@/components/sections/Languages"
@@ -39,9 +40,12 @@ export default function Home() {
                 <About />
               </div>
               <div className="animate-fade-in animate-delay-100">
-                <Experiences />
+                <AiPractice />
               </div>
               <div className="animate-fade-in animate-delay-200">
+                <Experiences />
+              </div>
+              <div className="animate-fade-in animate-delay-300">
                 <PersonalProjects />
               </div>
             </div>

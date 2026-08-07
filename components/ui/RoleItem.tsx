@@ -5,12 +5,14 @@ import { Calendar, ChevronDown, ChevronUp } from "lucide-react"
 
 interface RoleItemProps {
   title: string
+  /** Literal internal title, when it differs from the market-facing one. */
+  internalTitle?: string
   period: string
-  responsibilities: string[]
+  responsibilities: readonly string[]
   defaultExpanded?: boolean
 }
 
-export default function RoleItem({ title, period, responsibilities, defaultExpanded = false }: RoleItemProps): JSX.Element {
+export default function RoleItem({ title, internalTitle, period, responsibilities, defaultExpanded = false }: RoleItemProps): JSX.Element {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
@@ -25,6 +27,9 @@ export default function RoleItem({ title, period, responsibilities, defaultExpan
             <h4 className="font-semibold text-base text-foreground !leading-tight !scroll-m-0 !tracking-normal group-hover:text-primary transition-colors">
               {title}
             </h4>
+            {internalTitle && (
+              <p className="text-xs text-muted-foreground !leading-none !mt-1">internal title: {internalTitle}</p>
+            )}
             <p className="text-xs text-muted-foreground font-mono flex items-center gap-1 !leading-none !mt-1 opacity-75">
               <Calendar size={10} className="text-muted-foreground flex-shrink-0" />
               <span>{period}</span>
