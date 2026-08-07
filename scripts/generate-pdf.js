@@ -29,9 +29,30 @@ async function generatePDF() {
     const page = await browser.newPage();
     await page.setViewport({ width: 1200, height: 1600, deviceScaleFactor: 2 });
 
+    // Running `npm run build` while `next dev` is up wipes .next underneath the
+    // dev server, which then 404s its own CSS chunks. The page still returns
+    // 200 and still measures plausibly, so an unstyled PDF ships silently
+    // unless we watch for the failed asset explicitly.
+    const brokenAssets = [];
+    page.on("response", (res) => {
+      if (res.status() >= 400 && /\.(css|js|woff2?)/.test(res.url())) brokenAssets.push(`${res.status()} ${res.url()}`);
+    });
+
     const response = await page.goto(CV_URL, { waitUntil: "networkidle0", timeout: 45000 });
     if (!response || !response.ok()) {
       throw new Error(`${CV_URL} returned ${response ? response.status() : "no response"}`);
+    }
+    if (brokenAssets.length > 0) {
+      throw new Error(
+        `The page loaded but ${brokenAssets.length} asset(s) 404'd, so it is unstyled:\n  ${brokenAssets
+          .slice(0, 4)
+          .join("\n  ")}\nRestart the dev server (it was probably clobbered by a concurrent build).`
+      );
+    }
+
+    const bodyFont = await page.evaluate(() => getComputedStyle(document.body).fontFamily);
+    if (/^(Times|serif)/i.test(bodyFont)) {
+      throw new Error(`Body font resolved to "${bodyFont}" — the stylesheet did not load. Restart the dev server.`);
     }
 
     // Webfonts change line-heights, which changes how much content fits.

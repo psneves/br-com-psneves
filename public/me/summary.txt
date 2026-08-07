@@ -10,7 +10,7 @@ CONTACT
 - GitHub: https://github.com/psneves
 
 PROFESSIONAL HEADLINE
-Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, supports ~70 contractors across 18 parallel initiatives, and still designs and writes the production systems the group ships. Putting AI to work across how the team plans, builds and ships drove US$1.2M in cost avoidance through July 2026. Outside it, he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
+Full Stack Engineering Manager with 17 years in software and 3 managing engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, supports ~70 contractors across 18 parallel initiatives, and still designs and writes the production systems the group ships. AI across the team's planning, build and release cycle drove US$1.2M in cost avoidance through July 2026. Outside it, he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
 
 WHAT HE IS LOOKING FOR
 Engineering Manager, hands-on EM and Tech Manager roles at product companies — fintech, SaaS, marketplaces, healthtech. Not targeting pure individual-contributor roles (Staff/Principal Engineer).
@@ -24,7 +24,7 @@ PROFESSIONAL SNAPSHOT
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
 Internal title: IT Manager — Full Stack Chapter Lead. Promoted from chapter lead to manager in Sep 2023.
 - Manages 5 direct reports inside an 11-engineer group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, leveling, career plans and the technical bar.
-- Drove US$1.2M in cost avoidance through July 2026 by putting AI to work across the whole delivery process — planning, building, testing and shipping — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
+- Drove US$1.2M in cost avoidance through July 2026 by applying AI across the whole delivery cycle — planning, build, test and release — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
 - Supports ~70 contractors across the delivery org, and 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
 - Designs and writes the production systems the group ships, on TypeScript, Next.js, PostgreSQL, TypeORM and Docker. Do not describe individual internal systems, named or unnamed.
 - Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.

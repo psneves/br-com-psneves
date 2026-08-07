@@ -4,15 +4,15 @@ Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Putting AI to work across how the team plans, builds and ships drove US$1.2M in cost avoidance through July 2026. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.
+Full Stack Engineering Manager with 17 years in software and 3 managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. AI across the team's planning, build and release cycle drove US$1.2M in cost avoidance through July 2026. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product, mobile, backend, billing and store releases end to end.
 
 ## Experience
 
 **Full Stack Engineering Manager — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
 *(internal title: IT Manager — Full Stack Chapter Lead)*
-- Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, career plans and the technical bar are mine.
-- Drove US$1.2M in cost avoidance through July 2026 by putting AI to work across how the team plans, builds, tests and ships.
+- Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org; accountable for hiring, leveling, career plans and the technical bar.
+- Drove US$1.2M in cost avoidance through July 2026 by applying AI across the team's planning, build, test and release cycle.
 - Lead the internal program behind it, and run engineering on committed specs: agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) live next to the code and are reviewed like source, so intent survives across sessions and hand-offs.
 - Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.
 - Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
