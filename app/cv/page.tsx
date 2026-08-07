@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft, Sparkles } from "lucide-react";
-import { profile, summary, aiPractice, experiences, earlierExperience, skillGroups, languages, education, certifications } from "@/lib/data/profile";
+import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft } from "lucide-react";
+import { profile, summary, experiences, earlierExperience, skillGroups, languages, education, certifications } from "@/lib/data/profile";
 
 const [johnsonAndJohnson, meusDesafios] = experiences;
-/** Page 1 carries the current role and the most recent product-owner role. */
-const RECENT_JJ_ROLES = johnsonAndJohnson.roles.slice(0, 2);
-const EARLIER_JJ_ROLES = johnsonAndJohnson.roles.slice(2);
+/** Page 1 carries roughly the last five years; page 2 carries the rest. */
+const RECENT_JJ_ROLES = johnsonAndJohnson.roles.slice(0, 3);
+const EARLIER_JJ_ROLES = johnsonAndJohnson.roles.slice(3);
 
 interface SectionProps {
   title: string;
@@ -262,19 +262,10 @@ export default function CV() {
             <p className="text-gray-700 cv-summary">{summary.cv}</p>
           </Section>
 
-          <Section title={aiPractice.title} icon={<Sparkles size={14} />}>
-            <ul className="text-gray-700">
-              {aiPractice.cvPoints.map((point) => (
-                <li key={point} className="flex gap-2 cv-bullet">
-                  <span className="text-blue-600 flex-shrink-0" aria-hidden="true">
-                    •
-                  </span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </Section>
-
+          {/* The AI-assisted practice is folded into the two current roles
+              rather than standing alone: on a 2-page CV it competes with the
+              experience it is supposed to be evidence for. The homepage keeps
+              the dedicated section, where there is no page budget. */}
           <Section title="Professional Experience" icon={<Briefcase size={14} />}>
             <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={johnsonAndJohnson.period} />
             {/* The internal title ("IT Manager — Full Stack Chapter Lead") is
@@ -299,7 +290,7 @@ export default function CV() {
       <div className="cv-page bg-white">
         <div className="p-8 print:p-0">
           <Section title="Professional Experience" icon={<Briefcase size={14} />}>
-            <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period="2014 — 2020" />
+            <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period="2014 — 2019" />
             {EARLIER_JJ_ROLES.map((role) => (
               <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
             ))}

@@ -10,7 +10,7 @@ CONTACT
 - GitHub: https://github.com/psneves
 
 PROFESSIONAL HEADLINE
-Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, and still designs and writes the systems the group ships. Outside it, he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
+Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, supports ~70 contractors across 18 parallel initiatives, and still designs and writes the production systems the group ships. Outside it, he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
 
 WHAT HE IS LOOKING FOR
 Engineering Manager, hands-on EM and Tech Manager roles at product companies — fintech, SaaS, marketplaces, healthtech. Not targeting pure individual-contributor roles (Staff/Principal Engineer).
@@ -19,20 +19,21 @@ PROFESSIONAL SNAPSHOT
 - Focus: managing a mixed-seniority engineering team, hands-on architecture, and AI-assisted software development.
 - Known for: being a manager who still designs and writes systems; setting a review and release bar and holding internal and partner squads to the same one; building reusable platform foundations other teams adopt.
 - Domains: healthcare/pharma and enterprise web & APIs; consumer mobile on his own product.
-- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, PostgreSQL, TypeORM, Docker, Auth.js with Microsoft Entra SSO, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python.
+- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, PostgreSQL, TypeORM, Docker, Microsoft Entra SSO, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
 Internal title: IT Manager — Full Stack Chapter Lead. Promoted from chapter lead to manager in Sep 2023.
 - Manages 5 direct reports inside an 11-engineer group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, leveling, career plans and the technical bar.
-- Designs and writes the systems the group ships: an integration hub for the Innovative Medicine business and a checkout platform, on TypeScript, Next.js, PostgreSQL, TypeORM and Docker.
-- Built the internal enterprise Next.js template other J&J teams fork to start new products, with Entra SSO (Auth.js v5), OpenTelemetry tracing, Pino logging, CI and security baselines wired in from the first commit.
-- Leads the group's agent-assisted development program — PR pre-checks, test generation and change summaries — under enterprise privacy and audit guardrails.
+- Supports ~70 contractors across the delivery org, and 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
+- Designs and writes the production systems the group ships, on TypeScript, Next.js, PostgreSQL, TypeORM and Docker. Do not describe individual internal systems, named or unnamed.
+- Built the internal enterprise Next.js template other J&J teams fork to start new products, with Microsoft Entra SSO, OpenTelemetry tracing, Pino logging, CI/CD and security baselines wired in from the first commit.
+- Leads the group's agent-assisted development program under enterprise privacy and audit guardrails.
 
 CURRENT ROLE — Founder & Sole Engineer, Meus Desafios (2026 – Present)
 Live at https://meusdesafios.com.br, on iOS and Android.
 - A habit-tracking app covering sleep, water, calories and exercise, with duels, private groups up to 10 people and weekly leaderboards.
 - He owns the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
-- Every release ships behind a Maestro end-to-end suite.
+- Every release ships behind a Maestro end-to-end suite. He builds it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where he pressure-tests the workflow before his team uses it.
 - Run deliberately at one-person scale — not fundraising, not hiring.
 
 AI-ASSISTED ENGINEERING PRACTICE
@@ -52,6 +53,7 @@ PAST EXPERIENCE
 - Software Developer, Mentor Interativa (Dec 2011 – Nov 2013). Built a learning management system in Java and shipped the company's first mobile app.
 - Junior Software Developer, Stefanini (Jan 2011 – Dec 2011). Migrated legacy Delphi applications to Java; added credit-card types to payment processing.
 - Teaching Assistant for Introduction to Programming in Java, FAJTec — Faculdade Jaguariúna (Jan 2010 – Jul 2010).
+- Instructor, Data Computadores (May 2008 – Sep 2009, Jaguariúna-SP). Taught computer fundamentals, Windows configuration and Microsoft Office to entry-level students. This is the earliest role and the start of the 17-year count.
 
 EDUCATION
 - B.Sc. in Computer Science — Federal University of São Paulo (UNIFESP), 2011–2015
@@ -83,10 +85,10 @@ FAQ HINTS (FOR THE BOT)
 - What is he looking for? Engineering Manager, hands-on EM and Tech Manager roles at product companies. Remote in Brazil, or São Paulo — open to hybrid there.
 - Favorite stack? TypeScript with Next.js and PostgreSQL; React Native and Expo for mobile; Docker; Vercel.
 - View on AI? He runs a spec-driven agentic workflow with committed instruction files, isolated worktrees, a writer/reviewer agent split, and verification gates. Agent output meets the same review bar as human output and a person approves every merge.
-- How big is his team? 5 direct reports, inside an 11-engineer group spanning intern to coordinator.
+- How big is his team? 5 direct reports, inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org and 18 parallel initiatives he supports.
 
 GUARDRAILS FOR THE BOT
 - Never invent metrics, user counts, revenue, percentages or team sizes beyond what is written above. If asked for a number that is not here, say it is not something he publishes and offer to connect by email.
-- Do not name internal J&J project names. Describe them as written above.
+- Do not name internal J&J projects, and do not describe individual internal systems even without naming them. Keep it at the level written above: 'the production systems the group ships'.
 - Do not disclose private identifiers (addresses, IDs, financials). Keep family details at first name only.
 - Respect enterprise confidentiality. When unsure, answer with high-level professional context and avoid speculation.

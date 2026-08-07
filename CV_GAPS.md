@@ -19,10 +19,11 @@ this CV than any rewording.
 
 | Gap | Where it would go |
 |---|---|
-| Any before→after on the integration hub or checkout platform — latency, throughput, error rate, records processed, integrations replaced | `experiences[0].roles[0]` bullet 2 |
-| How many teams adopted the internal Next.js template, and what it saved them (setup days, duplicated auth/observability work) | `experiences[0].roles[0]` bullet 3 |
-| Anything measured about the agent-assisted development program — engineers using it, PRs it pre-checks, review load, cycle time | `experiences[0].roles[0]` bullet 4 and `aiPractice` |
-| Deploy frequency, lead time or change-failure rate before vs. after you set the review and release bar | `experiences[0].roles[0]` bullet 5 |
+| Any before→after on the production systems you build — latency, throughput, error rate, records processed, integrations replaced. Even one, stated generically, would carry the whole hands-on claim | `experiences[0].roles[0]` bullet 3 |
+| One shipped outcome from any of the 18 initiatives — what it was and what changed | `experiences[0].roles[0]` bullet 2 |
+| How many teams adopted the internal Next.js template, and what it saved them (setup days, duplicated auth/observability work) | `experiences[0].roles[0]` bullet 4 |
+| Anything measured about the agent-assisted development program — engineers using it, PRs it pre-checks, review load, cycle time | `experiences[0].roles[0]` bullets 5-6, and `aiPractice` for the homepage |
+| Deploy frequency, lead time or change-failure rate before vs. after you set the review and release bar | `experiences[0].roles[0]` bullet 7 |
 | Traffic, markets, users or SSO integrations on the Innovative Medicine LATAM portal | `experiences[0].roles[1]` bullet 1 |
 
 ## 2. People-management evidence
@@ -37,22 +38,19 @@ actually probes, and none of it exists anywhere in the repo.
 | Retention / regretted attrition over your tenure | new bullet, `experiences[0].roles[0]` |
 | Whether leveling and performance run against a written rubric | `experiences[0].roles[0]` bullet 1 |
 
-## 3. Team and org scope — unresolved contradiction
+## 3. Team and org scope — RESOLVED
 
-The site previously published **two incompatible figures** for the same role,
-and neither is currently on the CV:
+The site previously published two incompatible figures (`~70 professionals` vs
+`50+ engineers, 9 internal + 40+ contractors`, where 9 + 40 = 49). Both are gone.
 
-- `~70 professionals across employees and vendors` — old `app/cv/page.tsx` and `Experiences.tsx`
-- `50+ engineers, being 9 internal employees and 40+ contractors` — `docs/cover-letter-airbnb-sr-manager.md` (and 9 + 40 = 49, which is not "50+")
+The CV now states what you confirmed: **5 direct reports**, an **11-engineer J&J
+group** (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern), **~70
+contractors** across the delivery org, and **18 parallel initiatives** supported
+through vendor management, budget ownership and technical direction.
 
-You confirmed **5 direct reports** and **11 J&J engineers** (2 coordinators,
-3 senior, 4 mid-level, 1 trainee, 1 intern), which is what the CV now states.
-
-**Still needed:** the true total including partner/vendor squads, if you want the
-wider scope on the page. Right now the CV says nothing about it, which is safe
-but leaves influence scope invisible. It would go in
-`experiences[0].roles[0]` bullet 1 as "…within a ~N-person delivery org spanning
-employees and partner squads".
+One thing to be ready for: "supports 18 parallel initiatives" invites the
+question *"what did any of them ship?"*. One named outcome from one of the 18
+would convert that line from scope into evidence — see §1.
 
 ## 4. Meus Desafios
 
@@ -63,19 +61,21 @@ employees and partner squads".
 | A specific feature you deliberately cut or deferred — a named tradeoff beats the generic version | `experiences[1].roles[0]` bullet 4 |
 | Confirm 2026 is the founding year. It makes the venture ~7 months old, which is fine, but it is the first thing a reader will notice next to a 12-year tenure | `experiences[1].period` |
 
-## 5. Systems described but not named
+## 5. Systems deliberately not described
 
-You asked that J&J project names not be published, so the CV describes them
-generically: "an integration hub for the Innovative Medicine business" and
-"a checkout platform".
+At your instruction the CV no longer describes individual internal systems at
+all, named or unnamed. The bullet reads "Design and write the production systems
+the group ships — TypeScript, Next.js, PostgreSQL, TypeORM, Docker", and the
+chatbot grounding carries an explicit guardrail against elaborating.
 
-**Needed to sharpen without naming:** a one-line description of what each system
-actually does and for whom — what the hub integrates, who the checkout serves.
-Right now "a checkout platform" carries almost no information. Even
-"a checkout platform for the vision-care business" would be materially stronger,
-and it names a business unit rather than a project.
+**The cost, so you can weigh it:** a named system with a named tradeoff is the
+single strongest proof of hands-on architecture, and this removes it. What
+carries claim #2 now is the internal Next.js template (kept — it reads as
+engineering tooling rather than a business system) and everything on Meus
+Desafios, which is public and has no confidentiality constraint.
 
-→ `experiences[0].roles[0]` bullet 2 and `summary.cv`.
+If you ever get clearance for even a generic business-unit label, that bullet is
+where it goes: `experiences[0].roles[0]`.
 
 ## 6. Verify before an interview leans on it
 
@@ -92,9 +92,12 @@ and it names a business unit rather than a project.
 | Choice | Where | How to flip |
 |---|---|---|
 | **Internal title hidden on the print CV.** "IT Manager — Full Stack Chapter Lead" shows on the homepage but not in the PDF, because "IT Manager" reads as internal back-office at a product company. Some background checks match on legal title. | `app/cv/page.tsx`, the `RECENT_JJ_ROLES` map | Pass `internalTitle={role.internalTitle}` back into `RoleBlock` |
-| **"17 parallel initiatives" removed entirely.** It contradicted "~15" elsewhere, and "initiatives" is sponsor vocabulary — nothing in an initiative ever shipped. | removed from all files | Re-add with the true number if you want portfolio breadth visible |
+| **"18 parallel initiatives" published**, resolving the old `17` vs `~15` contradiction with the number you confirmed. Note that "initiatives" is sponsor vocabulary — it reads as steered rather than shipped, which is why §1 asks for one outcome from among them. | `experiences[0].roles[0]` bullet 2 | Drop the bullet, or attach an outcome to it |
 | **Language proficiency bars removed** from the homepage. They encoded invented precision (100% / 90% / 85%). | `components/sections/Languages.tsx` | Restore the bars if you want them, with levels you can defend |
-| **`public/PauloNeves.pdf` deleted.** A publicly served orphan referenced by no component, claiming "12+ years" with Technical Product Owner as the current role. | deleted | `git checkout backup-main -- public/PauloNeves.pdf` |
+| **Data Computadores (2008–2009) restored** as the earliest one-line entry, completing the timeline back to the start of the 17-year count. | `earlierExperience` | Remove the entry |
+| **`public/PauloNeves.pdf` deleted.** A publicly served orphan referenced by no component, claiming "12+ years" with Technical Product Owner as the current role. | deleted | Recover from the pre-rewrite bundle at `/Users/psneves/dev/br-com-psneves-pre-author-rewrite.bundle` |
+| **AI practice removed from the print CV.** The standalone section is gone; its five mechanisms are folded into the two current roles — specs/reviewer-agent/verification-gate under J&J, worktrees/headless under Meus Desafios. The homepage keeps the dedicated `AiPractice` section, where there is no page budget. | `app/cv/page.tsx`, `aiPractice` in `lib/data/profile.ts` | Re-add a `<Section>` rendering `aiPractice.points` on page 1 |
+| **Auth.js dropped entirely**, including the skills chip (you asked for it off the template bullet; leaving it in Skills alone would have read as inconsistent). Entra SSO is still named. | `skillGroups[0]`, `experiences[0].roles[0]` | Re-add "Auth.js" to the Build with group |
 | **Pre-2014 roles compressed to one line each**, security years kept with bullets, per your choice. | `earlierExperience` | Move any role back into `experiences` for full bullets |
 
 ## 8. Facts that were contradictory and how they were resolved
@@ -119,5 +122,5 @@ No averaging, no invention — the majority or the internally consistent value w
 - **`next.config.js` disables TypeScript and ESLint build enforcement** (`ignoreBuildErrors`, `ignoreDuringBuilds`) and sets `images.unoptimized` — the exact opposite of what `CLAUDE.md` claimed. Left as-is; turning them on would surface 46 pre-existing type errors.
 - **46 pre-existing type errors**, all in unused shadcn components under `components/ui/` plus `hooks/use-toast.ts`. Unchanged by this work — verified identical count before and after.
 - **~150 lines of dead print CSS** in `app/globals.css` (`.pdf-document`, `.pdf-header`, `.pdf-section`, `.company-block`, `.role-item`) with zero usages repo-wide. It will mislead anyone tuning print layout.
-- **38 older commits** still carry the `Neves, Paulo [TS LATAM] <pneves3@its.jnj.com>` identity, beyond the 21 that were rewritten.
+- **Commit authorship was rewritten across all local history** to `psneves <paulo@psneves.com.br>`, including the 18 commits generated by Vercel's v0 bot. `origin/main` and `origin/v0updates` still hold the pre-rewrite identities until a `git push --force-with-lease`. Pre-rewrite backup: `/Users/psneves/dev/br-com-psneves-pre-author-rewrite.bundle`.
 - **`docs/cover-letter-airbnb-sr-manager.md`** still states the old `50+ engineers` figure and the `99180-1176` phone number. It is a dated artifact, not published by the site.

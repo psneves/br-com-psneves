@@ -72,9 +72,9 @@ export const profile = {
  * strongest proof + direction.
  */
 export const summary = {
-  cv: "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, and still design and write the systems we ship — an integration hub for the Innovative Medicine business, a checkout platform, and the internal Next.js template other teams fork to start new products. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.",
+  cv: "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.",
   homeLead:
-    "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. I manage 5 direct reports inside an 11-engineer group at Johnson & Johnson that spans intern to coordinator — and I still design and write the systems we ship.",
+    "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. I manage 5 direct reports inside an 11-engineer group at Johnson & Johnson that spans intern to coordinator, support ~70 contractors across 18 parallel initiatives — and I still design and write the systems we ship.",
   homeSecondary:
     "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android. Product, mobile client, backend, billing and store releases are all mine — which is where the standards I set for my team get tested on my own code.",
 } as const;
@@ -86,8 +86,13 @@ export const highlights = [
 ] as const;
 
 /**
- * Every line follows "<concrete mechanism> so that <failure prevented>".
- * No metrics — none of this has been instrumented. See CV_GAPS.md.
+ * Homepage-only section. Every line follows "<concrete mechanism> so that
+ * <failure prevented>". No metrics — none of this has been instrumented.
+ *
+ * The print CV does NOT render this: the same practice is folded into the
+ * bullets of the two current roles, so it reads as evidence for the jobs
+ * rather than competing with them for page-1 space. Keep the two in sync by
+ * hand — if a mechanism changes here, update those role bullets too.
  */
 export const aiPractice = {
   title: "AI-Assisted Engineering Practice",
@@ -99,14 +104,6 @@ export const aiPractice = {
     "A reviewer agent audits the writer agent's diff before a human sees it — first output is never the output that ships.",
     "Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review, and a person approves every merge.",
     "Headless runs handle the repetitive passes — migrations, codebase-wide sweeps, release checks — that do not need someone in the loop.",
-  ],
-  /** Condensed variant for the print/PDF CV. */
-  cvPoints: [
-    "Specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed next to the code and reviewed like source, so intent survives across sessions and hand-offs.",
-    "Agents work scoped subtasks in isolated git worktrees, so parallel runs cannot collide and each change stays reviewable on its own.",
-    "A reviewer agent audits the writer agent's diff before a human sees it — first output is never what ships.",
-    "Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review; a person approves every merge.",
-    "Headless runs take the repetitive passes — migrations, codebase sweeps, release checks.",
   ],
 } as const;
 
@@ -123,18 +120,22 @@ export const experiences: Experience[] = [
         period: "Apr 2023 — Present",
         current: true,
         bullets: [
-          "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator — hiring, leveling, individual development plans and the technical bar are mine.",
-          "Design and write the systems the group ships: an integration hub for the Innovative Medicine business and a checkout platform, on TypeScript, Next.js, PostgreSQL and TypeORM, containerized with Docker.",
-          "Built the internal enterprise Next.js template other J&J teams fork to start new products, with Microsoft Entra SSO (Auth.js v5), OpenTelemetry tracing, Pino logging, CI and security baselines wired in from the first commit.",
-          "Lead the group's agent-assisted development program — PR pre-checks, test generation and change summaries — under enterprise privacy and audit guardrails.",
+          "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, individual development plans and the technical bar are mine.",
+          "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
+          "Design and write the production systems the group ships, on TypeScript, Next.js, PostgreSQL and TypeORM, containerized with Docker.",
+          "Built the internal enterprise Next.js template other J&J teams fork to start new products, with Microsoft Entra SSO, OpenTelemetry tracing, Pino logging, CI/CD and security baselines wired in from the first commit.",
+          "Lead the group's agent-assisted development program: specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed and reviewed like source, so intent survives across sessions and hand-offs.",
+          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
           "Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.",
           "Promoted from chapter lead to manager in Sep 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
         cvBullets: [
-          "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator — hiring, leveling, career plans and the technical bar are mine.",
-          "Design and write the systems the group ships: an integration hub for the Innovative Medicine business and a checkout platform — TypeScript, Next.js, PostgreSQL, TypeORM, Docker.",
-          "Built the internal Next.js template other teams fork to start products, with Entra SSO (Auth.js v5), OpenTelemetry, Pino, CI and security baselines in from the first commit.",
-          "Lead the group's agent-assisted development program — PR pre-checks, test generation, change summaries — under enterprise privacy and audit guardrails.",
+          "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, career plans and the technical bar are mine.",
+          "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
+          "Design and write the production systems the group ships — TypeScript, Next.js, PostgreSQL, TypeORM, Docker.",
+          "Built the internal Next.js template other teams fork to start products, with Entra SSO, OpenTelemetry, Pino, CI/CD and security baselines in from the first commit.",
+          "Lead the group's agent-assisted development program: specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed and reviewed like source, so intent survives across sessions and hand-offs.",
+          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
           "Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.",
           "Promoted from chapter lead to manager in Sep 2023.",
         ],
@@ -223,6 +224,7 @@ export const experiences: Experience[] = [
           "Founded and build Meus Desafios end to end — a live habit-tracking app on iOS and Android covering sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.",
           "Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the monthly and annual billing that separates the free tier from Premium.",
           "Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.",
+          "Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.",
           "Make the product calls a PM would normally make — which habits to track, what stays free and what sits behind Premium, what to cut to keep the surface small enough for one engineer to maintain — and then live with them in the support inbox.",
           "Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.",
         ],
@@ -230,7 +232,8 @@ export const experiences: Experience[] = [
           "Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.",
           "Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.",
           "Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.",
-          "Make the product calls a PM would normally make — what stays free, what sits behind Premium, what to cut to keep the surface small enough for one engineer to maintain.",
+          "Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.",
+          "Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.",
           "Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.",
         ],
       },
@@ -258,6 +261,12 @@ export const earlierExperience: EarlierRole[] = [
     period: "2010",
     detail: "Supported the Introduction to Programming in Java course and authored its assessments.",
   },
+  {
+    title: "Instructor",
+    company: "Data Computadores",
+    period: "2008 — 2009",
+    detail: "Taught computer fundamentals, Windows configuration and Microsoft Office to entry-level students.",
+  },
 ];
 
 export const skillGroups: SkillGroup[] = [
@@ -272,7 +281,7 @@ export const skillGroups: SkillGroup[] = [
       "PostgreSQL",
       "TypeORM",
       "Docker",
-      "Auth.js / Entra SSO (OIDC/SAML)",
+      "Microsoft Entra SSO (OIDC/SAML)",
       "OpenTelemetry",
       "Pino",
       "Playwright",
@@ -291,7 +300,7 @@ export const skillGroups: SkillGroup[] = [
       "Roadmap & OKRs",
       "Delivery & release management",
       "Partner squad delivery",
-      "Budget",
+      "Budget Management",
     ],
   },
 ];
