@@ -70,9 +70,9 @@ export const profile = {
  * strongest proof + direction.
  */
 export const summary = {
-  cv: "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by my team alongside approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Applying AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.",
+  cv: "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by my team alongside approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Integrating AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.",
   homeLead:
-    "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports and set technical direction for 18 initiatives delivered by my team alongside approximately 70 vendor engineers. I remain an active contributor to architecture and production code. Applying AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026.",
+    "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports and set technical direction for 18 initiatives delivered by my team alongside approximately 70 vendor engineers. I remain an active contributor to architecture and production code. Integrating AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026.",
   homeSecondary:
     "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android. I own product, mobile client, backend, billing and store releases end to end — which is where the standards I set for my team get tested against my own code.",
 } as const;
@@ -117,8 +117,8 @@ export const experiences: Experience[] = [
         period: "Apr 2023 — Present",
         current: true,
         bullets: [
-          "Manage 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator, with approximately 70 vendor engineers delivering alongside them; accountable for hiring, leveling, individual development plans and the technical bar.",
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by applying AI across the team's planning, build, test and release cycle.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance, engineering standards and technical excellence.",
+          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.",
           "Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.",
           "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
           "Design and write the production systems the group ships — TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.",
@@ -127,8 +127,8 @@ export const experiences: Experience[] = [
           "Promoted from chapter lead to manager in Sep 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
         cvBullets: [
-          "Manage 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator, with approximately 70 vendor engineers delivering alongside them; accountable for hiring, leveling, career plans and the technical bar.",
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by applying AI across the team's planning, build, test and release cycle.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance, engineering standards and technical excellence.",
+          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.",
           "Lead that program hands-on: spec-driven development, with SPEC.md, AGENTS.md and CLAUDE.md committed next to the code and reviewed like source, which is what speeds delivery up rather than the tooling alone.",
           "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
           "Design and write the production systems the group ships — TypeScript, React, React Native, Vite, Next.js, PostgreSQL, TypeORM, Docker, Python and LangGraph.",
