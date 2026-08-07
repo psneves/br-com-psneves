@@ -29,7 +29,7 @@ npx tsc --noEmit 2>&1 | grep -cE "error TS"   # expect 46
 ```
 
 ### Regenerating the CV PDF
-The header "Save PDF" button serves the static, pre-generated `public/Paulo_Neves_CV.pdf`. (The `/cv` page's own "Download PDF" button calls `window.print()` on live HTML instead — the two paths can paginate differently, so check both after layout changes.)
+Both download buttons — "Save PDF" in the homepage header and "Download PDF" on `/cv` — serve the same static, pre-generated `public/Paulo_Neves_CV.pdf`. Do not wire either of them to `window.print()`: browser printing applies its own margins and stamps header/footer chrome (URL, date, page numbers) onto the output, so the site would ship two visibly different PDFs.
 
 **Whenever content in `lib/data/profile.ts` or the CV layout changes, regenerate it:**
 1. `npm run dev` (in one terminal)

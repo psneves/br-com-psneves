@@ -98,8 +98,18 @@ function SkillGroupBlock({ title, skills }: { title: string; skills: string[] })
 }
 
 export default function CV() {
+  // Serves the pre-generated file rather than window.print(). Printing from
+  // the browser paginates with the browser's own margins and stamps its
+  // header/footer chrome (URL, date, page numbers) onto the output, so the
+  // two download buttons on the site produced visibly different PDFs.
+  // scripts/generate-pdf.js is the single path, and it verifies page fit.
   const handleDownloadPDF = () => {
-    window.print();
+    const link = document.createElement("a");
+    link.href = "/Paulo_Neves_CV.pdf";
+    link.download = "Paulo_Neves_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
