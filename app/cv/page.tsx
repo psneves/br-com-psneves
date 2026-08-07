@@ -159,13 +159,20 @@ export default function CV() {
 
           .print-hidden { display: none !important; }
 
-          /* Left-aligned and unhyphenated on purpose: justified text with
-             hyphens: auto injects real hyphen characters into the PDF text
-             layer, so an ATS reads "ar-chitecture" and misses the keyword. */
-          .cv-page p, .cv-page li span:last-child {
-            text-align: left !important;
+          /* Never hyphenate: justified text with hyphens: auto injects real
+             hyphen characters into the PDF text layer, so an ATS reads
+             "ar-chitecture" and misses the keyword. */
+          .cv-page * {
             -webkit-hyphens: none !important;
             hyphens: none !important;
+          }
+
+          /* Left-align body copy only. Scoped to the summary and bullet text
+             on purpose — a blanket "p { text-align: left }" also flattens the
+             centered name and title in the header. */
+          .cv-page .cv-summary,
+          .cv-page li span:last-child {
+            text-align: left !important;
           }
 
           .text-blue-600 { color: #1e40af !important; }
