@@ -10,7 +10,7 @@ CONTACT
 - GitHub: https://github.com/psneves
 
 PROFESSIONAL HEADLINE
-Full Stack Engineering Manager with 17 years in software, three of them managing engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, sets technical direction for 18 parallel initiatives delivered by approximately 70 vendor engineers, and owns the vendor relationships and budget behind them. He remains an active contributor to architecture and production code. Applying AI across the team's planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
+Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, sets technical direction for 18 parallel initiatives delivered by approximately 70 vendor engineers, and owns the vendor relationships and budget behind them. He remains an active contributor to architecture and production code. Applying AI across the team's planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
 
 WHAT HE IS LOOKING FOR
 Engineering Manager, hands-on EM and Tech Manager roles at product companies — fintech, SaaS, marketplaces, healthtech. Not targeting pure individual-contributor roles (Staff/Principal Engineer).

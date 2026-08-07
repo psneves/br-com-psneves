@@ -10,7 +10,7 @@ const inter = Inter({
 
 const TITLE = "Paulo Neves — Full Stack Engineering Manager"
 const DESCRIPTION =
-  "Full Stack Engineering Manager with 17 years in software and 3 managing engineering teams. Manages a mixed-seniority team at Johnson & Johnson, still designs and writes the systems, and runs a spec-driven agentic development workflow. Remote (Brazil) or São Paulo."
+  "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. Manages a mixed-seniority team at Johnson & Johnson, still designs and writes the systems, and runs a spec-driven agentic development workflow. Remote (Brazil) or São Paulo."
 
 export const metadata = {
   title: TITLE,

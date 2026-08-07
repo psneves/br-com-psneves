@@ -4,7 +4,7 @@ Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Full Stack Engineering Manager with 17 years in software, three of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Applying AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.
+Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Applying AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.
 
 ## Experience
 
