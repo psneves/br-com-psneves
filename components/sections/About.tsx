@@ -1,8 +1,8 @@
-import { Briefcase, Award, Users, Code2 } from "lucide-react"
+import { Briefcase, TrendingDown, Users, Code2 } from "lucide-react"
 import SectionHeader from "../ui/SectionHeader"
 import { summary, highlights } from "@/lib/data/profile"
 
-const HIGHLIGHT_ICONS = [Award, Users, Code2]
+const HIGHLIGHT_ICONS = [TrendingDown, Users, Code2]
 
 export default function About(): JSX.Element {
   return (
@@ -16,7 +16,7 @@ export default function About(): JSX.Element {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
           {highlights.map((highlight, index) => {
-            const Icon = HIGHLIGHT_ICONS[index] ?? Award
+            const Icon = HIGHLIGHT_ICONS[index] ?? TrendingDown
             return (
               <div
                 key={highlight.label}

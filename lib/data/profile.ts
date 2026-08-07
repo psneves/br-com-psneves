@@ -72,15 +72,15 @@ export const profile = {
  * strongest proof + direction.
  */
 export const summary = {
-  cv: "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.",
+  cv: "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Putting AI to work across how the team plans, builds and ships drove US$1.2M in cost avoidance through July 2026. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.",
   homeLead:
-    "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. I manage 5 direct reports inside an 11-engineer group at Johnson & Johnson that spans intern to coordinator, support ~70 contractors across 18 parallel initiatives — and I still design and write the systems we ship.",
+    "Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. I manage 5 direct reports inside an 11-engineer group at Johnson & Johnson that spans intern to coordinator, support ~70 contractors across 18 parallel initiatives — and I still design and write the systems we ship. Putting AI to work across how the team plans, builds and ships drove US$1.2M in cost avoidance through July 2026.",
   homeSecondary:
     "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android. Product, mobile client, backend, billing and store releases are all mine — which is where the standards I set for my team get tested on my own code.",
 } as const;
 
 export const highlights = [
-  { label: "17 Years", description: "In software, 3 leading teams" },
+  { label: "US$1.2M Avoided", description: "Through July 2026, from AI across the delivery process" },
   { label: "Mixed-Seniority Team", description: "5 direct reports, intern to coordinator" },
   { label: "Still Hands-On", description: "Architecture, code and releases" },
 ] as const;
@@ -121,22 +121,22 @@ export const experiences: Experience[] = [
         current: true,
         bullets: [
           "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, individual development plans and the technical bar are mine.",
+          "Drove US$1.2M in cost avoidance through July 2026 by putting AI to work across how the team plans, builds, tests and ships.",
+          "Lead the internal program behind it, and run engineering on committed specs: agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) live next to the code and are reviewed like source, so intent survives across sessions and hand-offs.",
+          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
           "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
           "Design and write the production systems the group ships, on TypeScript, Next.js, PostgreSQL and TypeORM, containerized with Docker.",
-          "Built the internal enterprise Next.js template other J&J teams fork to start new products, with Microsoft Entra SSO, OpenTelemetry tracing, Pino logging, CI/CD and security baselines wired in from the first commit.",
-          "Lead the group's agent-assisted development program: specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed and reviewed like source, so intent survives across sessions and hand-offs.",
-          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
-          "Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.",
+          "Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.",
           "Promoted from chapter lead to manager in Sep 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
         cvBullets: [
           "Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, career plans and the technical bar are mine.",
+          "Drove US$1.2M in cost avoidance through July 2026 by putting AI to work across how the team plans, builds, tests and ships.",
+          "Lead the internal program behind it, and run engineering on committed specs: agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) live next to the code and are reviewed like source, so intent survives across sessions and hand-offs.",
+          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
           "Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
           "Design and write the production systems the group ships — TypeScript, Next.js, PostgreSQL, TypeORM, Docker.",
-          "Built the internal Next.js template other teams fork to start products, with Entra SSO, OpenTelemetry, Pino, CI/CD and security baselines in from the first commit.",
-          "Lead the group's agent-assisted development program: specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed and reviewed like source, so intent survives across sessions and hand-offs.",
-          "Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.",
-          "Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.",
+          "Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.",
           "Promoted from chapter lead to manager in Sep 2023.",
         ],
       },

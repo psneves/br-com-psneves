@@ -4,7 +4,7 @@ Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.
+Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, support ~70 contractors across 18 parallel initiatives, and still design and write the production systems we ship. Putting AI to work across how the team plans, builds and ships drove US$1.2M in cost avoidance through July 2026. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.
 
 ## Experience
 
@@ -12,22 +12,13 @@ Full Stack Engineering Manager with 17 years in software and 3 leading engineeri
 São José dos Campos, SP, Brazil · Apr 2023 — Present
 *(internal title: IT Manager — Full Stack Chapter Lead)*
 - Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, plus ~70 contractors across the delivery org — hiring, leveling, career plans and the technical bar are mine.
+- Drove US$1.2M in cost avoidance through July 2026 by putting AI to work across how the team plans, builds, tests and ships.
+- Lead the internal program behind it, and run engineering on committed specs: agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) live next to the code and are reviewed like source, so intent survives across sessions and hand-offs.
+- Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.
 - Support 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
 - Design and write the production systems the group ships — TypeScript, Next.js, PostgreSQL, TypeORM, Docker.
-- Built the internal Next.js template other teams fork to start products, with Entra SSO, OpenTelemetry, Pino, CI/CD and security baselines in from the first commit.
-- Lead the group's agent-assisted development program: specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed and reviewed like source, so intent survives across sessions and hand-offs.
-- Hold agent output to the human bar — a reviewer agent audits the writer agent's diff, and build, typecheck, lint and tests gate every change before a person approves the merge.
-- Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.
+- Brought automated tests to every initiative the team owns, so nothing ships on manual verification alone — internal and partner squads held to the same bar.
 - Promoted from chapter lead to manager in Sep 2023.
-
-**Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
-Remote — Brazil · 2026 — Present
-- Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.
-- Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
-- Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.
-- Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.
-- Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.
-- Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 **Technical Product Owner — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
@@ -62,6 +53,17 @@ São José dos Campos, SP, Brazil · Jan 2014 — May 2015
 - Junior Software Developer — Stefanini (2011). Migrated legacy Delphi applications to Java; added credit-card types to payment processing.
 - Teaching Assistant, Java — FAJTec — Faculdade Jaguariúna (2010). Supported the Introduction to Programming in Java course and authored its assessments.
 - Instructor — Data Computadores (2008 — 2009). Taught computer fundamentals, Windows configuration and Microsoft Office to entry-level students.
+
+## Independent Product
+
+**Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
+Remote — Brazil · 2026 — Present
+- Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.
+- Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
+- Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.
+- Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.
+- Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.
+- Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
 ## Skills
 **Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · PostgreSQL · TypeORM · Docker · Microsoft Entra SSO (OIDC/SAML) · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python

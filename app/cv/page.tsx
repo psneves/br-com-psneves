@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft } from "lucide-react";
+import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft, Smartphone } from "lucide-react";
 import { profile, summary, experiences, earlierExperience, skillGroups, languages, education, certifications } from "@/lib/data/profile";
 
 const [johnsonAndJohnson, meusDesafios] = experiences;
@@ -59,7 +59,7 @@ function EmployerHeader({ company, context, location, period, url }: { company: 
   );
 }
 
-function RoleBlock({ title, internalTitle, period, bullets }: { title: string; internalTitle?: string; period: string; bullets: string[] }) {
+function RoleBlock({ title, internalTitle, period, bullets }: { title: string; internalTitle?: string; period?: string; bullets: string[] }) {
   return (
     <article className="mb-3 cv-role">
       <header className="flex items-baseline justify-between gap-3">
@@ -67,7 +67,7 @@ function RoleBlock({ title, internalTitle, period, bullets }: { title: string; i
           {title}
           {internalTitle && <span className="text-gray-500 font-normal"> (internal title: {internalTitle})</span>}
         </p>
-        <span className="text-gray-600 cv-meta shrink-0">{period}</span>
+        {period && <span className="text-gray-600 cv-meta shrink-0">{period}</span>}
       </header>
       <ul className="text-gray-700 mt-1">
         {bullets.map((bullet) => (
@@ -275,10 +275,15 @@ export default function CV() {
             {RECENT_JJ_ROLES.map((role) => (
               <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
             ))}
+          </Section>
 
-            <EmployerHeader company={meusDesafios.company} context={meusDesafios.context} location={meusDesafios.location} period={meusDesafios.period} url={meusDesafios.url} />
+          {/* Its own section, not a "Projects" bucket: the label has to read as
+              real work or the reader relocates it to the bottom of the page.
+              The role period is omitted because the header already carries it. */}
+          <Section title="Independent Product" icon={<Smartphone size={14} />}>
+            <EmployerHeader company={meusDesafios.company} location={meusDesafios.location} period={meusDesafios.period} url={meusDesafios.url} />
             {meusDesafios.roles.map((role) => (
-              <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
+              <RoleBlock key={role.title} title={role.title} bullets={role.cvBullets ?? role.bullets} />
             ))}
           </Section>
         </div>

@@ -9,21 +9,24 @@ the homepage and `/cv` render from.
 
 ---
 
-## 1. Impact numbers — the biggest gap
+## 1. Impact numbers
 
-The CV currently has **scope numbers** (5 direct reports, 11 engineers, 17
-years) but **no delta numbers** (before → after). Scope proves seniority; delta
-proves effectiveness. A hiring manager reads scope-only as "steered a portfolio"
-rather than "owned an outcome". One real delta per recent role would do more for
-this CV than any rewording.
+**Closed since the first pass:**
+- **US$1.2M in cost avoidance through July 2026** from putting AI to work across the whole delivery process — planning, building, testing and shipping — not only coding assistance. This is the only delta number on the CV and it carries the entire outcome case: it closes the summary, is the second bullet of the current role, and is a homepage highlight card.
+- **Automated tests on every initiative the team owns.** Not a before→after figure, but a binary state change with a clear consequence, which is the next best thing.
+
+Two cautions on the US$1.2M, because one number doing this much work is fragile:
+- It is stated exactly as given — seven months, 2026 through July. **Do not annualize it.** The chatbot grounding carries an explicit guardrail against that.
+- Be ready for "how was that calculated?". Whatever the methodology is — hours saved times rate, headcount not backfilled, vendor scope not purchased — you need to state it in one sentence. It is the first thing an interviewer will probe.
+- **The internal program that drives it is unnamed**, per your decision not to publish internal J&J project names. A named, sponsored program is stronger evidence than "the internal program behind it" — it converts a personal practice into an organizational fact, and nobody invents an acronym for a hobby. If the name is not actually confidential, naming it is a cheap upgrade: `experiences[0].roles[0]` bullet 3.
+
+**Still open:**
 
 | Gap | Where it would go |
 |---|---|
-| Any before→after on the production systems you build — latency, throughput, error rate, records processed, integrations replaced. Even one, stated generically, would carry the whole hands-on claim | `experiences[0].roles[0]` bullet 3 |
-| One shipped outcome from any of the 18 initiatives — what it was and what changed | `experiences[0].roles[0]` bullet 2 |
-| How many teams adopted the internal Next.js template, and what it saved them (setup days, duplicated auth/observability work) | `experiences[0].roles[0]` bullet 4 |
-| Anything measured about the agent-assisted development program — engineers using it, PRs it pre-checks, review load, cycle time | `experiences[0].roles[0]` bullets 5-6, and `aiPractice` for the homepage |
-| Deploy frequency, lead time or change-failure rate before vs. after you set the review and release bar | `experiences[0].roles[0]` bullet 7 |
+| Any before→after on the production systems you build — latency, throughput, error rate, records processed. The automated-tests line covers process; this would cover the systems themselves | `experiences[0].roles[0]` bullet 6 |
+| What the test coverage push changed — escaped defects, rollback rate, release frequency before vs. after | `experiences[0].roles[0]` bullet 7 |
+| One shipped outcome from among the 18 initiatives, so that line reads as delivered rather than steered | `experiences[0].roles[0]` bullet 5 |
 | Traffic, markets, users or SSO integrations on the Innovative Medicine LATAM portal | `experiences[0].roles[1]` bullet 1 |
 
 ## 2. People-management evidence
@@ -69,10 +72,14 @@ the group ships — TypeScript, Next.js, PostgreSQL, TypeORM, Docker", and the
 chatbot grounding carries an explicit guardrail against elaborating.
 
 **The cost, so you can weigh it:** a named system with a named tradeoff is the
-single strongest proof of hands-on architecture, and this removes it. What
-carries claim #2 now is the internal Next.js template (kept — it reads as
-engineering tooling rather than a business system) and everything on Meus
-Desafios, which is public and has no confidentiality constraint.
+single strongest proof of hands-on architecture. That is now entirely gone from
+the J&J side — the internal Next.js template bullet was removed too, at your
+instruction. What carries claim #2 today is one generic line naming the stack,
+the automated-testing push, and everything under Independent Product, which is
+public and has no confidentiality constraint.
+
+This is the weakest of the three differentiators as the CV now stands. Meus
+Desafios is doing most of the work for it.
 
 If you ever get clearance for even a generic business-unit label, that bullet is
 where it goes: `experiences[0].roles[0]`.
@@ -98,6 +105,8 @@ where it goes: `experiences[0].roles[0]`.
 | **`public/PauloNeves.pdf` deleted.** A publicly served orphan referenced by no component, claiming "12+ years" with Technical Product Owner as the current role. | deleted | Recover from the pre-rewrite bundle at `/Users/psneves/dev/br-com-psneves-pre-author-rewrite.bundle` |
 | **AI practice removed from the print CV.** The standalone section is gone; its five mechanisms are folded into the two current roles — specs/reviewer-agent/verification-gate under J&J, worktrees/headless under Meus Desafios. The homepage keeps the dedicated `AiPractice` section, where there is no page budget. | `app/cv/page.tsx`, `aiPractice` in `lib/data/profile.ts` | Re-add a `<Section>` rendering `aiPractice.points` on page 1 |
 | **Auth.js dropped entirely**, including the skills chip (you asked for it off the template bullet; leaving it in Skills alone would have read as inconsistent). Entra SSO is still named. | `skillGroups[0]`, `experiences[0].roles[0]` | Re-add "Auth.js" to the Build with group |
+| **Meus Desafios moved to its own "Independent Product" section**, out of Professional Experience. Named to avoid "project"/"side", which makes a reader relocate the entry mentally to the bottom of the page. It still sits on page 1, directly under the J&J block. | `app/cv/page.tsx` | Move the `<Section>` contents back under Professional Experience |
+| **Internal Next.js template bullet removed** at your instruction — see §5 for what that costs. | `experiences[0].roles[0]` | Re-add the bullet |
 | **Pre-2014 roles compressed to one line each**, security years kept with bullets, per your choice. | `earlierExperience` | Move any role back into `experiences` for full bullets |
 
 ## 8. Facts that were contradictory and how they were resolved
