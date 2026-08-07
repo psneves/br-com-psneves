@@ -1,9 +1,14 @@
 "use client";
 
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages, Phone, Home, ArrowLeft } from "lucide-react";
+import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft, Sparkles } from "lucide-react";
+import { profile, summary, aiPractice, experiences, earlierExperience, skillGroups, languages, education, certifications } from "@/lib/data/profile";
 
-// Semantic section components
+const [johnsonAndJohnson, meusDesafios] = experiences;
+/** Page 1 carries the current role and the most recent product-owner role. */
+const RECENT_JJ_ROLES = johnsonAndJohnson.roles.slice(0, 2);
+const EARLIER_JJ_ROLES = johnsonAndJohnson.roles.slice(2);
+
 interface SectionProps {
   title: string;
   icon: React.ReactNode;
@@ -13,58 +18,62 @@ interface SectionProps {
 
 function Section({ title, icon, children, className = "" }: SectionProps) {
   return (
-    <section className={`mb-6 print:mb-4 print:break-inside-avoid ${className}`}>
-      <header className="flex items-baseline gap-2">
+    <section className={`mb-4 cv-section ${className}`}>
+      <header className="flex items-baseline gap-2 mb-2">
         <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
           {icon}
         </span>
-        <h2 className="text-lg font-semibold text-gray-900 uppercase tracking-wide leading-none print:text-base section-header">{title}</h2>
+        <h2 className="text-lg font-semibold text-gray-900 uppercase tracking-wide leading-none section-header">{title}</h2>
       </header>
-      <div className={className}>{children}</div>
+      <div>{children}</div>
     </section>
   );
 }
 
-interface ExperienceItemProps {
-  title: string;
-  company: string;
-  period: string;
-  location?: string;
-  achievements: string[];
-  current?: boolean;
+/** Company header. Roles nest underneath so a long tenure reads as one employer. */
+function EmployerHeader({ company, context, location, period, url }: { company: string; context?: string; location: string; period: string; url?: string }) {
+  return (
+    <div className="flex items-baseline justify-between gap-3 border-b border-gray-200 pb-1 mb-2 employer-header">
+      <div className="flex items-baseline gap-2 flex-wrap">
+        <h3 className="font-bold text-gray-900 text-base cv-company">{company}</h3>
+        {context && <span className="text-gray-600 cv-meta">· {context}</span>}
+        {url && (
+          <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 cv-meta hover:underline">
+            {url.replace("https://", "")}
+          </a>
+        )}
+      </div>
+      <div className="flex items-center gap-3 text-gray-600 cv-meta shrink-0">
+        <span className="flex items-center gap-1">
+          <MapPin size={10} aria-hidden="true" />
+          {location}
+        </span>
+        <span className="flex items-center gap-1">
+          <Calendar size={10} aria-hidden="true" />
+          {period}
+        </span>
+      </div>
+    </div>
+  );
 }
 
-function ExperienceItem({ title, company, period, location, achievements, current = false }: ExperienceItemProps) {
+function RoleBlock({ title, internalTitle, period, bullets }: { title: string; internalTitle?: string; period: string; bullets: string[] }) {
   return (
-    <article className="mb-4 print:mb-3 space-y-0 print:break-inside-avoid">
-      <header className="mb-2">
-        <div className="flex space-y-0 items-start justify-between gap-2">
-          <div className="flex-1 space-y-0 ">
-            <h3 className="font-bold text-gray-900 text-base print:text-sm">{company}</h3>
-            <p className="text-blue-600 font-medium text-sm print:text-xs">{title}</p>
-          </div>
-          {current && <span className="bg-green-100 text-green-900 text-xs px-2 py-1 rounded-full font-medium print:hidden">Current</span>}
-        </div>
-        <div className="flex space-y-0 items-center gap-4 text-xs text-gray-600 mt-1">
-          <span className="flex items-center gap-1">
-            <Calendar size={12} aria-hidden="true" />
-            {period}
-          </span>
-          {location && (
-            <span className="flex items-center gap-1">
-              <MapPin size={12} aria-hidden="true" />
-              {location}
-            </span>
-          )}
-        </div>
+    <article className="mb-3 cv-role">
+      <header className="flex items-baseline justify-between gap-3">
+        <p className="text-blue-600 font-semibold cv-role-title">
+          {title}
+          {internalTitle && <span className="text-gray-500 font-normal"> (internal title: {internalTitle})</span>}
+        </p>
+        <span className="text-gray-600 cv-meta shrink-0">{period}</span>
       </header>
-      <ul className="space-y-0 text-sm print:text-xs text-gray-700">
-        {achievements.map((achievement, index) => (
-          <li key={index} className="flex gap-2 leading-relaxed">
+      <ul className="text-gray-700 mt-1">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex gap-2 cv-bullet">
             <span className="text-blue-600 flex-shrink-0" aria-hidden="true">
               •
             </span>
-            <span>{achievement}</span>
+            <span>{bullet}</span>
           </li>
         ))}
       </ul>
@@ -72,24 +81,13 @@ function ExperienceItem({ title, company, period, location, achievements, curren
   );
 }
 
-interface SkillGroupProps {
-  title: string;
-  skills: string[];
-  icon: React.ReactNode;
-}
-
-function SkillGroup({ title, skills, icon }: SkillGroupProps) {
+function SkillGroupBlock({ title, skills }: { title: string; skills: string[] }) {
   return (
-    <div className="mb-4 print:mb-3">
-      <h3 className="flex items-center gap-2 font-medium text-gray-900 text-sm mb-2 leading-none">
-        <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
-          {icon}
-        </span>
-        {title}
-      </h3>
+    <div className="mb-3">
+      <h3 className="font-semibold text-gray-900 cv-role-title mb-1">{title}</h3>
       <div className="flex flex-wrap gap-1">
         {skills.map((skill) => (
-          <span key={skill} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded border print:border-gray-300 skill-tag">
+          <span key={skill} className="bg-gray-100 text-gray-700 px-2 py-1 rounded border print:border-gray-300 skill-tag">
             {skill}
           </span>
         ))}
@@ -108,146 +106,93 @@ export default function CV() {
       <style>{`
         @page {
           size: A4;
-          margin: 0.5in;
-          counter-increment: page;
+          margin: 12mm;
         }
 
-        @page:first {
-          counter-reset: page 1;
-        }
+        /* app/globals.css applies typographic base styles to bare elements
+           (ul { my-6 ml-6 list-disc [&>li]:mt-2 }, p { mt-6 }, h2 { border-b
+           pb-2 }). They are right for prose and wrong for a density-critical
+           CV, so neutralize them inside .cv-page and control spacing here. */
+        .cv-page h1, .cv-page h2, .cv-page h3 { margin: 0; scroll-margin: 0; }
+        .cv-page h2 { border-bottom: 0; padding-bottom: 0; }
+        .cv-page p, .cv-page p:not(:first-child) { margin: 0; line-height: inherit; }
+        .cv-page ul { margin: 0; padding: 0; list-style: none; }
+        .cv-page ul > li { margin-top: 0; }
 
-        @page:after {
-          content: counter(page) " / 2";
-          position: absolute;
-          bottom: 0.25in;
-          right: 0.5in;
-          font-size: 10px;
-          color: #6b7280;
-        }
+        /* Semantic sizing, shared by screen and print.
+           NOTE: do not reintroduce Tailwind "print:" variants inside this
+           template literal — "\\:" collapses to ":" and the browser drops the
+           rule as an invalid selector. Plain class names only. */
+        .cv-page .cv-meta { font-size: 10px; line-height: 1.35; }
+        .cv-page .cv-bullet { font-size: 11px; line-height: 1.4; }
+        .cv-page .cv-role-title { font-size: 12px; line-height: 1.35; }
+        .cv-page .cv-company { font-size: 14px; line-height: 1.3; }
+        .cv-page .cv-summary { font-size: 11px; line-height: 1.5; }
+        .cv-page .section-header { font-size: 13px; }
+        .cv-page .skill-tag { font-size: 10px; padding: 0.1rem 0.35rem; }
 
         @media print {
-          body {
-            font-size: 12px;
-            line-height: 1.4;
-          }
+          body { font-size: 11px; }
 
           .cv-name-text {
             color: #1f2937 !important;
             -webkit-text-fill-color: #1f2937 !important;
           }
 
-          .cv-container {
-            max-height: 10.8in;
-            overflow: hidden;
+          /* Content that outgrows the page must spill onto a visible extra
+             page rather than be silently clipped. No max-height, no overflow
+             hidden — a regression has to be seen to be fixed. */
+          .cv-page {
+            break-after: page;
+            page-break-after: always;
+          }
+          .cv-page:last-of-type {
+            break-after: auto;
             page-break-after: auto;
           }
 
-          .page-break {
-            page-break-before: always;
-          }
-
-          .no-break {
+          .cv-section, .cv-role, .employer-header {
+            break-inside: avoid;
             page-break-inside: avoid;
           }
 
-          .print-hidden {
-            display: none !important;
+          .print-hidden { display: none !important; }
+
+          /* Left-aligned and unhyphenated on purpose: justified text with
+             hyphens: auto injects real hyphen characters into the PDF text
+             layer, so an ATS reads "ar-chitecture" and misses the keyword. */
+          .cv-page p, .cv-page li span:last-child {
+            text-align: left !important;
+            -webkit-hyphens: none !important;
+            hyphens: none !important;
           }
 
-          /* Prefer justified alignment for printed text */
-          .cv-container p,
-          .cv-container li span:last-child {
-            text-align: justify !important;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-          }
-
-          /* Ensure colors are preserved (darker blue for print) */
-          .text-blue-600 {
-            color: #1e40af !important; /* tailwind blue-800 */
-          }
-
-          .border-blue-600 {
-            border-color: #1e40af !important;
-          }
-
-          .bg-green-100 {
-            background-color: #dcfce7 !important;
-          }
-
-          .text-green-800 {
-            color: #166534 !important;
-          }
-
-          /* Adjust right column sizing for better fit */
-          .print\:text-xs {
-            font-size: 11px !important;
-          }
-
-          .print\:text-sm {
-            font-size: 12px !important;
-          }
-
-          .print\:mb-2 {
-            margin-bottom: 0.375rem !important;
-          }
-
-          .print\:mb-3 {
-            margin-bottom: 0.5rem !important;
-          }
-
-          .print\:space-y-4 > * + * {
-            margin-top: 0.75rem !important;
-          }
-
-          /* Compact skill tags (slightly larger for readability) */
-          .skill-tag {
-            font-size: 10px !important;
-            padding: 0.125rem 0.375rem !important;
-            margin: 0.125rem !important;
-          }
-
-          /* Reduce section headers */
-          .section-header {
-            font-size: 14px !important;
-            margin-bottom: 0.5rem !important;
-          }
+          .text-blue-600 { color: #1e40af !important; }
+          .border-blue-600 { border-color: #1e40af !important; }
         }
 
-        /* Align icons vertically with labels */
         .icon-align {
           display: inline-flex;
           align-items: center;
           justify-content: center;
           line-height: 1;
         }
-        .icon-align svg {
-          display: block;
-        }
+        .icon-align svg { display: block; }
 
         @media screen {
-          .cv-container {
+          .cv-page {
             background: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin: 2rem auto;
-            max-width: 8.5in;
-            min-height: 11in;
+            max-width: 8.27in;
+            min-height: 11.69in;
           }
-
-          /* Darker blue tone for on-screen CV page elements */
-          .cv-container .text-blue-600 {
-            color: #1e40af;
-          }
-          .cv-container .border-blue-600 {
-            border-color: #1e40af;
-          }
-          .cv-container .hover\:text-blue-600:hover {
-            color: #1e40af;
-          }
+          .cv-page .text-blue-600 { color: #1e40af; }
+          .cv-page .border-blue-600 { border-color: #1e40af; }
         }
       `}</style>
 
-      {/* Download Button - Screen Only */}
+      {/* Screen-only actions */}
       <div className="fixed top-4 right-4 z-10 print-hidden flex gap-2">
         <button onClick={() => (window.location.href = "/")} className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="Go to Home">
           <ArrowLeft size={16} />
@@ -263,228 +208,146 @@ export default function CV() {
         </button>
       </div>
 
-      <div className="cv-container bg-white print:bg-white">
+      {/* ---------------------------------------------------------------- */}
+      {/* Page 1 — the only page that decides anything                      */}
+      {/* ---------------------------------------------------------------- */}
+      <div className="cv-page bg-white">
         <div className="p-8 print:p-0">
-          {/* Header */}
-          <header className="mb-6 print:mb-4 no-break">
-            <div className="text-center w-full border-b-2 border-blue-600 pb-4">
-              {/* Name and Title */}
-              <div className="mb-4 text-center">
-                <h1 className="text-4xl font-bold mb-2 print:text-3xl cv-name-text" style={{ color: '#1f2937' }}>Paulo Neves</h1>
-                <div className="w-full flex flex-col items-center">
-                  <p className="text-lg text-blue-600 font-medium">Full Stack Engineering Manager | People Leader</p>
-                </div>
+          <header className="mb-4">
+            <div className="text-center w-full border-b-2 border-blue-600 pb-3">
+              <h1 className="text-3xl font-bold mb-1 cv-name-text" style={{ color: "#1f2937" }}>
+                {profile.name}
+              </h1>
+              <p className="text-blue-600 font-medium mb-2" style={{ fontSize: "15px" }}>
+                {profile.title}
+              </p>
+
+              {/* Email and phone first, plain text — parsers look here first. */}
+              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-1 text-gray-700 cv-meta">
+                <a href={`mailto:${profile.email}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Mail size={11} aria-hidden="true" />
+                  {profile.email}
+                </a>
+                <a href={`tel:${profile.phoneHref}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Phone size={11} aria-hidden="true" />
+                  {profile.phone}
+                </a>
+                <span className="flex items-center gap-1">
+                  <MapPin size={11} aria-hidden="true" />
+                  {profile.location} · {profile.availability}
+                </span>
               </div>
 
-              {/* Contact Information */}
-              <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-1 text-xs print:text-xs text-gray-600 print:gap-x-12">
-                <span className="flex items-center gap-1">
-                  <MapPin size={12} aria-hidden="true" />
-                  Jacareí-SP, Brazil
-                </span>
-                <a href="https://br.linkedin.com/in/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Linkedin size={12} aria-hidden="true" />
-                  LinkedIn @psneves
+              {/* Full URLs, not @handles — parsers match URL patterns. */}
+              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-1 text-gray-600 cv-meta mt-1">
+                <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Linkedin size={11} aria-hidden="true" />
+                  {profile.linkedin}
                 </a>
-                <a href="https://github.com/psneves" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Github size={12} aria-hidden="true" />
-                  GitHub @psneves
+                <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Github size={11} aria-hidden="true" />
+                  {profile.github}
                 </a>
-                <a href="https://psneves.com.br" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Globe size={12} aria-hidden="true" />
-                  psneves.com.br
-                </a>
-                <a href="mailto:paulo@psneves.com.br" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Mail size={12} aria-hidden="true" />
-                  paulo@psneves.com.br
-                </a>
-                <a href="tel:+551299180173" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Phone size={12} aria-hidden="true" />
-                  +55 (12) 99180-1173
+                <a href={profile.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
+                  <Globe size={11} aria-hidden="true" />
+                  {profile.website}
                 </a>
               </div>
             </div>
           </header>
 
-          {/* Two-Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 print:grid-cols-3 print:gap-6">
-            {/* Left Column */}
-            <div className="lg:col-span-2 print:col-span-2 space-y-6 print:space-y-4">
-              {/* Professional Summary */}
-              <Section title="Executive Summary" icon={<Users size={16} />}>
-                <p className="text-gray-700 leading-relaxed text-sm print:text-xs print:justify-normal">
-                  Technology leader with <strong>15+ years</strong> delivering secure, scalable web/API platforms at enterprise scale. Combines hands-on Full Stack engineering with solution architecture, product strategy, and stakeholder management.
-                  Currently leads engineering chapter and AI initiatives that accelerate SDLC with generative/agentic approaches while coaching senior engineers and raising technical standards across multiple SQUADs.
-                </p>
-              </Section>
+          <Section title="Summary" icon={<Users size={14} />}>
+            <p className="text-gray-700 cv-summary">{summary.cv}</p>
+          </Section>
 
-              {/* Experience */}
-              <Section title="Professional Experience" icon={<Briefcase size={16} />}>
-                <ExperienceItem
-                  title="IT Manager - Full Stack Chapter Lead"
-                  company="Johnson & Johnson - Technology Services"
-                  period="Sep 2023 — Present"
-                  location="São José dos Campos-SP"
-                  current={true}
-                  achievements={[
-                    "Sponsoring an engineering organization of ~70 professionals across employees and vendors",
-                    "Lead 17 parallel initiatives, aligning technical direction, capacity, budget, and execution to business priorities",
-                    "Govern vendor strategy, partner performance, and capacity to improve quality, scalability, and cost efficiency",
-                    "Strengthen DevSecOps, CI/CD, observability, and AI-driven SDLC acceleration through chapter leadership",
-                  ]}
-                />
+          <Section title={aiPractice.title} icon={<Sparkles size={14} />}>
+            <ul className="text-gray-700">
+              {aiPractice.cvPoints.map((point) => (
+                <li key={point} className="flex gap-2 cv-bullet">
+                  <span className="text-blue-600 flex-shrink-0" aria-hidden="true">
+                    •
+                  </span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
 
-                <ExperienceItem
-                  title="IT Lead - Full Stack Chapter Lead"
-                  company="Johnson & Johnson - Technology Services"
-                  period="Apr 2023 — Aug 2023"
-                  location="São José dos Campos-SP"
-                  achievements={[
-                    "Interviewed/onboarded engineers; set strategic direction for chapter technologies and training",
-                    "Created individual development plans and career pathways; mentored senior and junior engineers",
-                    "Led training events to strengthen regional engineering capabilities",
-                  ]}
-                />
-                <ExperienceItem
-                  title="IT Lead - Technical Product Owner"
-                  company="Johnson & Johnson - Innovative Medicine"
-                  period="Sep 2020 — Mar 2023"
-                  location="São José dos Campos-SP"
-                  achievements={[
-                    "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search for JanssenProLATAM.com",
-                    "Defined API contracts and NFRs; improved reliability, performance and observability",
-                    "Established OKRs/KPIs; led demos and executive readouts across markets",
-                    "Drove vendor and internal squads through Agile delivery with audited compliance",
-                  ]}
-                />
-              </Section>
-              <div className="page-break print:block hidden" />
-            </div>
+          <Section title="Professional Experience" icon={<Briefcase size={14} />}>
+            <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={johnsonAndJohnson.period} />
+            {RECENT_JJ_ROLES.map((role) => (
+              <RoleBlock key={role.title} title={role.title} internalTitle={role.internalTitle} period={role.period} bullets={role.cvBullets ?? role.bullets} />
+            ))}
 
-            {/* Right Column */}
-            <div className="space-y-6 print:space-y-4">
-              {/* Core Skills */}
-              <Section title="Skills" icon={<Code size={16} />}>
-                
-                        <SkillGroup
-                          title="Engineering"
-                          icon={<Code size={12} />}
-                          skills={["React", "Next.js", "NodeJS", "Python", "Docker", "DevSecOps", "CI/CD", "Robot Framework", "Playwright","Full Stack Architecture", "Artificial Intelligence", "API Platforms", "Cloud (AWS/GCP/Azure)", "Product Strategy"]}
-                        />
-                
-                        <SkillGroup
-                          title="Management"
-                          icon={<Briefcase size={12} />}
-                          skills={["Chapter Leadership", "Roadmapping", "OKRs", "Vendor Management", "Budget Management", "Stakeholder Management"]}
-                        />
-              </Section>
-
-              {/* Languages */}
-              <Section title="Languages" icon={<Languages size={16} />} className="no-break">
-                <div className="space-y-2 text-sm print:text-xs">
-                  <div className="flex justify-between">
-                    <span className="font-bold text-gray-700">Portuguese</span>
-                    <span className="font-medium text-blue-600">Native</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-bold text-gray-700">English</span>
-                    <span className="font-medium text-blue-600">Fluent</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-bold text-gray-700">Spanish</span>
-                    <span className="font-medium text-blue-600">Fluent</span>
-                  </div>
-                </div>
-              </Section>
-
-              {/* Education */}
-              <Section title="Education" icon={<GraduationCap size={16} />} className="no-break">
-                <div className="space-y-0 print:space-y-0">
-                  <div className="space-y-0 mb-6">
-                    <h3 className="font-bold text-gray-900 text-sm print:text-xs">Federal University of São Paulo</h3>
-                    <p className="text-blue-600 text-sm print:text-xs">Bachelor in Computer Science</p>
-                    <p className="text-gray-600 text-xs">2011 — 2015</p>
-                  </div>
-                  <div className="space-y-0">
-                    <h3 className="font-bold text-gray-900 text-sm print:text-xs">DeVry – Metrocamp</h3>
-                    <p className="text-blue-600 text-sm print:text-xs">Post-graduate, Information Security Management</p>
-                    <p className="text-gray-600 text-xs">2016 — 2018</p>
-                  </div>
-                </div>
-              </Section>
-            </div>
-          </div>
+            <EmployerHeader company={meusDesafios.company} context={meusDesafios.context} location={meusDesafios.location} period={meusDesafios.period} url={meusDesafios.url} />
+            {meusDesafios.roles.map((role) => (
+              <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
+            ))}
+          </Section>
         </div>
       </div>
-      <div className="cv-container bg-white print:bg-white p-8 print:p-0">
-        <Section title="Professional Experience (cont.)" icon={<Briefcase size={16} />}>
-          <ExperienceItem
-            title="Service Specialist"
-            company="Johnson & Johnson - Technology Services"
-            location="São José dos Campos-SP"
-            period="Feb 2019 — Aug 2020"
-            achievements={["Partnered with regional and global IT stakeholders to advance digital transformation"]}
-          />
-          <ExperienceItem
-            title="Sr. Information Security Analyst"
-            company="Johnson & Johnson - Information Security & Risk Management"
-            location="São José dos Campos-SP"
-            period="Apr 2018 — Feb 2019"
-            achievements={["Security liaison for Corporate, Vision Care and LifeScan across LATAM", "Led app-security assessments during M&A due diligence and integrations"]}
-          />
 
-          <ExperienceItem
-            title="Information Security Analyst"
-            company="Johnson & Johnson - Information Security & Risk Management"
-            location="São José dos Campos-SP"
-            period="Jun 2015 — Mar 2018"
-            achievements={["Drove enterprise security awareness programs; performed risk and compliance reviews"]}
-          />
+      {/* ---------------------------------------------------------------- */}
+      {/* Page 2 — history, compressed, plus credentials                    */}
+      {/* ---------------------------------------------------------------- */}
+      <div className="cv-page bg-white">
+        <div className="p-8 print:p-0">
+          <Section title="Professional Experience" icon={<Briefcase size={14} />}>
+            <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period="2014 — 2020" />
+            {EARLIER_JJ_ROLES.map((role) => (
+              <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
+            ))}
+          </Section>
 
-          <ExperienceItem
-            title="Information Security Intern"
-            company="Johnson & Johnson - Information Security & Risk Management"
-            location="São José dos Campos-SP"
-            period="Jan 2014 — May 2015"
-            achievements={[
-              "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications",
-              "Delivered security training to 800+ end-users and established foundational awareness programs",
-              "Guided SDLC methodology adoption and secure coding practices for development teams",
-            ]}
-          />
+          <Section title="Earlier Experience" icon={<Code size={14} />}>
+            <ul className="text-gray-700">
+              {earlierExperience.map((role) => (
+                <li key={`${role.company}-${role.period}`} className="cv-bullet mb-1">
+                  <span className="font-semibold text-gray-900">{role.title}</span>
+                  <span className="text-gray-700"> — {role.company}</span>
+                  <span className="text-gray-600"> ({role.period})</span>
+                  <span className="text-gray-700">. {role.detail}</span>
+                </li>
+              ))}
+            </ul>
+          </Section>
 
-          <ExperienceItem
-            title="Software Developer"
-            company="Mentor Interativa"
-            location="São José dos Campos-SP"
-            period="Dec 2011 — Nov 2013"
-            achievements={["Developed learning management system with social network integration using Java", "Created and launched the company's first mobile application using PhoneGap"]}
-          />
+          <Section title="Skills" icon={<Code size={14} />}>
+            {skillGroups.map((group) => (
+              <SkillGroupBlock key={group.title} title={group.title} skills={group.skills} />
+            ))}
+          </Section>
 
-          <ExperienceItem
-            title="Jr. Developer"
-            company="Stefanini"
-            location="Jaguariúna-SP"
-            period="Jan 2011 — Dec 2011"
-            achievements={["Led system migration initiatives, successfully translating legacy Delphi applications to modern Java architecture", "Engineered payment processing enhancements - new credit card types in financial transaction systems"]}
-          />
+          <div className="grid grid-cols-3 gap-6 items-start">
+            <Section title="Education" icon={<GraduationCap size={14} />}>
+              {education.map((item) => (
+                <div key={item.institution} className="mb-2">
+                  <h3 className="font-semibold text-gray-900 cv-role-title">{item.institution}</h3>
+                  <p className="text-blue-600 cv-meta">{item.degree}</p>
+                  <p className="text-gray-600 cv-meta">{item.period}</p>
+                </div>
+              ))}
+            </Section>
 
-          <ExperienceItem
-            location="Jaguariúna-SP"
-            title="Instructor - Java Programming"
-            company="FAJTec"
-            period="Jan 2010 — Jul 2010"
-            achievements={["Helped students of the course Introduction to Programming in Java to understand the course content", "Created and applied tests for the students"]}
-          />
+            <Section title="Certifications" icon={<Award size={14} />}>
+              {certifications.map((cert) => (
+                <div key={cert.title} className="mb-2">
+                  <h3 className="font-semibold text-gray-900 cv-role-title">{cert.title}</h3>
+                  <p className="text-gray-600 cv-meta">{cert.period}</p>
+                </div>
+              ))}
+            </Section>
 
-          <ExperienceItem
-            title="Instructor - Microsoft Office"
-            company="Data Computadores"
-            location="Jaguariúna-SP"
-            period="May 2008 — Sep 2009"
-            achievements={["Taught students on basic computer skills, including Windows configuration and Microsoft Office applications", "Provided personalized computer training for individuals and small groups"]}
-          />
-        </Section>
+            <Section title="Languages" icon={<LanguagesIcon size={14} />}>
+              {languages.map((language) => (
+                <div key={language.name} className="flex justify-between mb-1">
+                  <span className="font-semibold text-gray-700 cv-role-title">{language.name}</span>
+                  <span className="text-blue-600 cv-role-title">{language.level}</span>
+                </div>
+              ))}
+            </Section>
+          </div>
+        </div>
       </div>
     </>
   );
