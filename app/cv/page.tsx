@@ -32,8 +32,10 @@ function Section({ title, icon, children, className = "" }: SectionProps) {
 
 /** Company header. Roles nest underneath so a long tenure reads as one employer. */
 function EmployerHeader({ company, context, location, period, url }: { company: string; context?: string; location: string; period: string; url?: string }) {
+  // Stacks below sm so the company name does not wrap mid-word on a 390px
+  // screen. Print renders at 703px, so it is always the row form.
   return (
-    <div className="flex items-baseline justify-between gap-3 border-b border-gray-200 pb-1 mb-2 employer-header">
+    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 border-b border-gray-200 pb-1 mb-2 employer-header">
       <div className="flex items-baseline gap-2 flex-wrap">
         <h3 className="font-bold text-gray-900 text-base cv-company">{company}</h3>
         {context && <span className="text-gray-600 cv-meta">· {context}</span>}
@@ -275,8 +277,12 @@ export default function CV() {
 
           <Section title="Professional Experience" icon={<Briefcase size={14} />}>
             <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={johnsonAndJohnson.period} />
+            {/* The internal title ("IT Manager — Full Stack Chapter Lead") is
+                shown on the homepage but kept off the print CV: "IT Manager"
+                reads as internal back-office at a product company and undoes
+                the positioning the rest of the page is doing. */}
             {RECENT_JJ_ROLES.map((role) => (
-              <RoleBlock key={role.title} title={role.title} internalTitle={role.internalTitle} period={role.period} bullets={role.cvBullets ?? role.bullets} />
+              <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
             ))}
 
             <EmployerHeader company={meusDesafios.company} context={meusDesafios.context} location={meusDesafios.location} period={meusDesafios.period} url={meusDesafios.url} />

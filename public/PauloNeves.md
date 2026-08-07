@@ -1,87 +1,79 @@
 # Paulo Neves
-##### Full Stack Engineering Manager | People Leader
-Jacareí-SP, Brazil  
-**Email:** paulo@psneves.com.br · **Phone:** (12) 99180-1173
+##### Full Stack Engineering Manager
+Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
+**Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
-## Professional Summary
-Technology leader with 15+ years delivering secure, scalable web/API platforms at enterprise scale. Combines hands-on Full Stack engineering with solution architecture, product/platform strategy, and stakeholder management. Leads an engineering chapter and AI initiatives that accelerate SDLC with generative/agentic approaches while coaching senior engineers and raising technical standards.
+## Summary
+Full Stack Engineering Manager with 17 years in software and 3 leading engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator, and still design and write the systems we ship — an integration hub for the Innovative Medicine business, a checkout platform, and the internal Next.js template other teams fork to start new products. Outside it, I am the founder and sole engineer of a live habit-tracking app on iOS and Android, where product, mobile, backend, billing and store releases are all mine.
 
-## Core Competencies
-* Full Stack (React/Next.js/Node/Python)
-* API Platforms & Integration
-* Cloud (AWS/GCP/Azure)
-* Generative & Agentic AI
-* Architecture & Patterns
-* Kubernetes & Docker
-* DevSecOps & CI/CD
-* Observability & Reliability
-* Security
-* Privacy & Compliance
-* Product & Platform Strategy
-* Roadmapping & OKRs
-* Stakeholder Management
-* People Leadership
-* Vendor & Budget Management
+## AI-Assisted Engineering Practice
+- Specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed next to the code and reviewed like source, so intent survives across sessions and hand-offs.
+- Agents work scoped subtasks in isolated git worktrees, so parallel runs cannot collide and each change stays reviewable on its own.
+- A reviewer agent audits the writer agent's diff before a human sees it — first output is never what ships.
+- Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review; a person approves every merge.
+- Headless runs take the repetitive passes — migrations, codebase sweeps, release checks.
 
 ## Experience
-**IT Manager – Full Stack Chapter Lead – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Sep 2023 — Present
-- Set platform guardrails and reusable patterns for secure, scalable delivery across squads
-- Elevate capabilities in DevSecOps, CI/CD, observability and service reliability through chapter programs
-- Lead KODA (Key Operations & Development Assistants) initiative to accelerate SDLC with AI
-- Guide ~15 Full Stack initiatives; align scope, budget and KPIs with business outcomes
-- Govern vendor strategy and capacity; optimize partner tiers, SLAs and delivery outcomes
-- Oversee environment strategy, security baselines and cost/usage governance
 
-**IT Lead – Full Stack Chapter Lead – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Apr 2023 — Oct 2023
-- Interviewed/onboarded engineers; set strategic direction for chapter technologies and training
-- Created individual development plans and career pathways; mentored senior engineers
-- Led training events to strengthen regional engineering capabilities
+**Full Stack Engineering Manager — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Apr 2023 — Present
+*(internal title: IT Manager — Full Stack Chapter Lead)*
+- Manage 5 direct reports inside an 11-engineer group spanning intern to coordinator — hiring, leveling, career plans and the technical bar are mine.
+- Design and write the systems the group ships: an integration hub for the Innovative Medicine business and a checkout platform — TypeScript, Next.js, PostgreSQL, TypeORM, Docker.
+- Built the internal Next.js template other teams fork to start products, with Entra SSO (Auth.js v5), OpenTelemetry, Pino, CI and security baselines in from the first commit.
+- Lead the group's agent-assisted development program — PR pre-checks, test generation, change summaries — under enterprise privacy and audit guardrails.
+- Set the review and release bar that internal and partner squads deliver against, and hold both to the same one.
+- Promoted from chapter lead to manager in Sep 2023.
 
-**IT Lead – Technical Product Owner – Johnson & Johnson (Janssen Pro LATAM)**  
-São José dos Campos-SP, Brazil  
-Sep 2020 — Mar 2023
-- Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and search
-- Defined API contracts and NFRs; improved reliability, performance and observability
-- Established OKRs/KPIs; led demos and executive readouts across markets
-- Drove vendor and internal squads through Agile delivery with audited compliance
+**Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
+Remote — Brazil · 2026 — Present
+- Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.
+- Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
+- Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.
+- Make the product calls a PM would normally make — what stays free, what sits behind Premium, what to cut to keep the surface small enough for one engineer to maintain.
+- Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
 
-**Service Specialist – Digital & RPA – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Feb 2019 — Aug 2020
-- Architected RPA solutions and platform governance aligned to enterprise standards
-- Scaled successful PoCs, quantified ROI and established delivery/QA metrics
+**Technical Product Owner — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
+*(internal title: IT Lead)*
+- Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.
+- Defined the API contracts and non-functional requirements, and drove the reliability, performance and observability work behind them.
+- Set OKRs and ran demos and executive readouts across LATAM markets.
 
-**Sr. Information Security Analyst – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Apr 2018 — Feb 2019
-- Security liaison for Corporate, Vision Care and LifeScan across LATAM
-- Led app-security assessments during M&A due diligence and integrations
+**Service Specialist — Digital & RPA — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Feb 2019 — Aug 2020
+- Main technical point of contact and escalation for regional digital initiatives.
+- Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.
 
-**Information Security Analyst – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Jun 2015 — Mar 2018
-- Drove enterprise security awareness programs; performed risk and compliance reviews
-- Led SOX testing; coordinated incident response for device loss/theft
+**Sr. Information Security Analyst — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Apr 2018 — Feb 2019
+- Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM; guided risk posture and remediation.
+- Led application-security assessments during M&A due diligence and integration.
 
-**Information Security Intern – Johnson & Johnson**  
-São José dos Campos-SP, Brazil  
-Jan 2014 — Jun 2015
-- Supported vulnerability remediation for LATAM web apps; delivered training to 800+ users
-- Guided SDLC adoption and secure coding best practices
+**Information Security Analyst — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Jun 2015 — Mar 2018
+- Ran application risk assessments and compliance reviews against corporate and regulatory standards.
+- Led SOX testing for IT operations and partnered with corporate internal audit.
+- Cut security training completion time in half by reworking the process; mentored interns.
 
-**Earlier Experience (condensed)**
-- Software Developer – Mentor Interativa (Dec 2011 — Nov 2013, São José dos Campos-SP)
-- Junior Software Developer – Stefanini (Jan 2011 — Dec 2011, Jaguariúna-SP)
-- Intern (Java) – FAJTec – Faculdade Jaguariúna (Jan 2010 — Jul 2010, Jaguariúna-SP)
-- Instructor – Data Computadores (May 2008 — Sep 2009, Jaguariúna-SP)
+**Information Security Intern — Johnson & Johnson**
+São José dos Campos, SP, Brazil · Jan 2014 — May 2015
+- Supported vulnerability assessment and remediation for J&J Medical LATAM web applications.
+- Delivered security training to 800+ end users and guided secure coding practices for development teams.
+
+**Earlier Experience**
+- Software Developer — Mentor Interativa (2011 — 2013). Built a learning management system in Java and shipped the company's first mobile app.
+- Junior Software Developer — Stefanini (2011). Migrated legacy Delphi applications to Java; added credit-card types to payment processing.
+- Teaching Assistant, Java — FAJTec — Faculdade Jaguariúna (2010). Supported the Introduction to Programming in Java course and authored its assessments.
+
+## Skills
+**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · PostgreSQL · TypeORM · Docker · Auth.js / Entra SSO (OIDC/SAML) · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python
+
+**Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget
 
 ## Education
-- **Federal University of São Paulo (UNIFESP)** — Bacharel in Computer Science (2011 — 2015)
-- **DeVry – Metrocamp** — Post-graduate, Information Security Management (2016 — 2018)
+- **Federal University of São Paulo (UNIFESP)** — B.Sc. in Computer Science (2011 — 2015)
+- **DeVry — Metrocamp** — Post-graduate, Information Security Management (2016 — 2018)
 
 ## Certifications
 - CompTIA Security+ (2017 — 2020)
@@ -89,9 +81,9 @@ Jan 2014 — Jun 2015
 - Blue Prism Developer (2020 — Present)
 
 ## Languages
-* Portuguese — Native
-* English — Fluent
-* Spanish — Fluent
+- Portuguese — Native
+- English — Fluent
+- Spanish — Fluent
 
 ## Links
 - **Personal website:** https://psneves.com.br
