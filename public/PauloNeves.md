@@ -1,52 +1,52 @@
 # Paulo Neves
-##### Full Stack Engineering Manager
+##### Engineering Manager, Product Owner and Information Security Specialist
 Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by my team alongside approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Integrating AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.
+Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments, security awareness and SOX testing for IT operations. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives, with responsibility for engineering standards. Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the planning, build, test and release phases of the software development lifecycle.
 
 ## Experience
 
 **Full Stack Engineering Manager — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
-- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance and technical excellence.
-- Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.
+- Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.
+- Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.
+- Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.
 - Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.
-- Oversee 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.
-- Define technical architecture and engineering standards across the chapter.
-- Remain hands-on by designing architecture and developing production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.
-- Lead CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS.
-- Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.
-- Promoted from Chapter Lead to Engineering Manager in September 2023.
+- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.
+- Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.
+- Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.
 
 **Technical Product Owner — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
-- Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.
-- Defined the API contracts and non-functional requirements, and drove the reliability, performance and observability work behind them.
+- Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics.
+- Ran agency-led acquisition campaigns for the portal targeting doctors, nurses and pharmacists, with analytics as the feedback loop into what shipped next.
+- Defined the API contracts and non-functional requirements behind it, and drove the reliability, performance and observability work they implied.
 - Set OKRs and ran demos and executive readouts across LATAM markets.
 
 **Service Specialist — Digital & RPA — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Feb 2019 — Aug 2020
 - Main technical point of contact and escalation for regional digital initiatives.
-- Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.
+- Ran workflow-automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.
 - Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
 
 **Sr. Information Security Analyst — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2018 — Feb 2019
-- Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM; guided risk posture and remediation.
-- Led application-security assessments during M&A due diligence and integration.
+- Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.
+- Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.
+- Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.
 
 **Information Security Analyst — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Jun 2015 — Mar 2018
-- Ran application risk assessments and compliance reviews against corporate and regulatory standards.
-- Led SOX testing for IT operations and partnered with corporate internal audit.
-- Cut security training completion time in half by reworking the process; mentored interns.
+- Ran application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams.
+- Led SOX testing for IT operations across Change Management, User Access Management and Operations Management, partnering with corporate internal audit on scoping and evidence.
+- Coordinated the regional information-security newsletters to business and technology staff across LATAM.
 
 **Information Security Intern — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Jan 2014 — May 2015
+- Trained 800+ employees across manufacturing and logistics on security awareness (instructor-led sessions).
 - Supported vulnerability assessment and remediation for J&J Medical LATAM web applications.
-- Delivered security training to 800+ end users and guided secure coding practices for development teams.
 
 **Earlier Experience**
 - Software Developer — Mentor Interativa (2011 — 2013). Built a learning management system in Java and shipped the company's first mobile app.
@@ -54,25 +54,16 @@ São José dos Campos, SP, Brazil · Jan 2014 — May 2015
 - Teaching Assistant, Java — FAJTec — Faculdade Jaguariúna (2010). Supported the Introduction to Programming in Java course and authored its assessments.
 - Instructor — Data Computadores (2008 — 2009). Taught computer fundamentals, Windows configuration and Microsoft Office to entry-level students.
 
-## Independent Product
-
-**Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
-Remote — Brazil · 2026 — Present
-- Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.
-- Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
-- Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.
-- Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.
-- Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.
-- Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.
-
 ## Skills
-**Build with:** TypeScript · Next.js · React · Node.js · React Native / Expo · PostgreSQL · Docker · Terraform · AWS (Lambda, API Gateway, EKS, S3, EC2) · GCP (BigQuery, App Engine) · Microsoft Entra · OpenTelemetry · Pino · Playwright · Maestro · Vercel · Python · LangGraph
+**Product & experience:** Product ownership · Roadmap & OKRs · Drupal · Contentstack · Payload CMS · Personalization · Site search · Web analytics · Self-service portals · Identity Providers · LLM integrations · RAG · Chatbots · Agile delivery under audited compliance · Vendor management · Budget ownership · Architecture & technical direction · Hiring & career development
 
-**Lead:** Hiring & leveling · Career development · Architecture & technical direction · Code review standards · Roadmap & OKRs · Delivery & release management · Partner squad delivery · Budget Management
+**Security & risk:** Application security assessment · Compliance reviews · SOX testing for IT operations · Security awareness & training · Vulnerability assessment & remediation · Secure coding guidance
+
+**Build with:** LangGraph · Agent orchestration · Tool-calling assistants · GitHub Copilot · Specification-driven development · TypeScript · Next.js · React Native · PostgreSQL · Python · Terraform · AWS (Lambda, API Gateway, EKS) · Vercel
 
 ## Education
-- **Federal University of São Paulo (UNIFESP)** — B.Sc. in Computer Science (2011 — 2015)
 - **DeVry — Metrocamp** — Post-graduate, Information Security Management (2016 — 2018)
+- **Federal University of São Paulo (UNIFESP)** — B.Sc. in Computer Science (2011 — 2015)
 
 ## Certifications
 - CompTIA Security+ (2017 — 2020)
@@ -83,6 +74,12 @@ Remote — Brazil · 2026 — Present
 - Portuguese — Native
 - English — Fluent
 - Spanish — Fluent
+
+## Independent Product
+
+**Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
+2026 — Present
+- Founded and build a live habit-tracking app on iOS and Android — React Native, Next.js and PostgreSQL on Vercel — and a grounded conversational assistant on psneves.com.br with OpenAI tool calling.
 
 ## Links
 - **Personal website:** https://psneves.com.br

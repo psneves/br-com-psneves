@@ -1,329 +1,125 @@
 "use client";
 
+/**
+ * The print CV. Content comes from lib/data/profile.ts; chrome and every print
+ * rule come from components/cv/CvShell.tsx. Regenerate the PDF with:
+ *   npm run dev && npm run generate:pdf   ->  public/Paulo_Neves_CV.pdf
+ *
+ * Composition notes, all deliberate:
+ *
+ *  - Professional Experience is ONE section covering the whole J&J tenure,
+ *    running unbroken from Engineering Manager back to Information Security
+ *    Intern. The security years are not a separate block; they are the back half
+ *    of one continuous record. It currently fits entirely on page 1 — if a
+ *    future edit pushes it over, PAGE_1_ROLE_COUNT splits it and the section and
+ *    employer headers repeat on page 2.
+ *
+ *  - Every experience section comes before Skills — the J&J run, then Earlier
+ *    Experience, then Skills. Skills summarises the record, so it reads after
+ *    the record rather than interrupting it.
+ *
+ *  - Independent Product closes the CV, after the credentials block.
+ *
+ *  - Education is reversed so the post-graduate in Information Security
+ *    Management reads before the B.Sc.
+ *
+ *  - `availability` is stripped from the identity here. It is a job-search
+ *    signal for the site header, and on the CV it answers a question nobody
+ *    asked. Header.tsx still renders it, so the field stays in profile.ts.
+ *
+ *  - Bullets come from `cvBullets ?? bullets`. Both are populated per role, as
+ *    separate literals, so rewording the homepage cannot change the PDF. That
+ *    matters: page 1 runs with single-digit headroom.
+ */
+
 import React from "react";
-import { Mail, Linkedin, Github, Globe, MapPin, Download, Calendar, Briefcase, GraduationCap, Award, Users, Code, Languages as LanguagesIcon, Phone, ArrowLeft, Smartphone } from "lucide-react";
+import { Briefcase, Code, Smartphone, Users } from "lucide-react";
 import { profile, summary, experiences, earlierExperience, skillGroups, languages, education, certifications } from "@/lib/data/profile";
+import {
+  CredentialsGrid,
+  CvActions,
+  CvHeader,
+  CvStyles,
+  EarlierExperienceList,
+  EmployerHeader,
+  RoleBlock,
+  Section,
+  SkillGroupBlock,
+} from "@/components/cv/CvShell";
 
 const [johnsonAndJohnson, meusDesafios] = experiences;
-/** Page 1 carries roughly the last five years; page 2 carries the rest. */
-const RECENT_JJ_ROLES = johnsonAndJohnson.roles.slice(0, 3);
-const EARLIER_JJ_ROLES = johnsonAndJohnson.roles.slice(3);
 
-interface SectionProps {
-  title: string;
-  icon: React.ReactNode;
-  children: React.ReactNode;
-  className?: string;
-}
+/**
+ * Where the J&J run breaks across pages. Purely a fit decision — move it and
+ * re-run `npm run generate:pdf`, which refuses to write if either page
+ * overflows. 6 keeps the whole record on page 1.
+ */
+const PAGE_1_ROLE_COUNT = 6;
+const PAGE_1_JJ_ROLES = johnsonAndJohnson.roles.slice(0, PAGE_1_ROLE_COUNT);
+const CONTINUED_JJ_ROLES = johnsonAndJohnson.roles.slice(PAGE_1_ROLE_COUNT);
 
-function Section({ title, icon, children, className = "" }: SectionProps) {
-  return (
-    <section className={`mb-4 cv-section ${className}`}>
-      <header className="flex items-baseline gap-2 mb-2">
-        <span className="text-blue-600 icon-align shrink-0" aria-hidden="true">
-          {icon}
-        </span>
-        <h2 className="text-lg font-semibold text-gray-900 uppercase tracking-wide leading-none section-header">{title}</h2>
-      </header>
-      <div>{children}</div>
-    </section>
-  );
-}
+/**
+ * Date range for the repeated employer header on page 2, derived from whichever
+ * roles land there. Hardcoding it would silently go stale the moment
+ * PAGE_1_ROLE_COUNT changes.
+ */
+const CONTINUED_PERIOD = (() => {
+  const years = CONTINUED_JJ_ROLES.flatMap((role) => role.period.match(/\d{4}/g) ?? []).map(Number);
+  if (years.length === 0) return "";
+  const [from, to] = [Math.min(...years), Math.max(...years)];
+  return from === to ? `${from}` : `${from} — ${to}`;
+})();
 
-/** Company header. Roles nest underneath so a long tenure reads as one employer. */
-function EmployerHeader({ company, context, location, period, url }: { company: string; context?: string; location: string; period: string; url?: string }) {
-  // Stacks below sm so the company name does not wrap mid-word on a 390px
-  // screen. Print renders at 703px, so it is always the row form.
-  return (
-    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3 border-b border-gray-200 pb-1 mb-2 employer-header">
-      <div className="flex items-baseline gap-2 flex-wrap">
-        <h3 className="font-bold text-gray-900 text-base cv-company">{company}</h3>
-        {context && <span className="text-gray-600 cv-meta">· {context}</span>}
-        {url && (
-          <a href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 cv-meta hover:underline">
-            {url.replace("https://", "")}
-          </a>
-        )}
-      </div>
-      <div className="flex items-center gap-3 text-gray-600 cv-meta shrink-0">
-        <span className="flex items-center gap-1">
-          <MapPin size={10} aria-hidden="true" />
-          {location}
-        </span>
-        <span className="flex items-center gap-1">
-          <Calendar size={10} aria-hidden="true" />
-          {period}
-        </span>
-      </div>
-    </div>
-  );
-}
+/** Highest and most relevant qualification first. */
+const EDUCATION_SECURITY_FIRST = [...education].reverse();
 
-function RoleBlock({ title, period, bullets }: { title: string; period?: string; bullets: string[] }) {
-  return (
-    <article className="mb-3 cv-role">
-      <header className="flex items-baseline justify-between gap-3">
-        <p className="text-blue-600 font-semibold cv-role-title">
-          {title}
-        </p>
-        {period && <span className="text-gray-600 cv-meta shrink-0">{period}</span>}
-      </header>
-      <ul className="text-gray-700 mt-1">
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex gap-2 cv-bullet">
-            <span className="text-blue-600 flex-shrink-0" aria-hidden="true">
-              •
-            </span>
-            <span>{bullet}</span>
-          </li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
-function SkillGroupBlock({ title, skills }: { title: string; skills: string[] }) {
-  return (
-    <div className="mb-3">
-      <h3 className="font-semibold text-gray-900 cv-role-title mb-1">{title}</h3>
-      <div className="flex flex-wrap gap-1">
-        {skills.map((skill) => (
-          <span key={skill} className="bg-gray-100 text-gray-700 px-2 py-1 rounded border print:border-gray-300 skill-tag">
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
+/** The CV header shows location alone; see the note above. */
+const { availability: _availabilityOmitted, ...cvIdentity } = profile;
 
 export default function CV() {
-  // Serves the pre-generated file rather than window.print(). Printing from
-  // the browser paginates with the browser's own margins and stamps its
-  // header/footer chrome (URL, date, page numbers) onto the output, so the
-  // two download buttons on the site produced visibly different PDFs.
-  // scripts/generate-pdf.js is the single path, and it verifies page fit.
-  const handleDownloadPDF = () => {
-    const link = document.createElement("a");
-    link.href = "/Paulo_Neves_CV.pdf";
-    link.download = "Paulo_Neves_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <>
-      <style>{`
-        @page {
-          size: A4;
-          margin: 12mm;
-        }
-
-        /* app/globals.css applies typographic base styles to bare elements
-           (ul { my-6 ml-6 list-disc [&>li]:mt-2 }, p { mt-6 }, h2 { border-b
-           pb-2 }). They are right for prose and wrong for a density-critical
-           CV, so neutralize them inside .cv-page and control spacing here. */
-        .cv-page h1, .cv-page h2, .cv-page h3 { margin: 0; scroll-margin: 0; }
-        .cv-page h2 { border-bottom: 0; padding-bottom: 0; }
-        .cv-page p, .cv-page p:not(:first-child) { margin: 0; line-height: inherit; }
-        .cv-page ul { margin: 0; padding: 0; list-style: none; }
-        .cv-page ul > li { margin-top: 0; }
-
-        /* Semantic sizing, shared by screen and print.
-           NOTE: do not reintroduce Tailwind "print:" variants inside this
-           template literal — "\\:" collapses to ":" and the browser drops the
-           rule as an invalid selector. Plain class names only. */
-        .cv-page .cv-meta { font-size: 10px; line-height: 1.35; }
-        .cv-page .cv-bullet { font-size: 11px; line-height: 1.4; }
-        .cv-page .cv-role-title { font-size: 12px; line-height: 1.35; }
-        .cv-page .cv-company { font-size: 14px; line-height: 1.3; }
-        .cv-page .cv-summary { font-size: 11px; line-height: 1.5; }
-        .cv-page .section-header { font-size: 13px; }
-        .cv-page .skill-tag { font-size: 10px; padding: 0.1rem 0.35rem; }
-
-        @media print {
-          body { font-size: 11px; }
-
-          .cv-name-text {
-            color: #1f2937 !important;
-            -webkit-text-fill-color: #1f2937 !important;
-          }
-
-          /* Content that outgrows the page must spill onto a visible extra
-             page rather than be silently clipped. No max-height, no overflow
-             hidden — a regression has to be seen to be fixed. */
-          .cv-page {
-            break-after: page;
-            page-break-after: always;
-          }
-          .cv-page:last-of-type {
-            break-after: auto;
-            page-break-after: auto;
-          }
-
-          .cv-section, .cv-role, .employer-header {
-            break-inside: avoid;
-            page-break-inside: avoid;
-          }
-
-          .print-hidden { display: none !important; }
-
-          /* Never hyphenate: justified text with hyphens: auto injects real
-             hyphen characters into the PDF text layer, so an ATS reads
-             "ar-chitecture" and misses the keyword. */
-          .cv-page * {
-            -webkit-hyphens: none !important;
-            hyphens: none !important;
-          }
-
-          /* Left-align body copy only. Scoped to the summary and bullet text
-             on purpose — a blanket "p { text-align: left }" also flattens the
-             centered name and title in the header. */
-          .cv-page .cv-summary,
-          .cv-page li span:last-child {
-            text-align: left !important;
-          }
-
-          .text-blue-600 { color: #1e40af !important; }
-          .border-blue-600 { border-color: #1e40af !important; }
-        }
-
-        .icon-align {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 1;
-        }
-        .icon-align svg { display: block; }
-
-        @media screen {
-          .cv-page {
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-            max-width: 8.27in;
-            min-height: 11.69in;
-          }
-          .cv-page .text-blue-600 { color: #1e40af; }
-          .cv-page .border-blue-600 { border-color: #1e40af; }
-        }
-      `}</style>
-
-      {/* Screen-only actions */}
-      <div className="fixed top-4 right-4 z-10 print-hidden flex gap-2">
-        <button onClick={() => (window.location.href = "/")} className="button-secondary text-sm px-4 py-2 lg:px-6 lg:py-3" aria-label="Go to Home">
-          <ArrowLeft size={16} />
-          Return
-        </button>
-        <button
-          onClick={handleDownloadPDF}
-          className="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
-          aria-label="Download CV as PDF"
-        >
-          <Download size={16} aria-hidden="true" />
-          Download PDF
-        </button>
-      </div>
+      <CvStyles />
+      <CvActions pdfHref="/Paulo_Neves_CV.pdf" />
 
       {/* ---------------------------------------------------------------- */}
-      {/* Page 1 — the only page that decides anything                      */}
+      {/* Page 1 — summary and the J&J record                               */}
       {/* ---------------------------------------------------------------- */}
       <div className="cv-page bg-white">
         <div className="p-8 print:p-0">
-          <header className="mb-4">
-            <div className="text-center w-full border-b-2 border-blue-600 pb-3">
-              <h1 className="text-3xl font-bold mb-1 cv-name-text" style={{ color: "#1f2937" }}>
-                {profile.name}
-              </h1>
-              <p className="text-blue-600 font-medium mb-2" style={{ fontSize: "15px" }}>
-                {profile.title}
-              </p>
-
-              {/* Email and phone first, plain text — parsers look here first. */}
-              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-1 text-gray-700 cv-meta">
-                <a href={`mailto:${profile.email}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Mail size={11} aria-hidden="true" />
-                  {profile.email}
-                </a>
-                <a href={`tel:${profile.phoneHref}`} className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Phone size={11} aria-hidden="true" />
-                  {profile.phone}
-                </a>
-                <span className="flex items-center gap-1">
-                  <MapPin size={11} aria-hidden="true" />
-                  {profile.location} · {profile.availability}
-                </span>
-              </div>
-
-              {/* Full URLs, not @handles — parsers match URL patterns. */}
-              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-1 text-gray-600 cv-meta mt-1">
-                <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Linkedin size={11} aria-hidden="true" />
-                  {profile.linkedin}
-                </a>
-                <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Github size={11} aria-hidden="true" />
-                  {profile.github}
-                </a>
-                <a href={profile.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-blue-600 transition-colors">
-                  <Globe size={11} aria-hidden="true" />
-                  {profile.website}
-                </a>
-              </div>
-            </div>
-          </header>
+          <CvHeader identity={cvIdentity} title={profile.cvTitle} />
 
           <Section title="Summary" icon={<Users size={14} />}>
             <p className="text-gray-700 cv-summary">{summary.cv}</p>
           </Section>
 
-          {/* The AI-assisted practice is folded into the two current roles
-              rather than standing alone: on a 2-page CV it competes with the
-              experience it is supposed to be evidence for. The homepage keeps
-              the dedicated section, where there is no page budget. */}
           <Section title="Professional Experience" icon={<Briefcase size={14} />}>
             <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={johnsonAndJohnson.period} />
-            {RECENT_JJ_ROLES.map((role) => (
+            {PAGE_1_JJ_ROLES.map((role) => (
               <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
-            ))}
-          </Section>
-
-          {/* Its own section, not a "Projects" bucket: the label has to read as
-              real work or the reader relocates it to the bottom of the page.
-              The role period is omitted because the header already carries it. */}
-          <Section title="Independent Product" icon={<Smartphone size={14} />}>
-            <EmployerHeader company={meusDesafios.company} location={meusDesafios.location} period={meusDesafios.period} url={meusDesafios.url} />
-            {meusDesafios.roles.map((role) => (
-              <RoleBlock key={role.title} title={role.title} bullets={role.cvBullets ?? role.bullets} />
             ))}
           </Section>
         </div>
       </div>
 
       {/* ---------------------------------------------------------------- */}
-      {/* Page 2 — history, compressed, plus credentials                    */}
+      {/* Page 2 — history, skills, credentials, side venture               */}
       {/* ---------------------------------------------------------------- */}
       <div className="cv-page bg-white">
         <div className="p-8 print:p-0">
-          <Section title="Professional Experience" icon={<Briefcase size={14} />}>
-            <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period="2014 — 2019" />
-            {EARLIER_JJ_ROLES.map((role) => (
-              <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
-            ))}
-          </Section>
-
-          <Section title="Earlier Experience" icon={<Code size={14} />}>
-            <ul className="text-gray-700">
-              {earlierExperience.map((role) => (
-                <li key={`${role.company}-${role.period}`} className="cv-bullet mb-1">
-                  <span className="font-semibold text-gray-900">{role.title}</span>
-                  <span className="text-gray-700"> — {role.company}</span>
-                  <span className="text-gray-600"> ({role.period})</span>
-                  <span className="text-gray-700">. {role.detail}</span>
-                </li>
+          {CONTINUED_JJ_ROLES.length > 0 && (
+            <Section title="Professional Experience" icon={<Briefcase size={14} />}>
+              <EmployerHeader company={johnsonAndJohnson.company} location={johnsonAndJohnson.location} period={CONTINUED_PERIOD} />
+              {CONTINUED_JJ_ROLES.map((role) => (
+                <RoleBlock key={role.title} title={role.title} period={role.period} bullets={role.cvBullets ?? role.bullets} />
               ))}
-            </ul>
+            </Section>
+          )}
+
+          {/* Every experience section — the J&J run above and the pre-2014
+              roles here — finishes before Skills starts. */}
+          <Section title="Earlier Experience" icon={<Code size={14} />}>
+            <EarlierExperienceList roles={earlierExperience} />
           </Section>
 
           <Section title="Skills" icon={<Code size={14} />}>
@@ -332,35 +128,17 @@ export default function CV() {
             ))}
           </Section>
 
-          <div className="grid grid-cols-3 gap-6 items-start">
-            <Section title="Education" icon={<GraduationCap size={14} />}>
-              {education.map((item) => (
-                <div key={item.institution} className="mb-2">
-                  <h3 className="font-semibold text-gray-900 cv-role-title">{item.institution}</h3>
-                  <p className="text-blue-600 cv-meta">{item.degree}</p>
-                  <p className="text-gray-600 cv-meta">{item.period}</p>
-                </div>
-              ))}
-            </Section>
+          <CredentialsGrid education={EDUCATION_SECURITY_FIRST} certifications={certifications} languages={languages} />
 
-            <Section title="Certifications" icon={<Award size={14} />}>
-              {certifications.map((cert) => (
-                <div key={cert.title} className="mb-2">
-                  <h3 className="font-semibold text-gray-900 cv-role-title">{cert.title}</h3>
-                  <p className="text-gray-600 cv-meta">{cert.period}</p>
-                </div>
-              ))}
-            </Section>
-
-            <Section title="Languages" icon={<LanguagesIcon size={14} />}>
-              {languages.map((language) => (
-                <div key={language.name} className="flex justify-between mb-1">
-                  <span className="font-semibold text-gray-700 cv-role-title">{language.name}</span>
-                  <span className="text-blue-600 cv-role-title">{language.level}</span>
-                </div>
-              ))}
-            </Section>
-          </div>
+          {/* Last block on the CV, below the credentials grid. */}
+          <Section title="Independent Product" icon={<Smartphone size={14} />}>
+            {/* No location: "Remote — Brazil" says nothing about a solo app
+                that has no office, and the header reads cleaner without it. */}
+            <EmployerHeader company={meusDesafios.company} period={meusDesafios.period} url={meusDesafios.url} />
+            {meusDesafios.roles.map((role) => (
+              <RoleBlock key={role.title} title={role.title} bullets={role.cvBullets ?? role.bullets} />
+            ))}
+          </Section>
         </div>
       </div>
     </>

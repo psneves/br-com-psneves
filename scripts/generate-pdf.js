@@ -1,18 +1,20 @@
 /**
- * Regenerates public/Paulo_Neves_CV.pdf from the live /cv page.
+ * Regenerates a CV PDF from a live CV page.
  *
  * Requires a running dev or production server:
  *   npm run dev            # terminal 1
  *   npm run generate:pdf   # terminal 2
  *
- * Override the target with CV_URL, e.g.
- *   CV_URL=http://localhost:3001/cv npm run generate:pdf
+ * Override either end with CV_URL and CV_OUTPUT (CV_OUTPUT is resolved from the
+ * repo root), e.g. to measure a page without overwriting the committed file:
+ *   CV_URL=http://localhost:3001/cv CV_OUTPUT=/tmp/scratch.pdf npm run generate:pdf
  */
 const puppeteer = require("puppeteer");
 const path = require("path");
 
+const REPO_ROOT = path.join(__dirname, "..");
 const CV_URL = process.env.CV_URL || "http://localhost:3000/cv";
-const OUTPUT = path.join(__dirname, "..", "public", "Paulo_Neves_CV.pdf");
+const OUTPUT = path.resolve(REPO_ROOT, process.env.CV_OUTPUT || "public/Paulo_Neves_CV.pdf");
 /** A4 printable box at 96dpi with the 12mm @page margin declared in app/cv/page.tsx. */
 const PRINTABLE_WIDTH_PX = 703;
 const PRINTABLE_HEIGHT_PX = 1032;
@@ -80,17 +82,32 @@ async function generatePDF() {
       throw new Error(
         `Content overflows the A4 printable box on page(s) ${overflowing
           .map((p) => p.page)
-          .join(", ")}. Trim content in lib/data/profile.ts before regenerating.`
+          .join(", ")}. Trim content in the data file behind ${CV_URL} before regenerating.`
       );
     }
 
     // preferCSSPageSize honors the @page rule in app/cv/page.tsx. Declaring a
     // puppeteer margin here as well would give two competing page boxes.
+    //
+    // The page number goes in the footer template rather than in the document,
+    // for two reasons. It renders inside the @page margin, so it adds nothing
+    // to .cv-page height — which matters, because page 1 runs with single-digit
+    // headroom and an in-document footer would overflow it. And "n/total" stays
+    // correct by itself; a hardcoded "Page 1/2" silently lies the day a third
+    // page appears. headerTemplate must be supplied and empty, or Chrome stamps
+    // its own default header (title and URL) onto the output.
+    const FOOTER = `<div style="width:100%;padding:0 12mm;font-family:Helvetica,Arial,sans-serif;font-size:8px;color:#6b7280;text-align:right;">
+      Page <span class="pageNumber"></span>/<span class="totalPages"></span>
+    </div>`;
+
     await page.pdf({
       path: OUTPUT,
       format: "A4",
       printBackground: true,
       preferCSSPageSize: true,
+      displayHeaderFooter: true,
+      headerTemplate: "<div></div>",
+      footerTemplate: FOOTER,
     });
 
     console.log(`Wrote ${OUTPUT}`);

@@ -8,9 +8,9 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-const TITLE = "Paulo Neves — Full Stack Engineering Manager"
+const TITLE = "Paulo Neves — Engineering Manager & Product Owner"
 const DESCRIPTION =
-  "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. Manages a mixed-seniority team at Johnson & Johnson, still designs and writes the systems, and runs a spec-driven agentic development workflow. Remote (Brazil) or São Paulo."
+  "Product-minded engineering leader with a strong security foundation — five years in Information Security & Risk Management at Johnson & Johnson, product ownership of the Innovative Medicine HCP portal across LATAM and CENCA, and AI taken to production with US$1.2M in cost avoidance."
 
 export const metadata = {
   title: TITLE,

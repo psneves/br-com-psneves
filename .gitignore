@@ -26,3 +26,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Job-application working files. THIS REPO IS PUBLIC on GitHub, and anything
+# committed under docs/ is world-readable. These files carry internal J&J
+# system names, internal cost models, candid self-assessment and targeted
+# positioning — none of which should ever be published. Keep them local.
+docs/interview-prep-*.md
+# Blanket: no PDF under docs/ is ever meant to be published. A targeted CV
+# saved under a generic filename slipped past the specific rule once already.
+docs/*.pdf
+
+CV_GAPS.md

@@ -47,7 +47,13 @@ export interface SkillGroup {
 
 export const profile = {
   name: "Paulo Neves",
-  title: "Full Stack Engineering Manager",
+  /** Header subtitle. Kept short: it wraps badly under the h1 at 390px. */
+  title: "Engineering Manager & Product Owner",
+  /**
+   * The CV title line. Longer than `title` on purpose — the print header has
+   * the width for all three threads, the mobile site header does not.
+   */
+  cvTitle: "Engineering Manager, Product Owner and Information Security Specialist",
   /** Where he is based. */
   location: "Jacareí, SP, Brazil",
   /** Rendered next to the location. Must not exclude hybrid São Paulo roles. */
@@ -70,16 +76,21 @@ export const profile = {
  * strongest proof + direction.
  */
 export const summary = {
-  cv: "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports inside an 11-engineer group spanning intern to coordinator. I set technical direction for 18 parallel initiatives delivered by my team alongside approximately 70 vendor engineers, and own the vendor relationships and budget behind them. I remain an active contributor to architecture and production code. Integrating AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J I am the founder and sole engineer of a live habit-tracking app on iOS and Android, owning product strategy, mobile, backend, subscriptions and App Store / Google Play releases end to end.",
+  /**
+   * Rendered by /cv. Security -> product -> scope -> AI, because that is the
+   * order this reader needs it in. The five security years lead: they are the
+   * foundation the rest of the CV is built on, not a footnote to it.
+   */
+  cv: "Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments, security awareness and SOX testing for IT operations. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives, with responsibility for engineering standards. Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the planning, build, test and release phases of the software development lifecycle.",
   homeLead:
-    "Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson I manage 5 direct reports and set technical direction for 18 initiatives delivered by my team alongside approximately 70 vendor engineers. I remain an active contributor to architecture and production code. Integrating AI across our planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026.",
+    "Product-minded engineering leader with a strong security foundation \u2014 five years in Information Security & Risk Management at Johnson & Johnson, then product ownership of the Innovative Medicine HCP portal across LATAM and CENCA. Today I lead Full Stack Engineering across a 25-initiative portfolio, 10 of them mine end to end. Integrating AI capabilities across the planning, build, test and release lifecycle produced US$1.2M in cost avoidance in the first seven months of 2026.",
   homeSecondary:
-    "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android. I own product, mobile client, backend, billing and store releases end to end — which is where the standards I set for my team get tested against my own code.",
+    "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android \u2014 and of the grounded conversational assistant on this site. I own product, mobile client, backend, billing and store releases end to end, which is where the standards I set for my team get tested against my own code.",
 } as const;
 
 export const highlights = [
-  { label: "US$1.2M Avoided", description: "First seven months of 2026, from AI across the delivery cycle" },
-  { label: "Mixed-Seniority Team", description: "5 direct reports, intern to coordinator" },
+  { label: "US$1.2M Avoided", description: "First seven months of 2026, from AI across the delivery lifecycle" },
+  { label: "5 Years in Security", description: "Information Security & Risk Management at J&J, 2014 \u2014 2019" },
   { label: "Still Hands-On", description: "Architecture, code and releases" },
 ] as const;
 
@@ -95,13 +106,13 @@ export const highlights = [
 export const aiPractice = {
   title: "AI-Assisted Engineering Practice",
   intro:
-    "How I work, and the bar I hold agent-written code to. Every mechanism below exists because of a failure it prevents.",
+    "The practice behind the US$1.2M \u2014 how AI is integrated across planning, build, test and release, and the bar agent-written work has to clear. Every mechanism below exists because of a failure it prevents.",
   points: [
-    "Specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed next to the code and reviewed like source, so intent and constraints survive across sessions, engineers and hand-offs.",
+    "Specifications and agent instructions are version-controlled artifacts committed next to the code and reviewed like source, so the context an agent works from is owned and current rather than re-explained each session.",
     "Agents run on scoped subtasks in isolated git worktrees, so parallel work cannot collide and every change stays independently reviewable.",
-    "A reviewer agent audits the writer agent's diff before a human sees it — first output is never the output that ships.",
+    "A reviewer agent audits the writer agent's diff before a human sees it \u2014 first output is never the output that ships.",
     "Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review, and a person approves every merge.",
-    "Headless runs handle the repetitive passes — migrations, codebase-wide sweeps, release checks — that do not need someone in the loop.",
+    "Headless runs handle the repetitive passes \u2014 migrations, codebase-wide sweeps, release checks \u2014 that do not need someone in the loop.",
   ],
 } as const;
 
@@ -117,40 +128,37 @@ export const experiences: Experience[] = [
         period: "Apr 2023 — Present",
         current: true,
         bullets: [
-          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance and technical excellence.",
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.",
+          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
+          "Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.",
+          "Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.",
           "Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.",
-          "Oversee 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
-          "Define technical architecture and engineering standards across the chapter.",
-          "Remain hands-on by designing architecture and developing production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.",
-          "Lead CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS.",
-          "Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.",
+          "Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.",
           "Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
         cvBullets: [
-          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, with approximately 70 vendor engineers contributing across the delivery organization; accountable for hiring, career development, performance and technical excellence.",
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI across the team's planning, build, test and release cycle.",
+          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
+          "Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.",
+          "Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.",
           "Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.",
-          "Oversee 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction.",
-          "Define technical architecture and engineering standards across the chapter.",
-          "Remain hands-on by designing architecture and developing production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.",
-          "Lead CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS.",
-          "Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.",
-          "Promoted from Chapter Lead to Engineering Manager in September 2023.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.",
+          "Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.",
+          "Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
       },
       {
         title: "Technical Product Owner",
         period: "Sep 2020 — Mar 2023",
         bullets: [
-          "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.",
-          "Defined the API contracts and non-functional requirements, and drove the reliability, performance and observability work behind them.",
+          "Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics.",
+          "Ran agency-led acquisition campaigns for the portal targeting doctors, nurses and pharmacists, with analytics as the feedback loop into what shipped next.",
+          "Defined the API contracts and non-functional requirements behind it, and drove the reliability, performance and observability work they implied.",
           "Set OKRs and ran demos and executive readouts across LATAM markets.",
-          "Ran internal and partner squads through Agile delivery under audited compliance.",
         ],
         cvBullets: [
-          "Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM.",
-          "Defined the API contracts and non-functional requirements, and drove the reliability, performance and observability work behind them.",
+          "Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics.",
+          "Ran agency-led acquisition campaigns for the portal targeting doctors, nurses and pharmacists, with analytics as the feedback loop into what shipped next.",
+          "Defined the API contracts and non-functional requirements behind it, and drove the reliability, performance and observability work they implied.",
           "Set OKRs and ran demos and executive readouts across LATAM markets.",
         ],
       },
@@ -159,12 +167,12 @@ export const experiences: Experience[] = [
         period: "Feb 2019 — Aug 2020",
         bullets: [
           "Main technical point of contact and escalation for regional digital initiatives.",
-          "Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
+          "Ran workflow-automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
           "Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.",
         ],
         cvBullets: [
           "Main technical point of contact and escalation for regional digital initiatives.",
-          "Ran automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
+          "Ran workflow-automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.",
           "Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.",
         ],
       },
@@ -172,38 +180,40 @@ export const experiences: Experience[] = [
         title: "Sr. Information Security Analyst",
         period: "Apr 2018 — Feb 2019",
         bullets: [
-          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM; guided risk posture and remediation.",
-          "Led application-security assessments during M&A due diligence and integration.",
+          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.",
+          "Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.",
+          "Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.",
         ],
         cvBullets: [
-          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM; guided risk posture and remediation.",
-          "Led application-security assessments during M&A due diligence and integration.",
+          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.",
+          "Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.",
+          "Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.",
         ],
       },
       {
         title: "Information Security Analyst",
         period: "Jun 2015 — Mar 2018",
         bullets: [
-          "Ran application risk assessments and compliance reviews against corporate and regulatory standards.",
-          "Led SOX testing for IT operations and partnered with corporate internal audit.",
-          "Cut security training completion time in half by reworking the process; mentored interns.",
+          "Ran application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams.",
+          "Led SOX testing for IT operations across Change Management, User Access Management and Operations Management, partnering with corporate internal audit on scoping and evidence.",
+          "Coordinated the regional information-security newsletters to business and technology staff across LATAM.",
         ],
         cvBullets: [
-          "Ran application risk assessments and compliance reviews against corporate and regulatory standards.",
-          "Led SOX testing for IT operations and partnered with corporate internal audit.",
-          "Cut security training completion time in half by reworking the process; mentored interns.",
+          "Ran application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams.",
+          "Led SOX testing for IT operations across Change Management, User Access Management and Operations Management, partnering with corporate internal audit on scoping and evidence.",
+          "Coordinated the regional information-security newsletters to business and technology staff across LATAM.",
         ],
       },
       {
         title: "Information Security Intern",
         period: "Jan 2014 — May 2015",
         bullets: [
+          "Trained 800+ employees across manufacturing and logistics on security awareness (instructor-led sessions).",
           "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications.",
-          "Delivered security training to 800+ end users and guided secure coding practices for development teams.",
         ],
         cvBullets: [
+          "Trained 800+ employees across manufacturing and logistics on security awareness (instructor-led sessions).",
           "Supported vulnerability assessment and remediation for J&J Medical LATAM web applications.",
-          "Delivered security training to 800+ end users and guided secure coding practices for development teams.",
         ],
       },
     ],
@@ -223,18 +233,12 @@ export const experiences: Experience[] = [
         bullets: [
           "Founded and build Meus Desafios end to end — a live habit-tracking app on iOS and Android covering sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.",
           "Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the monthly and annual billing that separates the free tier from Premium.",
+          "Built the grounded conversational assistant on psneves.com.br — OpenAI tool calling over a curated knowledge document, with a tool that logs every question it could not answer.",
           "Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.",
-          "Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.",
-          "Make the product calls a PM would normally make — which habits to track, what stays free and what sits behind Premium, what to cut to keep the surface small enough for one engineer to maintain — and then live with them in the support inbox.",
-          "Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.",
+          "Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.",
         ],
         cvBullets: [
-          "Founded and build a live habit-tracking app on iOS and Android — sleep, water, calories and exercise, with duels, private groups and weekly leaderboards.",
-          "Own the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.",
-          "Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.",
-          "Build it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where I pressure-test the workflow before my team uses it.",
-          "Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.",
-          "Run it deliberately at one-person scale — not fundraising, not hiring — which keeps me fluent in what my engineers deal with daily.",
+          "Founded and build a live habit-tracking app on iOS and Android — React Native, Next.js and PostgreSQL on Vercel — and a grounded conversational assistant on psneves.com.br with OpenAI tool calling.",
         ],
       },
     ],
@@ -271,39 +275,55 @@ export const earlierExperience: EarlierRole[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Build with",
+    title: "Product & experience",
     skills: [
-      "TypeScript",
-      "Next.js",
-      "React",
-      "Node.js",
-      "React Native / Expo",
-      "PostgreSQL",
-      "Docker",
-      "Terraform",
-      "AWS (Lambda, API Gateway, EKS, S3, EC2)",
-      "GCP (BigQuery, App Engine)",
-      "Microsoft Entra",
-      "OpenTelemetry",
-      "Pino",
-      "Playwright",
-      "Maestro",
-      "Vercel",
-      "Python",
-      "LangGraph",
+      "Product ownership",
+      "Roadmap & OKRs",
+      "Drupal",
+      "Contentstack",
+      "Payload CMS",
+      "Personalization",
+      "Site search",
+      "Web analytics",
+      "Self-service portals",
+      "Identity Providers",
+      "LLM integrations",
+      "RAG",
+      "Chatbots",
+      "Agile delivery under audited compliance",
+      "Vendor management",
+      "Budget ownership",
+      "Architecture & technical direction",
+      "Hiring & career development",
     ],
   },
   {
-    title: "Lead",
+    title: "Security & risk",
     skills: [
-      "Hiring & leveling",
-      "Career development",
-      "Architecture & technical direction",
-      "Code review standards",
-      "Roadmap & OKRs",
-      "Delivery & release management",
-      "Partner squad delivery",
-      "Budget Management",
+      "Application security assessment",
+      "Compliance reviews",
+      "SOX testing for IT operations",
+      "Security awareness & training",
+      "Vulnerability assessment & remediation",
+      "Secure coding guidance",
+    ],
+  },
+  {
+    title: "Build with",
+    skills: [
+      "LangGraph",
+      "Agent orchestration",
+      "Tool-calling assistants",
+      "GitHub Copilot",
+      "Specification-driven development",
+      "TypeScript",
+      "Next.js",
+      "React Native",
+      "PostgreSQL",
+      "Python",
+      "Terraform",
+      "AWS (Lambda, API Gateway, EKS)",
+      "Vercel",
     ],
   },
 ];

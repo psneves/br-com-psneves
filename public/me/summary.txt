@@ -10,56 +10,57 @@ CONTACT
 - GitHub: https://github.com/psneves
 
 PROFESSIONAL HEADLINE
-Full Stack Engineering Manager with 17 years in software, 3 of them managing engineering teams. At Johnson & Johnson he manages 5 direct reports inside an 11-engineer group spanning intern to coordinator, sets technical direction for 18 parallel initiatives delivered by his team alongside approximately 70 vendor engineers, and owns the vendor relationships and budget behind them. He remains an active contributor to architecture and production code. Integrating AI across the team's planning, build, test and release cycle produced US$1.2M in cost avoidance in the first seven months of 2026. Outside J&J he is the founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android.
+Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments, security awareness and SOX testing for IT operations. As Technical Product Owner he led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. He currently manages 5 direct reports within an 11-engineer team and provides technical leadership to approximately 70 vendor engineers across 25 initiatives, with responsibility for engineering standards. He drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the planning, build, test and release phases of the software development lifecycle.
 
 WHAT HE IS LOOKING FOR
-Engineering Manager, hands-on EM and Tech Manager roles at product companies — fintech, SaaS, marketplaces, healthtech. Not targeting pure individual-contributor roles (Staff/Principal Engineer).
+Product and service ownership roles, and engineering leadership roles where security, digital product and AI delivery meet. Open to both people-leadership and senior individual-contributor tracks.
 
 PROFESSIONAL SNAPSHOT
-- Focus: managing a mixed-seniority engineering team, hands-on architecture, and AI-assisted software development.
-- Known for: being a manager who still designs and writes systems; setting a review and release bar and holding internal and partner squads to the same one; building reusable platform foundations other teams adopt.
-- Domains: healthcare/pharma and enterprise web & APIs; consumer mobile on his own product.
-- Stack he actually works in: TypeScript, Next.js, React, Node.js, React Native/Expo, PostgreSQL, Docker, Terraform, AWS (Lambda, API Gateway, EKS, S3, EC2), GCP (BigQuery, App Engine), Microsoft Entra, OpenTelemetry, Pino, Playwright, Maestro, Vercel, Python, LangGraph.
+- Focus: product and service ownership of digital experiences, information security, and AI capabilities taken to production with a measured outcome.
+- Known for: a security foundation plus product ownership plus hands-on delivery in one person; setting a review and release bar and holding internal and partner teams to the same one.
+- Domains: healthcare/pharma, enterprise web and APIs, information security and risk; consumer mobile on his own product.
+- Stack he actually works in: TypeScript, Next.js, React Native, PostgreSQL, Python, Terraform, AWS (Lambda, API Gateway, EKS), Vercel, LangGraph. Content and experience platforms: Drupal, Contentstack, Payload CMS. AI: LLM integrations, RAG, chatbots, agent orchestration, tool-calling assistants, GitHub Copilot, specification-driven development.
 
 CURRENT ROLE — Full Stack Engineering Manager, Johnson & Johnson (Apr 2023 – Present)
-Promoted from Chapter Lead to Engineering Manager in September 2023.
-- Manages 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator (2 coordinators, 3 senior, 4 mid-level, 1 trainee, 1 intern). Owns hiring, career development, performance and technical excellence. These 11 are J&J employees.
-- Drove US$1.2M in cost avoidance in the first seven months of 2026 (January through July) by integrating AI across the whole delivery cycle — planning, build, test and release — not only coding assistance. He leads the internal program that is the biggest driver of it; do not name that program. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
-- Approximately 70 vendor engineers deliver alongside that team. He does NOT line-manage them: he sets their technical direction and owns the vendor relationships and budget. He oversees 18 parallel initiatives across the chapter through vendor management, budget ownership and technical direction, and defines the technical architecture and engineering standards the chapter builds against.
-- Remains hands-on: designs architecture and develops production software using TypeScript, React, React Native, Next.js, PostgreSQL, Docker, Python and LangGraph.
-- Leads CI/CD and infrastructure-as-code initiatives using Terraform to provision AWS services including Lambda, API Gateway and EKS. AWS is the cloud he has real depth in. Do not describe individual internal systems, named or unnamed.
-- Established automated testing as the engineering standard across all team-owned initiatives, eliminating manual-only release validation.
+Promoted from Chapter Lead to Engineering Manager in September 2023, after establishing the group's hiring, onboarding and career-path foundations.
+- Drove US$1.2M in cost avoidance in the first seven months of 2026 (January through July) by integrating AI capabilities across the team's planning, build, test and release cycle — not only coding assistance. This is the single strongest number on his CV — quote it exactly, never extrapolate it to a full year or to other periods.
+- Owns Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.
+- Leads Full Stack Engineering for 10 initiatives and provides technical guidance and oversight across 15 additional initiatives — 25 in total. Manages vendors and budgets, and interviews Full Stack engineers for open positions.
+- Manages 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator. Owns hiring, career development and performance. These 11 are J&J employees.
+- Approximately 70 vendor engineers deliver alongside that team. He does NOT line-manage them: he provides their technical direction and owns the vendor relationships and budget.
 - Introduced AI-native, specification-driven development practices: engineering specifications are version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency. Runs under enterprise privacy and audit guardrails.
+- Remains hands-on: designs architecture and writes production software, with CI/CD and infrastructure-as-code on Terraform and AWS. AWS is the cloud he has real depth in. Do not describe individual internal systems, named or unnamed.
 
 CURRENT ROLE — Founder & Sole Engineer, Meus Desafios (2026 – Present)
 Live at https://meusdesafios.com.br, on iOS and Android.
 - A habit-tracking app covering sleep, water, calories and exercise, with duels, private groups up to 10 people and weekly leaderboards.
 - He owns the whole stack alone: React Native and Expo on the client, Next.js and PostgreSQL on Vercel behind it, and the billing that separates the free tier from Premium.
+- He also built the grounded conversational assistant on psneves.com.br — OpenAI tool calling over a curated knowledge document, with a tool that logs every question it could not answer.
 - Every release ships behind a Maestro end-to-end suite. He builds it with parallel agents in isolated git worktrees and headless runs for migrations and release checks — where he pressure-tests the workflow before his team uses it.
 - Run deliberately at one-person scale — not fundraising, not hiring.
 
 AI-ASSISTED ENGINEERING PRACTICE
-This is his sharpest differentiator. Describe mechanisms, never benefits, and never invent metrics — none of it has been instrumented.
-- Specs and agent instructions (SPEC.md, AGENTS.md, CLAUDE.md) are committed next to the code and reviewed like source, so intent survives across sessions and hand-offs.
+Describe mechanisms, never benefits, and never invent metrics — none of it has been instrumented.
+- Specifications and agent instructions are committed next to the code and reviewed like source, so intent survives across sessions and hand-offs.
 - Agents work scoped subtasks in isolated git worktrees, so parallel runs cannot collide and each change stays reviewable on its own.
 - A reviewer agent audits the writer agent's diff before a human sees it.
 - Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review; a person approves every merge.
 - Headless runs take the repetitive passes — migrations, codebase sweeps, release checks.
 
 PAST EXPERIENCE
-- Technical Product Owner, Johnson & Johnson (Sep 2020 – Mar 2023). Owned roadmap and delivery for personalization, SSO (OIDC/SAML), analytics and site search on the Innovative Medicine professional portal for LATAM. Defined API contracts and non-functional requirements; set OKRs and ran executive readouts across markets.
-- Service Specialist — Digital & RPA, Johnson & Johnson (Feb 2019 – Aug 2020). Main technical point of contact and escalation for regional digital initiatives; ran automation proofs of concept with Blue Prism and Python. Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
-- Sr. Information Security Analyst, Johnson & Johnson (Apr 2018 – Feb 2019). Security liaison for Corporate, Vision Care and LifeScan across LATAM; led application-security assessments during M&A due diligence and integration.
-- Information Security Analyst, Johnson & Johnson (Jun 2015 – Mar 2018). Application risk assessments and compliance reviews; SOX testing for IT operations; cut security training completion time in half.
-- Information Security Intern, Johnson & Johnson (Jan 2014 – May 2015). Vulnerability remediation for J&J Medical LATAM web applications; delivered security training to 800+ end users.
+- Technical Product Owner, Johnson & Johnson (Sep 2020 – Mar 2023). Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics. Ran agency-led acquisition campaigns for the portal targeting doctors, nurses and pharmacists, with analytics as the feedback loop into what shipped next. Defined API contracts and non-functional requirements; set OKRs and ran demos and executive readouts across LATAM markets.
+- Service Specialist — Digital & RPA, Johnson & Johnson (Feb 2019 – Aug 2020). Main technical point of contact and escalation for regional digital initiatives; ran workflow-automation proofs of concept with Blue Prism and Python. Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
+- Sr. Information Security Analyst, Johnson & Johnson (Apr 2018 – Feb 2019). Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM, guiding risk posture and remediation across three business units through influence rather than reporting line. Led application security assessments during M&A integration. Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.
+- Information Security Analyst, Johnson & Johnson (Jun 2015 – Mar 2018). Application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams. Led SOX testing for IT operations across Change Management, User Access Management and Operations Management, partnering with corporate internal audit on scoping and evidence. Coordinated the regional information-security newsletters to business and technology staff across LATAM.
+- Information Security Intern, Johnson & Johnson (Jan 2014 – May 2015). Trained 800+ employees across manufacturing and logistics on security awareness through instructor-led sessions; supported vulnerability assessment and remediation for J&J Medical LATAM web applications.
 - Software Developer, Mentor Interativa (Dec 2011 – Nov 2013). Built a learning management system in Java and shipped the company's first mobile app.
 - Junior Software Developer, Stefanini (Jan 2011 – Dec 2011). Migrated legacy Delphi applications to Java; added credit-card types to payment processing.
 - Teaching Assistant for Introduction to Programming in Java, FAJTec — Faculdade Jaguariúna (Jan 2010 – Jul 2010).
 - Instructor, Data Computadores (May 2008 – Sep 2009, Jaguariúna-SP). Taught computer fundamentals, Windows configuration and Microsoft Office to entry-level students. This is the earliest role and the start of the 17-year count.
 
 EDUCATION
-- B.Sc. in Computer Science — Federal University of São Paulo (UNIFESP), 2011–2015
 - Post-graduate, Information Security Management — DeVry | Metrocamp, 2016–2018
+- B.Sc. in Computer Science — Federal University of São Paulo (UNIFESP), 2011–2015
 
 CERTIFICATIONS
 - CompTIA Security+ (2017–2020)
@@ -82,15 +83,16 @@ COMMUNICATION STYLE
 - Prefers English technical content; values concrete mechanisms over abstractions
 
 FAQ HINTS (FOR THE BOT)
-- What does Paulo do? He is a Full Stack Engineering Manager at Johnson & Johnson — manages a mixed-seniority team of engineers and still designs and writes the systems they ship. He also founded and solo-builds a consumer habit-tracking app.
-- Is he still hands-on? Yes. He designs and writes production systems at J&J, and he is the only engineer on his own live mobile app.
-- What is he looking for? Engineering Manager, hands-on EM and Tech Manager roles at product companies. Remote in Brazil, or São Paulo — open to hybrid there.
-- Favorite stack? TypeScript with Next.js and PostgreSQL; React Native and Expo for mobile; Docker; Vercel.
+- What does Paulo do? He is an engineering leader at Johnson & Johnson with a five-year foundation in Information Security & Risk Management. He leads Full Stack Engineering for 10 initiatives with oversight across 15 more, and previously owned the Innovative Medicine HCP portal as its Technical Product Owner. He also founded and solo-builds a consumer habit-tracking app.
+- Is he still hands-on? Yes. He designs and writes production systems at J&J, and he is the only engineer on his own live mobile app and on the assistant running on this site.
+- What is he looking for? Product and service ownership roles, and engineering leadership roles where security, digital product and AI delivery meet. Remote in Brazil, or São Paulo — open to hybrid there.
+- Favorite stack? TypeScript with Next.js and PostgreSQL; React Native for mobile; Terraform and AWS; Vercel.
 - View on AI? He runs a spec-driven agentic workflow with committed instruction files, isolated worktrees, a writer/reviewer agent split, and verification gates. Agent output meets the same review bar as human output and a person approves every merge.
 - How big is his team? He line-manages 5 direct reports inside an 11-engineer J&J group spanning intern to coordinator. Approximately 70 vendor engineers deliver alongside that team under his technical direction — they are not his reports.
 
 GUARDRAILS FOR THE BOT
-- The ONLY outcome figure he publishes is US$1.2M in cost avoidance in the first seven months of 2026 (January through July). Never annualize it, never round it up, never invent any other metric, user count, revenue figure, percentage or team size beyond what is written above. If asked for a number that is not here, say it is not something he publishes and offer to connect by email.
-- Do not name internal J&J projects, and do not describe individual internal systems even without naming them. Keep it at the level written above: 'the production systems the group ships'.
+- Answer only from what is written in this document. Do not elaborate, infer, name, or speculate beyond it — including about employers, clients, partners, acquisitions, third parties, business areas or systems that are not named here. If asked to go further, say it is not something he discusses publicly and offer to connect by email.
+- The ONLY outcome figure he publishes is US$1.2M in cost avoidance in the first seven months of 2026 (January through July). Never annualize it, never round it up, never invent any other metric, user count, revenue figure, spend figure, percentage or team size beyond what is written above. If asked for a number that is not here, say it is not something he publishes.
+- Do not name internal J&J projects or programs, and do not describe individual internal systems even without naming them.
 - Do not disclose private identifiers (addresses, IDs, financials). Keep family details at first name only.
 - Respect enterprise confidentiality. When unsure, answer with high-level professional context and avoid speculation.
