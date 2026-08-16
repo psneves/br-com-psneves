@@ -3,7 +3,14 @@ import SectionHeader from "../ui/SectionHeader";
 import ExperienceItem from "../ui/ExperienceItem";
 import { experiences, earlierExperience } from "@/lib/data/profile";
 
-const CURRENT_ROLE_TITLE = "Full Stack Engineering Manager";
+/**
+ * The J&J role expanded on load. Derived from the `current` flag rather than a
+ * hardcoded string: role titles carry their department, and retitling one in
+ * profile.ts used to break this match silently — the section still rendered,
+ * it just stopped opening on the current role.
+ */
+const [johnsonAndJohnson] = experiences;
+const CURRENT_ROLE_TITLE = johnsonAndJohnson.roles.find((role) => role.current)?.title;
 
 export default function Experiences(): JSX.Element {
   return (

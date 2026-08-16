@@ -81,11 +81,11 @@ export const summary = {
    * order this reader needs it in. The five security years lead: they are the
    * foundation the rest of the CV is built on, not a footnote to it.
    */
-  cv: "Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments, security awareness and SOX testing for IT operations. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives, with responsibility for engineering standards. Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the planning, build, test and release phases of the software development lifecycle.",
+  cv: "Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments and coordinating security awareness campaigns. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives. Delivered US$1.2M in cost avoidance year-to-date in 2026, driven by AI adoption across the software development lifecycle.",
   homeLead:
     "Product-minded engineering leader with a strong security foundation \u2014 five years in Information Security & Risk Management at Johnson & Johnson, then product ownership of the Innovative Medicine HCP portal across LATAM and CENCA. Today I lead Full Stack Engineering across a 25-initiative portfolio, 10 of them mine end to end. Integrating AI capabilities across the planning, build, test and release lifecycle produced US$1.2M in cost avoidance in the first seven months of 2026.",
   homeSecondary:
-    "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android \u2014 and of the grounded conversational assistant on this site. I own product, mobile client, backend, billing and store releases end to end, which is where the standards I set for my team get tested against my own code.",
+    "Founder and sole engineer of Meus Desafios, a live habit-tracking app on iOS and Android \u2014 and of the grounded conversational assistant on this site. I own product, mobile client, backend, billing and store releases end to end, which is where product ownership and hands-on engineering meet in one pair of hands.",
 } as const;
 
 export const highlights = [
@@ -109,6 +109,7 @@ export const aiPractice = {
     "The practice behind the US$1.2M \u2014 how AI is integrated across planning, build, test and release, and the bar agent-written work has to clear. Every mechanism below exists because of a failure it prevents.",
   points: [
     "Specifications and agent instructions are version-controlled artifacts committed next to the code and reviewed like source, so the context an agent works from is owned and current rather than re-explained each session.",
+    "Recurring workflows are packaged as reusable agent skills rather than re-prompted from scratch, so the same task produces the same shape of output whoever runs it.",
     "Agents run on scoped subtasks in isolated git worktrees, so parallel work cannot collide and every change stays independently reviewable.",
     "A reviewer agent audits the writer agent's diff before a human sees it \u2014 first output is never the output that ships.",
     "Agent changes clear the same gate as human ones: build, typecheck, lint and tests pass before review, and a person approves every merge.",
@@ -124,30 +125,32 @@ export const experiences: Experience[] = [
     period: "2014 — Present",
     roles: [
       {
-        title: "Full Stack Engineering Manager",
+        title: "Full Stack Engineering Manager, Technology Services",
         period: "Apr 2023 — Present",
         current: true,
         bullets: [
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
+          "Led the team that took 1st place globally in the 2026 Hack4Health hackathon, Care Community theme.",
+          "Delivered US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
           "Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.",
           "Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.",
-          "Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.",
-          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.",
+          "Standardized the team on GitHub Copilot and AWS Kiro across the delivery cycle and built the reusable agent skills they adopted; specification-driven development emerged as the practice that keeps AI output reviewable.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance; zero voluntary attrition across three years in the role.",
           "Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.",
-          "Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
+          "Stepped up from Chapter Lead in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
         cvBullets: [
-          "Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
+          "Led the team that took 1st place globally in the 2026 Hack4Health hackathon, Care Community theme.",
+          "Delivered US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.",
           "Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.",
           "Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.",
-          "Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.",
-          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.",
+          "Standardized the team on GitHub Copilot and AWS Kiro across the delivery cycle and built the reusable agent skills they adopted; specification-driven development emerged as the practice that keeps AI output reviewable.",
+          "Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance; zero voluntary attrition across three years in the role.",
           "Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.",
-          "Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
+          "Stepped up from Chapter Lead in September 2023 after establishing the group's hiring, onboarding and career-path foundations.",
         ],
       },
       {
-        title: "Technical Product Owner",
+        title: "Technical Product Owner, Innovative Medicine",
         period: "Sep 2020 — Mar 2023",
         bullets: [
           "Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics.",
@@ -163,7 +166,7 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        title: "Service Specialist — Digital & RPA",
+        title: "Service Specialist — Digital & RPA, Technology Services",
         period: "Feb 2019 — Aug 2020",
         bullets: [
           "Main technical point of contact and escalation for regional digital initiatives.",
@@ -177,21 +180,21 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        title: "Sr. Information Security Analyst",
+        title: "Sr. Information Security Analyst, Information Security & Risk Management",
         period: "Apr 2018 — Feb 2019",
         bullets: [
-          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.",
-          "Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.",
+          "Security single point of contact for J&J Corporate and Vision across LATAM: owned the SDLC security documentation, documented and tracked risks through to remediation or formal acceptance, and referred out-of-scope assessments to the specialist teams that owned them.",
+          "Led application security work during M&A integration, assessing high-risk applications on-site in Switzerland and identifying risks ahead of migration into J&J infrastructure.",
           "Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.",
         ],
         cvBullets: [
-          "Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.",
-          "Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.",
+          "Security single point of contact for J&J Corporate and Vision across LATAM: owned the SDLC security documentation, documented and tracked risks through to remediation or formal acceptance, and referred out-of-scope assessments to the specialist teams that owned them.",
+          "Led application security work during M&A integration, assessing high-risk applications on-site in Switzerland and identifying risks ahead of migration into J&J infrastructure.",
           "Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.",
         ],
       },
       {
-        title: "Information Security Analyst",
+        title: "Information Security Analyst, Information Security & Risk Management",
         period: "Jun 2015 — Mar 2018",
         bullets: [
           "Ran application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams.",
@@ -205,7 +208,7 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        title: "Information Security Intern",
+        title: "Information Security Intern, Information Security & Risk Management",
         period: "Jan 2014 — May 2015",
         bullets: [
           "Trained 800+ employees across manufacturing and logistics on security awareness (instructor-led sessions).",
@@ -237,8 +240,14 @@ export const experiences: Experience[] = [
           "Every release ships behind a Maestro end-to-end suite, because with no QA function a regression reaches users through an app-store queue measured in days, not minutes.",
           "Make the product calls a PM would normally make — what stays free, what sits behind Premium, and what to cut to keep the surface small enough for one engineer to maintain.",
         ],
+        // Deliberately does not mention psneves.com.br: the print CV is read
+        // alongside the site itself, so the section spends its lines on the
+        // shipped product rather than on the page the reader is already on.
         cvBullets: [
-          "Founded and build a live habit-tracking app on iOS and Android — React Native, Next.js and PostgreSQL on Vercel — and a grounded conversational assistant on psneves.com.br with OpenAI tool calling.",
+          "Own the product end to end — discovery, roadmap, design, build and store releases — for a gamified habit-tracking mobile app.",
+          "Shipped subscription billing with monthly and annual Premium tiers, Sign in with Apple and Google, calorie logging and social challenge features; run the full submission and release cycle on both App Store Connect and Google Play Console.",
+          "Built on React Native/Expo, Next.js and PostgreSQL on Vercel, with Maestro end-to-end tests on every release.",
+          "Develop it with AI-assisted workflows — the side project is another place to put product and engineering experience into practice.",
         ],
       },
     ],
@@ -315,6 +324,7 @@ export const skillGroups: SkillGroup[] = [
       "Agent orchestration",
       "Tool-calling assistants",
       "GitHub Copilot",
+      "AWS Kiro",
       "Specification-driven development",
       "TypeScript",
       "Next.js",

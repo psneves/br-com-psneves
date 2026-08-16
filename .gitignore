@@ -32,8 +32,20 @@ next-env.d.ts
 # system names, internal cost models, candid self-assessment and targeted
 # positioning — none of which should ever be published. Keep them local.
 docs/interview-prep-*.md
+# Targeted cover letters name the company being applied to. Publishing one tells
+# every other reader of this public repo exactly where else the search is aimed.
+docs/cover-letter-*.md
 # Blanket: no PDF under docs/ is ever meant to be published. A targeted CV
 # saved under a generic filename slipped past the specific rule once already.
 docs/*.pdf
 
-CV_GAPS.md
+# Candid self-assessment of what the CV is missing, plus team composition and
+# notes on what was deliberately withheld. A recruiter reading this reads the
+# weaknesses before the record.
+#
+# NOTE: a rule here does NOTHING for a file git already tracks — the index wins
+# over .gitignore. Both this file and docs/cover-letter-airbnb-sr-manager.md were
+# listed here yet still published, because they had been committed first. If you
+# add a pattern for a file that already exists in the repo, you must also run:
+#   git rm --cached <path>
+/CV_GAPS.md

@@ -44,12 +44,12 @@ Both ends are overridable — `CV_URL` for the page, `CV_OUTPUT` for the file (r
 
 | Page | Height | Headroom |
 |---|---|---|
-| 1 | 1025px | **7px** |
+| 1 | 1008px | **24px** |
 | 2 | 727px | 305px |
 
-**Page 1 is full.** 7px is under half a line of body copy (`.cv-bullet` is 11px at 1.4 line-height ≈ 15px), so essentially any addition to page 1 will overflow and the generator will refuse to write. Recover space by trimming copy, or move a role to page 2 with `PAGE_1_ROLE_COUNT` in `app/cv/page.tsx`.
+**Page 1 is effectively full.** 24px is one and a half lines of body copy (`.cv-bullet` is 11px at 1.4 line-height ≈ 15px), so a single added bullet fits and a second one overflows and the generator refuses to write. Recover space by trimming copy, or move a role to page 2 with `PAGE_1_ROLE_COUNT` in `app/cv/page.tsx`.
 
-**Height is not a content check.** Swapping a 70-character title for a 30-character one leaves page 1 at exactly 1025px — the overflow guard is blind to wrong content. When a change is supposed to preserve the rendered output, verify it:
+**Height is not a content check.** Swapping a 70-character title for a 30-character one leaves page 1 at exactly the same height — the overflow guard is blind to wrong content. When a change is supposed to preserve the rendered output, verify it:
 ```bash
 CV_OUTPUT=/tmp/candidate.pdf node scripts/generate-pdf.js
 diff <(pdftotext -layout /tmp/candidate.pdf -) <(pdftotext -layout public/Paulo_Neves_CV.pdf -)

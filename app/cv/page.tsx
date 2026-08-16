@@ -14,11 +14,15 @@
  *    future edit pushes it over, PAGE_1_ROLE_COUNT splits it and the section and
  *    employer headers repeat on page 2.
  *
- *  - Every experience section comes before Skills — the J&J run, then Earlier
- *    Experience, then Skills. Skills summarises the record, so it reads after
- *    the record rather than interrupting it.
+ *  - Every experience section comes before Skills — the J&J run, then
+ *    Independent Product, then Earlier Experience, then Skills. Skills
+ *    summarises the record, so it reads after the record rather than
+ *    interrupting it.
  *
- *  - Independent Product closes the CV, after the credentials block.
+ *  - Independent Product opens page 2, immediately after the J&J run. It used
+ *    to close the CV below the credentials grid, which buried the one block
+ *    proving product ownership and hands-on delivery in the same person — a
+ *    reader who stopped at Skills never saw it.
  *
  *  - Education is reversed so the post-graduate in Information Security
  *    Management reads before the B.Sc.
@@ -116,8 +120,23 @@ export default function CV() {
             </Section>
           )}
 
-          {/* Every experience section — the J&J run above and the pre-2014
-              roles here — finishes before Skills starts. */}
+          {/* Directly after the J&J run and before the pre-2014 roles: this is
+              the only place on the CV where product ownership, architecture and
+              shipped code are all demonstrably one person's, so it reads as the
+              second half of the current record rather than an appendix. It used
+              to close the CV below the credentials grid, where a reader who
+              stopped at Skills never reached it. */}
+          <Section title="Independent Product" icon={<Smartphone size={14} />}>
+            {/* No location: "Remote — Brazil" says nothing about a solo app
+                that has no office, and the header reads cleaner without it. */}
+            <EmployerHeader company={meusDesafios.company} period={meusDesafios.period} url={meusDesafios.url} />
+            {meusDesafios.roles.map((role) => (
+              <RoleBlock key={role.title} title={role.title} bullets={role.cvBullets ?? role.bullets} />
+            ))}
+          </Section>
+
+          {/* Every experience section — the J&J run, Independent Product above,
+              and the pre-2014 roles here — finishes before Skills starts. */}
           <Section title="Earlier Experience" icon={<Code size={14} />}>
             <EarlierExperienceList roles={earlierExperience} />
           </Section>
@@ -129,16 +148,6 @@ export default function CV() {
           </Section>
 
           <CredentialsGrid education={EDUCATION_SECURITY_FIRST} certifications={certifications} languages={languages} />
-
-          {/* Last block on the CV, below the credentials grid. */}
-          <Section title="Independent Product" icon={<Smartphone size={14} />}>
-            {/* No location: "Remote — Brazil" says nothing about a solo app
-                that has no office, and the header reads cleaner without it. */}
-            <EmployerHeader company={meusDesafios.company} period={meusDesafios.period} url={meusDesafios.url} />
-            {meusDesafios.roles.map((role) => (
-              <RoleBlock key={role.title} title={role.title} bullets={role.cvBullets ?? role.bullets} />
-            ))}
-          </Section>
         </div>
       </div>
     </>

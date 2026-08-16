@@ -4,46 +4,47 @@ Jacareí, SP, Brazil · Remote (Brazil) or São Paulo
 **Email:** paulo@psneves.com.br · **Phone:** +55 (12) 99180-1173
 
 ## Summary
-Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments, security awareness and SOX testing for IT operations. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives, with responsibility for engineering standards. Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the planning, build, test and release phases of the software development lifecycle.
+Product-minded engineering leader with a strong security foundation, including five years in Information Security & Risk Management as a point of contact for business areas, leading application security assessments and coordinating security awareness campaigns. As Technical Product Owner, led the roadmap and delivery of the Innovative Medicine HCP portal across LATAM and CENCA. Currently manage 5 direct reports within an 11-engineer team and provide technical leadership to approximately 70 vendor engineers across 25 initiatives. Led US$1.2M in cost avoidance year-to-date in 2026, driven by AI adoption across the software development lifecycle.
 
 ## Experience
 
-**Full Stack Engineering Manager — Johnson & Johnson**
+**Full Stack Engineering Manager, Technology Services — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2023 — Present
-- Drove US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.
+- Led the team that took 1st place globally in the 2026 Hack4Health hackathon, Care Community theme.
+- Delivered US$1.2M in cost avoidance in the first seven months of 2026 by integrating AI capabilities across the team's planning, build, test and release cycle.
 - Own Engineering engagements for Vision, while supporting Full Stack Engineering across additional business areas.
 - Lead Full Stack Engineering for 10 initiatives, while providing technical guidance and oversight across 15 additional initiatives; manage vendors and budgets, and interview Full Stack engineers for open positions.
-- Introduced AI-native, specification-driven development practices by treating engineering specifications as version-controlled artifacts reviewed alongside source code, improving delivery speed and consistency.
-- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance.
+- Standardized the team on GitHub Copilot and AWS Kiro across the delivery cycle and built the reusable agent skills they adopted; specification-driven development emerged as the practice that keeps AI output reviewable.
+- Manage 5 direct reports within an 11-engineer J&J team spanning intern to coordinator, accountable for hiring, career development and performance; zero voluntary attrition across three years in the role.
 - Remain hands-on: design architecture and write production software, with CI/CD and infrastructure-as-code on Terraform and AWS.
-- Promoted from Chapter Lead to Engineering Manager in September 2023 after establishing the group's hiring, onboarding and career-path foundations.
+- Stepped up from Chapter Lead in September 2023 after establishing the group's hiring, onboarding and career-path foundations.
 
-**Technical Product Owner — Johnson & Johnson**
+**Technical Product Owner, Innovative Medicine — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Sep 2020 — Mar 2023
 - Owned roadmap and delivery for the Innovative Medicine HCP portal across LATAM and CENCA, on Drupal: personalization, single sign-on federated to third-party services, site search and analytics.
 - Ran agency-led acquisition campaigns for the portal targeting doctors, nurses and pharmacists, with analytics as the feedback loop into what shipped next.
 - Defined the API contracts and non-functional requirements behind it, and drove the reliability, performance and observability work they implied.
 - Set OKRs and ran demos and executive readouts across LATAM markets.
 
-**Service Specialist — Digital & RPA — Johnson & Johnson**
+**Service Specialist — Digital & RPA, Technology Services — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Feb 2019 — Aug 2020
 - Main technical point of contact and escalation for regional digital initiatives.
 - Ran workflow-automation proofs of concept with Blue Prism and Python, and set the delivery and QA metrics they were judged on.
 - Managed vendor delivery, interviewed and selected engineers for the regional squads, and set the technical direction they built against.
 
-**Sr. Information Security Analyst — Johnson & Johnson**
+**Sr. Information Security Analyst, Information Security & Risk Management — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Apr 2018 — Feb 2019
-- Security liaison for J&J Corporate, Vision Care and LifeScan across LATAM — guided risk posture and remediation across three business units, through influence rather than reporting line.
-- Led application security assessments during M&A integration, conducting on-site assessments of high-risk applications in Switzerland and identifying security risks ahead of migration into J&J infrastructure.
+- Security single point of contact for J&J Corporate and Vision across LATAM: owned the SDLC security documentation, documented and tracked risks through to remediation or formal acceptance, and referred out-of-scope assessments to the specialist teams that owned them.
+- Led application security work during M&A integration, assessing high-risk applications on-site in Switzerland and identifying risks ahead of migration into J&J infrastructure.
 - Coordinated security awareness campaigns across J&J LATAM offices, leading communications and on-site and remote training for employees and partners.
 
-**Information Security Analyst — Johnson & Johnson**
+**Information Security Analyst, Information Security & Risk Management — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Jun 2015 — Mar 2018
 - Ran application security assessments and compliance reviews for LATAM business applications, from requirements review through remediation follow-up with development and vendor teams.
 - Led SOX testing for IT operations across Change Management, User Access Management and Operations Management, partnering with corporate internal audit on scoping and evidence.
 - Coordinated the regional information-security newsletters to business and technology staff across LATAM.
 
-**Information Security Intern — Johnson & Johnson**
+**Information Security Intern, Information Security & Risk Management — Johnson & Johnson**
 São José dos Campos, SP, Brazil · Jan 2014 — May 2015
 - Trained 800+ employees across manufacturing and logistics on security awareness (instructor-led sessions).
 - Supported vulnerability assessment and remediation for J&J Medical LATAM web applications.
@@ -59,7 +60,7 @@ São José dos Campos, SP, Brazil · Jan 2014 — May 2015
 
 **Security & risk:** Application security assessment · Compliance reviews · SOX testing for IT operations · Security awareness & training · Vulnerability assessment & remediation · Secure coding guidance
 
-**Build with:** LangGraph · Agent orchestration · Tool-calling assistants · GitHub Copilot · Specification-driven development · TypeScript · Next.js · React Native · PostgreSQL · Python · Terraform · AWS (Lambda, API Gateway, EKS) · Vercel
+**Build with:** LangGraph · Agent orchestration · Tool-calling assistants · GitHub Copilot · AWS Kiro · Specification-driven development · TypeScript · Next.js · React Native · PostgreSQL · Python · Terraform · AWS (Lambda, API Gateway, EKS) · Vercel
 
 ## Education
 - **DeVry — Metrocamp** — Post-graduate, Information Security Management (2016 — 2018)
@@ -79,7 +80,10 @@ São José dos Campos, SP, Brazil · Jan 2014 — May 2015
 
 **Founder & Sole Engineer — Meus Desafios** (meusdesafios.com.br)
 2026 — Present
-- Founded and build a live habit-tracking app on iOS and Android — React Native, Next.js and PostgreSQL on Vercel — and a grounded conversational assistant on psneves.com.br with OpenAI tool calling.
+- Own the product end to end — discovery, roadmap, design, build and store releases — for a gamified habit-tracking mobile app.
+- Shipped subscription billing with monthly and annual Premium tiers, Sign in with Apple and Google, calorie logging and social challenge features; run the full submission and release cycle on both App Store Connect and Google Play Console.
+- Built on React Native/Expo, Next.js and PostgreSQL on Vercel, with Maestro end-to-end tests on every release.
+- Develop it with AI-assisted workflows — the side project is another place to put product and engineering experience into practice.
 
 ## Links
 - **Personal website:** https://psneves.com.br
